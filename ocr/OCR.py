@@ -30,7 +30,6 @@ class OCR_image:
     '''
     OCR中英文识别
     '''
-
     def scan_english_cn_image(self):
         ocr = CnOcr( rec_model_name='densenet_lite_136-gru')
 
