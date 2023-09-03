@@ -4,6 +4,7 @@ from cnocr import CnOcr
 class OCR_image:
 
     def __init__(self, path):
+
         self.image_path=path
 
 
