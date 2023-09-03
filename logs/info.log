@@ -1,0 +1,1286 @@
+2023-08-22 20:13:32,525 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:13:32,527 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f8ff830d4d0>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:13:32,527 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:13:32,528 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:13:53,868 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:14:09,301 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:14:36,560 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:115] - INFO: success connect tor
+2023-08-22 20:15:44,553 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:15:48,595 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:15:48,596 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fc4680e68d0>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:15:48,596 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:15:48,598 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:16:08,100 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:16:08,130 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:16:34,543 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:124] - WARNING: get connect page info timeout,close driver
+2023-08-22 20:16:35,030 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:43] - ERROR: failed connect tor, retry connect
+2023-08-22 20:16:35,030 - /Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-08-22 20:16:45,041 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:16:48,007 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:16:48,069 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:17:16,268 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:124] - WARNING: get connect page info timeout,close driver
+2023-08-22 20:17:16,738 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:43] - ERROR: failed connect tor, retry connect
+2023-08-22 20:17:16,739 - /Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-08-22 20:17:26,744 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:17:29,694 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:17:29,748 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:18:21,940 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:18:32,377 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:18:32,378 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f7f3031a510>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:18:32,378 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:18:32,380 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:18:35,598 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:18:35,671 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:20:32,171 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:20:37,120 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:20:37,120 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fa161646390>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:20:37,121 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:20:37,122 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:20:40,134 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:20:40,167 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:22:17,728 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:22:21,530 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:22:21,531 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fbf583b3850>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:22:21,531 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:22:21,533 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:22:24,528 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:22:24,562 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:24:08,381 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:24:12,201 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:24:12,202 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f82b96cab50>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:24:12,202 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:24:12,204 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:24:26,620 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:24:28,986 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:25:50,676 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:26:08,055 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:26:08,056 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fc4f040d6d0>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:26:08,056 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:26:08,058 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:26:20,055 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:26:21,880 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:27:42,502 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:27:46,602 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:27:46,602 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fb6e83f1550>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:27:46,603 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:27:46,604 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:27:53,053 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:27:53,084 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:28:14,069 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:29:23,413 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:29:23,414 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fd8c882d750>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:29:23,414 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:29:23,416 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:29:47,402 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:29:50,317 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:30:50,911 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:43] - ERROR: failed connect tor, retry connect
+2023-08-22 20:30:50,912 - /Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-08-22 20:31:00,917 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:35:55,542 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:35:59,603 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:35:59,603 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f93d88fdb10>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:35:59,604 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:35:59,605 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:36:07,045 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:36:07,118 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:36:32,800 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:43] - ERROR: failed connect tor, retry connect
+2023-08-22 20:36:32,801 - /Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-08-22 20:36:42,803 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:38:43,300 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:39:00,655 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:39:00,656 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fdb0077b8d0>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:39:00,656 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:39:00,658 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:39:07,310 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:39:07,376 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:40:28,310 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:40:32,435 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:40:32,436 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7ff268b0f310>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:40:32,436 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:40:32,437 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:40:38,143 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:40:38,214 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:41:04,804 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:43] - ERROR: failed connect tor, retry connect
+2023-08-22 20:41:04,804 - /Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-08-22 20:41:14,810 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:41:27,212 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:41:27,269 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:42:09,855 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:43] - ERROR: failed connect tor, retry connect
+2023-08-22 20:42:09,855 - /Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-08-22 20:42:19,866 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:42:22,841 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:42:22,899 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:46:47,373 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:46:54,220 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:46:54,221 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f8479ad0e50>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:46:54,221 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:46:54,223 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:46:57,211 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:46:57,270 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:48:37,936 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:48:42,819 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:48:42,820 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f7c5097d450>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:48:42,820 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:48:42,822 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:48:45,827 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:48:45,888 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:49:31,552 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:49:35,408 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:49:35,409 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f9b5850a450>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:49:35,409 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:49:35,411 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:49:38,463 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:49:38,525 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:49:38,615 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:49:42,443 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:49:42,444 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7ff0c0945650>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:49:42,444 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:49:42,446 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:49:45,515 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:49:45,572 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:51:16,487 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:51:23,663 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:51:23,664 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fe4718cac50>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:51:23,664 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:51:23,665 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:51:32,082 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:51:33,697 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:55:57,683 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:55:57,684 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7ff4d0384650>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:55:57,684 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:55:57,685 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:56:04,061 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:56:04,121 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:57:53,455 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 20:57:57,231 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 20:57:57,232 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fa769bb6e90>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 20:57:57,232 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 20:57:57,233 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 20:58:10,956 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 20:58:11,016 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 20:59:14,979 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:43] - ERROR: failed connect tor, retry connect
+2023-08-22 20:59:14,979 - /Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-08-22 20:59:24,985 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 21:01:25,376 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 21:01:43,280 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:01:43,281 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fd61035ddd0>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:01:43,281 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:01:43,282 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 21:01:49,929 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 21:01:49,998 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 21:02:59,479 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:43] - ERROR: failed connect tor, retry connect
+2023-08-22 21:02:59,480 - /Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-08-22 21:03:09,486 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 21:03:47,550 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 21:03:49,055 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 21:06:53,247 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 21:06:57,252 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:06:57,253 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f94c0514650>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:06:57,253 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:06:57,255 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 21:07:09,721 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 21:07:09,788 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 21:07:20,912 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:118] - INFO: success connect tor
+2023-08-22 21:07:24,006 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 21:08:41,242 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:08:41,242 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fea32041e50>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:08:41,243 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:08:41,244 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 21:09:20,991 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 21:09:24,997 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:09:24,998 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fa800f21d50>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:09:24,999 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:09:25,000 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 21:09:51,509 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 21:09:55,146 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:09:55,147 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fce60ae1510>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:09:55,147 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:09:55,148 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 21:10:30,117 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:32] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 21:10:35,725 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:10:35,726 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f9820a15650>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:10:35,726 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:10:35,728 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 21:10:52,840 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 21:20:16,985 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:20:16,986 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fbff83b5510>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:20:16,986 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:20:24,389 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:69] - INFO: 使用TOR浏览器登录
+2023-08-22 21:20:28,034 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-08-22 21:20:31,214 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:81] - INFO: close alert
+2023-08-22 21:20:31,284 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:90] - INFO: check page load complete
+2023-08-22 21:20:51,828 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:100] - INFO: success connect tor
+2023-08-22 21:33:39,435 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:33:39,436 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fa5d8721910>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:33:39,436 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:33:45,938 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:69] - INFO: 使用TOR浏览器登录
+2023-08-22 21:33:46,795 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-08-22 21:33:48,937 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-08-22 21:33:48,981 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-08-22 21:33:52,606 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - INFO: success connect tor
+2023-08-22 21:34:36,554 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is unsupported operand type(s) for +: 'float' and 'str'
+2023-08-22 21:37:43,471 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:37:43,472 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fc9d096a890>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:37:43,472 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:37:54,466 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 21:37:57,111 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:37:57,111 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fdea8b64710>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:37:57,112 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:38:06,218 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:69] - INFO: 使用TOR浏览器登录
+2023-08-22 21:38:06,218 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-08-22 21:38:08,363 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-08-22 21:38:08,402 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-08-22 21:40:19,447 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 21:40:22,356 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:40:22,357 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fadc048c610>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:40:22,357 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:40:22,360 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:69] - INFO: 使用TOR浏览器登录
+2023-08-22 21:40:22,360 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-08-22 21:40:24,382 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-08-22 21:40:24,411 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-08-22 21:41:03,009 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - INFO: success connect tor
+2023-08-22 21:41:37,674 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is Message: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/marionette/capture.js :: capture.canvas :: line 143"  data: no]
+Stacktrace:
+capture.canvas@chrome://remote/content/marionette/capture.js:143:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:256:32
+
+2023-08-22 21:42:13,668 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:42:13,668 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fe0b03ed650>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:42:13,668 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:42:13,669 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:69] - INFO: 使用TOR浏览器登录
+2023-08-22 21:42:13,669 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-08-22 21:42:15,710 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-08-22 21:42:15,737 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-08-22 21:42:19,367 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - INFO: success connect tor
+2023-08-22 21:43:05,054 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is Message: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/marionette/capture.js :: capture.canvas :: line 143"  data: no]
+Stacktrace:
+capture.canvas@chrome://remote/content/marionette/capture.js:143:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:256:32
+
+2023-08-22 21:43:15,263 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:43:15,263 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fc0a04236d0>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:43:15,264 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:43:15,264 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:69] - INFO: 使用TOR浏览器登录
+2023-08-22 21:43:15,264 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-08-22 21:43:17,300 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-08-22 21:43:17,326 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-08-22 21:43:22,025 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - INFO: success connect tor
+2023-08-22 21:43:58,353 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is Message: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/marionette/capture.js :: capture.canvas :: line 143"  data: no]
+Stacktrace:
+capture.canvas@chrome://remote/content/marionette/capture.js:143:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:256:32
+
+2023-08-22 21:45:23,871 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:45:23,872 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fca903a55d0>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:45:23,872 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:45:23,873 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:69] - INFO: 使用TOR浏览器登录
+2023-08-22 21:45:23,873 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-08-22 21:45:25,939 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-08-22 21:45:25,955 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-08-22 21:45:31,138 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - INFO: success connect tor
+2023-08-22 21:46:46,620 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:46:46,620 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fe3d241ce10>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:46:46,620 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:46:46,621 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:69] - INFO: 使用TOR浏览器登录
+2023-08-22 21:46:46,621 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-08-22 21:46:48,677 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-08-22 21:46:48,692 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-08-22 21:46:52,365 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - INFO: success connect tor
+2023-08-22 21:49:55,592 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:49:55,593 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fa6200f3590>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:49:55,593 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:49:55,593 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:69] - INFO: 使用TOR浏览器登录
+2023-08-22 21:49:55,594 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-08-22 21:49:57,749 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-08-22 21:49:57,777 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-08-22 21:50:01,435 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - INFO: success connect tor
+2023-08-22 21:50:49,410 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-08-22 21:50:51,501 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-08-22 21:50:51,523 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-08-22 21:50:54,660 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - INFO: success connect tor
+2023-08-22 21:50:59,045 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:103] - INFO: step 1: login check
+2023-08-22 21:51:29,884 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:51:29,885 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fdd206b8390>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:51:29,885 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:51:29,885 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:69] - INFO: 使用TOR浏览器登录
+2023-08-22 21:51:29,886 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-08-22 21:51:31,978 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-08-22 21:51:31,994 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-08-22 21:51:35,660 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - INFO: success connect tor
+2023-08-22 21:52:20,833 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-08-22 21:52:22,872 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-08-22 21:52:22,913 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-08-22 21:52:26,585 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - INFO: success connect tor
+2023-08-22 21:52:28,955 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:103] - INFO: step 1: login check
+2023-08-22 21:57:37,115 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:57:37,116 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f7e097d2b10>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:57:37,116 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:57:37,116 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 21:58:15,770 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:58:15,771 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f8ba8776710>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:58:15,771 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:58:15,771 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 21:59:06,113 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 21:59:06,113 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f89587f9510>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 21:59:09,105 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:48] - INFO: 使用TOR浏览器登录
+2023-08-22 21:59:22,914 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 22:01:11,016 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 22:01:11,017 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fa6a848c6d0>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 22:01:14,445 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:49] - INFO: 使用TOR浏览器登录
+2023-08-22 22:01:20,942 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-08-22 22:11:02,259 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-08-22 22:11:02,260 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fe638895610>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-08-22 22:11:05,394 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:49] - INFO: 使用TOR浏览器登录
+2023-08-22 22:11:10,053 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:65] - INFO: 使用TOR浏览器登录
+2023-08-22 22:11:12,263 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-08-22 22:11:14,606 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-08-22 22:11:14,621 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-08-22 22:31:31,244 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - ERROR: failed connect tor, retry connect
+2023-08-22 22:31:31,245 - /Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-08-22 22:31:41,251 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-08-22 22:31:43,514 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-08-22 22:31:43,530 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-08-22 22:35:01,756 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - INFO: success connect tor
