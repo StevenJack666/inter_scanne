@@ -2070,3 +2070,71 @@ Crash Annotation GraphicsCriticalError: |[C0][GFX1-]: Receive IPC close with rea
 Exiting due to channel error.
 Crash Annotation GraphicsCriticalError: |[C0][GFX1-]: Receive IPC close with reason=AbnormalShutdown (t=15632.2) Exiting due to channel error.
 Exiting due to channel error.
+1694273144435	geckodriver	INFO	Listening on 127.0.0.1:54301
+1694273144831	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/mb/6dqbtq096tnchll7h6d9qggr0000gn/T/rust_mozprofile5UkXCS"
+*** You are running in headless mode.
+console.info: SecurityLevel: Listening for messages from NoScript.
+console.info: SecurityLevel: Initializing security-prefs.js
+console.info: SecurityLevel: security-prefs.js initialization complete
+console.info: TorProtocolService: SOCKS port type: TCP
+console.info: TorProtocolService: SOCKS host: 127.0.0.1
+console.info: TorProtocolService: SOCKS port: 9150
+1694273148983	Marionette	INFO	Marionette enabled
+1694273149194	Marionette	INFO	Listening on port 54309
+WebDriver BiDi listening on ws://localhost:54302
+Read port: 54309
+console.debug: TorProtocolService: 
+  TorProtocolService initialized
+console.info: TorMonitorService: Not starting the event monitor, as we do not own the Tor daemon.
+console.debug: TorMonitorService: 
+  TorMonitorService initialized
+console.log: "TorConnect: init()"
+console.log: "TorConnect: Entering Initial state"
+console.log: "TorConnect: Try transitioning from Initial to Disabled"
+console.log: "TorConnect: Exited Initial state"
+console.log: "TorConnect: Entering Disabled state"
+1694273149527	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1694273149528	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"[::ffff:7f00:1]:54300","sslProxy":"[::ffff:7f00:1]:54300"}
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt (t=5.698) [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/mb/6dqbtq096tnchll7h6d9qggr0000gn/T/rust_mozprofile5UkXCS/search.json.mozlz4", (void 0)))
+console.error: TorCircuitPanel: 
+  Not collecting circuits because of an error: Component returned failure code: 0x804b000d (NS_ERROR_CONNECTION_REFUSED) [nsIScriptableInputStream.available]
+JavaScript error: resource://gre/modules/RFPHelper.jsm, line 308: NS_NOINTERFACE: Component returned failure code: 0x80004002 (NS_NOINTERFACE) [nsIInterfaceRequestor.getInterface]
+DevTools listening on ws://localhost:54302/devtools/browser/7a2e0eb5-6add-49d6-8e8a-1dffa36fd4ee
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/marionette/capture.js :: capture.canvas :: line 143"  data: no]
+capture.canvas@chrome://remote/content/marionette/capture.js:143:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:256:32
+
+1694273173778	Marionette	INFO	Stopped listening on port 54309
+1694273174270	geckodriver	INFO	Listening on 127.0.0.1:54336
+1694273174786	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/mb/6dqbtq096tnchll7h6d9qggr0000gn/T/rust_mozprofileYZzjAa"
+*** You are running in headless mode.
+console.info: SecurityLevel: Listening for messages from NoScript.
+console.info: SecurityLevel: Initializing security-prefs.js
+console.info: SecurityLevel: security-prefs.js initialization complete
+console.info: TorProtocolService: SOCKS port type: TCP
+console.info: TorProtocolService: SOCKS host: 127.0.0.1
+console.info: TorProtocolService: SOCKS port: 9150
+1694273175289	Marionette	INFO	Marionette enabled
+1694273175394	Marionette	INFO	Listening on port 54343
+WebDriver BiDi listening on ws://localhost:54337
+Read port: 54343
+console.debug: TorProtocolService: 
+  TorProtocolService initialized
+console.info: TorMonitorService: Not starting the event monitor, as we do not own the Tor daemon.
+console.debug: TorMonitorService: 
+  TorMonitorService initialized
+console.log: "TorConnect: init()"
+console.log: "TorConnect: Entering Initial state"
+console.log: "TorConnect: Try transitioning from Initial to Disabled"
+console.log: "TorConnect: Exited Initial state"
+console.log: "TorConnect: Entering Disabled state"
+1694273175792	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1694273175793	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"[::ffff:7f00:1]:54335","sslProxy":"[::ffff:7f00:1]:54335"}
+console.error: TorCircuitPanel: 
+  Not collecting circuits because of an error: Component returned failure code: 0x804b000d (NS_ERROR_CONNECTION_REFUSED) [nsIScriptableInputStream.available]
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt (t=1.761) [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/mb/6dqbtq096tnchll7h6d9qggr0000gn/T/rust_mozprofileYZzjAa/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/RFPHelper.jsm, line 308: NS_NOINTERFACE: Component returned failure code: 0x80004002 (NS_NOINTERFACE) [nsIInterfaceRequestor.getInterface]
+DevTools listening on ws://localhost:54337/devtools/browser/50b63679-8e2a-47fe-be5f-086209fee91a
+1694273260934	Marionette	INFO	Stopped listening on port 54343
