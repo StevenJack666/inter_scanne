@@ -1,7 +1,5 @@
 
 from kafka import KafkaProducer
-from kafka.errors import kafka_errors
-import traceback
 import json
 from kafka_util.kafka_base import KafkaBase
 from tools.log import *

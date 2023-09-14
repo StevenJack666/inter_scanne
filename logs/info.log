@@ -6816,3 +6816,69 @@ domains=['xxxxxxxxxs6qbnahsbvxbghsnqh4rj6whbyblqtnmetf7vell2fmxmad.onion', 'xxxx
 2023-09-09 23:50:02,227 - /Users/zhangmingming/pyProjects/vcrawl/tools/crawl_dao.py[line:56] - INFO: keyword is 贷款, dtype is darknet_trading_net
 2023-09-09 23:50:02,231 - /Users/zhangmingming/pyProjects/vcrawl/tools/crawl_dao.py[line:56] - INFO: keyword is 金融, dtype is darknet_trading_net
 2023-09-09 23:50:03,440 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is {'@163.com': (550, b'Invalid User: @163.com')}
+2023-09-10 20:41:00,200 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:17] - INFO: send_status is False 
+2023-09-10 20:41:00,266 - /Users/zhangmingming/pyProjects/vcrawl/tools/log.py[line:61] - ERROR: (1146, "Table 'vcrawl.monitor_task' doesn't exist")
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/peewee.py", line 3221, in execute_sql
+    cursor.execute(sql, params or ())
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'vcrawl.monitor_task' doesn't exist")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/tools/log.py", line 59, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py", line 21, in list_monitor_task_info
+    return list(crawl_infos.dicts())
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/peewee.py", line 7038, in __iter__
+    self.execute()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/peewee.py", line 1946, in inner
+    return method(self, database, *args, **kwargs)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/peewee.py", line 2017, in execute
+    return self._execute(database)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/peewee.py", line 2190, in _execute
+    cursor = database.execute(self)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/peewee.py", line 3234, in execute
+    return self.execute_sql(sql, params, commit=commit)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/peewee.py", line 3228, in execute_sql
+    self.commit()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/peewee.py", line 2994, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/peewee.py", line 191, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/peewee.py", line 3221, in execute_sql
+    cursor.execute(sql, params or ())
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+peewee.ProgrammingError: (1146, "Table 'vcrawl.monitor_task' doesn't exist")
+2023-09-10 20:41:00,270 - /Users/zhangmingming/pyProjects/vcrawl/service/task_model_service.py[line:91] - ERROR: None
