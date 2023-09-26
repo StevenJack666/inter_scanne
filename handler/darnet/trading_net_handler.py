@@ -16,8 +16,7 @@ from tools.log import logger
 from tools.crawl_service import CrawlService
 from tools.tor_tool import make_new_tor_id
 from handler.base_handler import BaseHandler
-from kafka_util.kafka_producer import CrawlerProducer
-
+import traceback
 
 class DarkNetTradingNet(BaseHandler):
     is_login: bool = False
@@ -252,9 +251,10 @@ class DarkNetTradingNet(BaseHandler):
 
                 send_data_li = [crawl_info]
                 self.send_kafka_producer(send_data_li)
-                CrawlService.insert_crawl_info(crawl_info)
+#                CrawlService.insert_crawl_info(crawl_info)
             except Exception as e:
-                logger.error(f"[parse error {href},{datas}")
+                trace_msg = traceback.format_exc()
+                logger.error(f"[parse error {href},{datas}, {e} ; trace {trace_msg}")
 
 
 
@@ -333,13 +333,14 @@ class DarkNetTradingNet(BaseHandler):
             self.get_all_types()
             '''
             关键字匹配，发送告警邮件
-            '''
+         
             CrawlService.match_crawl_info(self.keywords, self.dtype, self.to_addrs, self.zh_type, send_dict= {
                 "title": "标题",
                 "publish_time": "发布时间",
                 "publisher": "发布人",
                 "docid": "交易编号",
             })
+            '''
         else:
             self.send_error_email(f"暗网中文网爬虫错误,异常信息:{error_domain_exceptions}", None)
 
