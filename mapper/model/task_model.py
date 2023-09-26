@@ -20,7 +20,7 @@ class BaseModel(Model):
 
 class MonitorTask(BaseModel):
     id = BigIntegerField(primary_key=True, verbose_name="主键ID")
-    task_id = CharField(index=True, max_length=200, verbose_name="任务名称",  default="")
+    task_name = CharField(index=True, max_length=200, verbose_name="任务名称",  default="")
     tenant_id = CharField(index=True, max_length=20, verbose_name="租户ID",  default="")
     Mon_Tp_Nm = CharField(max_length=1, verbose_name="监控类型：1:暗网，2:开源社区，3:在线文档，4:网盘",  default="")
     T_FIELD = CharField(max_length=100, verbose_name="监控目标", default="")
@@ -36,4 +36,4 @@ class MonitorTask(BaseModel):
     UPDATE_TIME = DateTimeField(verbose_name="更新时间")
 
     class Meta:
-        table_name = "tb_monitor_task"
+        table_name = "tbl_monitor_task"

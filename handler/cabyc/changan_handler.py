@@ -22,6 +22,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from kafka_util.kafka_producer import CrawlerProducer
 
 
 class ChangAn(BaseHandler):
@@ -49,7 +50,7 @@ class ChangAn(BaseHandler):
         logger.info("使用TOR浏览器登录")
         # 1、初始化driver
         try:
-            self.screenshot("https://blog.csdn.net/JNingWei/article/details/78618273")
+            # self.screenshot("https://blog.csdn.net/JNingWei/article/details/78618273")
             self.driver = connect_tor_with_retry(self.firefox_binary, self.geckodriver_path, self.proxies,
                                                  self.headless)
             # 2、 请求主页
@@ -77,7 +78,7 @@ class ChangAn(BaseHandler):
             height = self.driver.execute_script("return document.documentElement.scrollHeight")
             self.driver.set_window_size(width, height)
             # 是否需要超时等待
-            time.sleep(10)
+            time.sleep(1000)
             # 保存的截图名字
             current_milli_time = int(round(time.time() * 1000))
             pic_name = str(current_milli_time) + '__screenshot.png'
@@ -392,18 +393,24 @@ class ChangAn(BaseHandler):
                         "description": description,
                         "doc_page_tag": f"{page}页{idx}行"
                     })
+
+
                 except Exception as e:
                     logger.exception(e)
                     logger.error(f"error page={page},error idx={idx}")
         if len(result) == 0:
             logger.error(f"parse error, page={page}")
+
+        self.send_kafka_producer(result)
         return result
+
+
 
     def run(self):
         self.print_arguments()
         if self.tor_enable:
             if not self.login_with_tor_headless():
-                self.send_error_email(f"长安不夜城登录失败,异常信息:{e}", None)
+                self.send_error_email(f"长安不夜城登录失败,异常信息:", None)
         self.new_session()
         try:
             self.get_all_types()

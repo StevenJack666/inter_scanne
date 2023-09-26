@@ -28,11 +28,20 @@ tar -zxvf vcrawl.tar.gz && cd vcrawl
 ```
 使用python3.7+环境执行
 
+控制台下载
 pip install -r requirements.txt
+后台下载
+nohup python3.7 -m pip install -r requirements.txt  >vcrawler.log 2>&1 &
+
 python包镜像：https://mirrors.aliyun.com/pypi/simple/
 pip3 install cnocr -i https://mirrors.aliyun.com/pypi/simple/
 ```
 
+## 2.3 
+```
+添加新的依赖
+pip freeze > requirements.txt
+```
 
 # 3、更新配置文件
 ## 3.1 更新mysql与emal账号密码
@@ -113,16 +122,32 @@ run_interval = 1800
 至今使用darnet.conf或者changan.conf或者复制新的配置文件，修改执行命令
 ```
 # 暗网交易市场
-nohup python vcrawl.py crawl --conf=darknet.conf 2>&1 &
+nohup python vcrawl.py crawl --conf=darknet.conf    2>&1 &
 
 # 长安不夜城
-nohup python vcrawl.py crawl --conf=changan.conf 2>&1 &
+nohup python vcrawl.py crawl --conf=changan.conf >vcrawler.log 2>&1 &
 
+#TG爬虫
+nohup python vcrawl.py tg --task_id=1 --action=get_message >vcrawler.log 2>&1 &
 # 查看日志
 less logs/info.log
 ```
+# 5.事件topic数据结构
 
-# 5、特别说明
+``` 
+        {
+            "message_id":"",
+            "type":"dark_event",
+            "datetime":"1234567890",
+            "data": [
+                        {
+                            "id":"id"
+                        }
+            ]
+        }
+```
+
+# 6、特别说明
 1. darnet的交易市场可以完成自动登录，只需更改配置文件中的**login.name**和**login.passwd**即可
 2. 长安不夜城登录较为复杂，目前需要人工在本地访问，获取request header内的**Authorization**，更新配置文件中的**url.auth.header**
 3. 如果需要配置调度，结合crontab配置，注意需要将**run_type**设置成**once**。

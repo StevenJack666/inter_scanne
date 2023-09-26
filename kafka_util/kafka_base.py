@@ -10,5 +10,5 @@ class KafkaBase(object):
 
 
 
-    def __init__(self, kafkaconf):
-        self.bootstrap_servers = kafkaconf["kafka"]["address"]
+    def __init__(self, kafka_conf):
+        self.bootstrap_servers = kafka_conf["kafka"]["address"]

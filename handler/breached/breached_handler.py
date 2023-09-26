@@ -11,13 +11,16 @@ from requests import RequestException
 from retry import retry
 from tools.log import logger
 from bs4 import BeautifulSoup
-from datetime import datetime
 
 cur_dirname = os.path.dirname(os.path.abspath(__file__))
 
 class BreachedTo(BaseHandler):
     def __init__(self, jobconf):
         super(BreachedTo, self).__init__(jobconf)
+
+        self.domain = jobconf["url"]["url.domain"]
+        self.index_url = f"{self.protocol}://{self.domain}"
+
         self.cookies_key = jobconf["url"]["url.cookies.key"]
         self.max_pagenum = int(jobconf["parse"]["parse.max.pagenum"])
         self.query_params = jobconf["url"]["url.query.params"].split(",")
@@ -41,7 +44,7 @@ class BreachedTo(BaseHandler):
     获取当前列表页最大页码
     """
     def parse_max_pagenum(self, resp):
-        html = BeautifulSoup(resp.content,'html.parser')
+        html = BeautifulSoup(resp.content, 'html.parser')
         pages = html.find_all("a", class_="pagination_page")
         parse_max_pagenum = int(pages[-1].string)
         if parse_max_pagenum > self.max_pagenum:
@@ -88,7 +91,13 @@ class BreachedTo(BaseHandler):
         for s_data in self.parse_summary(resp, page=page):
             logger.info(f"parse page = {page} data")
             CrawlService.insert_crawl_info(s_data)
-    
+
+        '''
+        发送kafka消息
+        '''
+        send_data_li = self.parse_summary(resp, page=page)
+        self.send_kafka_producer(send_data_li)
+
 
     """
     数据标准化

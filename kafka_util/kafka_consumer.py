@@ -7,10 +7,10 @@ from tools.log import *
 cur_dirname = os.path.dirname(os.path.abspath(__file__))
 
 
-class Consumer(KafkaBase):
+class CrawlerConsumer(KafkaBase):
 
-    def __init__(self, kafkaconf, topic):
-        super(Consumer, self).__init__(kafkaconf)
+    def __init__(self, kafka_conf, topic):
+        super(CrawlerConsumer, self).__init__(kafka_conf)
         self.topic = topic
 
 
@@ -21,20 +21,21 @@ class Consumer(KafkaBase):
             group_id='test'
         )
         for message in consumer:
-            print("receive, key: {}, value: {}".format(
-                json.loads(message.key.decode()),
-                json.loads(message.value.decode())
+            res = json.loads(message.value.decode())
+            print("receive,  value: {}".format(
+                # 消息反序列化
+                res
             ))
 
 
     def run(self):
-        self.producer_event()
+        self.consumer_event()
 
 if __name__ == "__main__":
     cur_dirname = os.path.dirname(os.path.abspath(__file__))
-    conf_file = os.path.join(cur_dirname, "../../application.conf")
+    conf_file = os.path.join(cur_dirname, "../conf/application.conf")
     from tools.config_parser import CrawlConfigParser
 
     jobconf = CrawlConfigParser()
     jobconf.read(conf_file)
-    Consumer(jobconf, "test").run()
+    CrawlerConsumer(jobconf, "crawl_event_topic").run()

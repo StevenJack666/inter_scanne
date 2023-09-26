@@ -3,15 +3,18 @@ from kafka import KafkaProducer
 import json
 from kafka_util.kafka_base import KafkaBase
 from tools.log import *
-
+from tools.config_parser import CrawlConfigParser
+from tools.complex_encoder import *
 cur_dirname = os.path.dirname(os.path.abspath(__file__))
 
+import tools
+import functools
 
-class Producer(KafkaBase):
+class CrawlerProducer(KafkaBase):
 
-    def __init__(self, kafkaconf, topic):
+    def __init__(self, kafka_conf, topic):
 
-        super(Producer, self).__init__(kafkaconf)
+        super(CrawlerProducer, self).__init__(kafka_conf)
         self.topic = topic
         """
         kafka 生产者
@@ -37,17 +40,19 @@ class Producer(KafkaBase):
             offset = record_metadata.offset  # 数据所在分区的位置
             print('save success, partition: {}, offset: {}'.format(partition, offset))
 
-    def asyn_producer(self, data_li: list):
+    def async_producer(self, data):
+        print(json.dumps(data, cls=DateEncoder))
+        # 对消息序列化
+        data_json = json.dumps(data, cls=DateEncoder)
         """
         异步发送数据
         :param data_li:发送数据
         :return:
         """
-        for data in data_li:
-            self.producer.send(self.topic, data)
+        self.producer.send(self.topic, value=data_json)
         self.producer.flush()  # 批量提交
 
-    def asyn_producer_callback(self, data_li: list):
+    def async_producer_callback(self, data_li: list):
         """
         异步发送数据 + 发送状态处理
         :param data_li:发送数据
@@ -86,16 +91,16 @@ class Producer(KafkaBase):
 
 if __name__ == "__main__":
     cur_dirname = os.path.dirname(os.path.abspath(__file__))
-    conf_file = os.path.join(cur_dirname, "../application.conf")
+    conf_file = os.path.join(cur_dirname, "../conf/application.conf")
     from tools.config_parser import CrawlConfigParser
 
     jobconf = CrawlConfigParser()
     jobconf.read(conf_file)
 
-    send_data_li = [{"test": 1}, {"test": 2}]
+    send_data_li = [{"test": 1}, {"test": 2}, {"test": 3}]
 
 
-    prod = Producer(jobconf, "test")
+    prod = CrawlerProducer(jobconf, "test")
 
     prod.sync_producer(send_data_li)
     prod.close_producer()

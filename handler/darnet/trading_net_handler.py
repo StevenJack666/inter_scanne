@@ -16,6 +16,7 @@ from tools.log import logger
 from tools.crawl_service import CrawlService
 from tools.tor_tool import make_new_tor_id
 from handler.base_handler import BaseHandler
+from kafka_util.kafka_producer import CrawlerProducer
 
 
 class DarkNetTradingNet(BaseHandler):
@@ -149,7 +150,7 @@ class DarkNetTradingNet(BaseHandler):
 
     @retry((RequestException, RemoteDisconnected), tries=5, delay=20, logger=logger)
     def redirect_passwd_request(self, url):
-        logger.info("step7: request redirect_passwd_request")
+        logger.info("step7: request redirect_passwd_request url:{}", url)
         resp = self.get(url, is_clear_cookies=True, is_abs_path=True)
         self.session_id = resp.cookies['PHPSESSID']
         return resp.html.find("form", first=True).attrs['action']
@@ -230,6 +231,7 @@ class DarkNetTradingNet(BaseHandler):
 
     """
     获取列表页和详情页对应属性信息
+    并插入数据
     """
     def get_single_type(self, page_link: str = "", page:str = ""):
         logger.info(f"parse page={page},url={page_link}")
@@ -247,9 +249,15 @@ class DarkNetTradingNet(BaseHandler):
                     "dtype": self.dtype,
                     "doc_page_tag": f"{page}页{idx}行"
                 }
+
+                send_data_li = [crawl_info]
+                self.send_kafka_producer(send_data_li)
                 CrawlService.insert_crawl_info(crawl_info)
             except Exception as e:
                 logger.error(f"[parse error {href},{datas}")
+
+
+
     '''
     解析列表信息，并获取对应字段值    
     '''
@@ -325,7 +333,6 @@ class DarkNetTradingNet(BaseHandler):
             self.get_all_types()
             '''
             关键字匹配，发送告警邮件
-            更新表状态为已发送
             '''
             CrawlService.match_crawl_info(self.keywords, self.dtype, self.to_addrs, self.zh_type, send_dict= {
                 "title": "标题",

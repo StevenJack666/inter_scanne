@@ -12,8 +12,7 @@ class MonitorTaskService:
     '''
     获取任务列表，对任务结果排序输出
     '''
-    @staticmethod
-    def match_monitor_task_info():
+    def match_monitor_task_info(self):
         match_all_infos = MonitorTaskDao.list_monitor_task_info()
         if len(match_all_infos) == 0:
             logger.error(f"没有监控任务信息")
@@ -35,19 +34,18 @@ class MonitorTaskService:
             DEL_ST = bean['DEL_ST']
             CREATE_TIME = bean['CREATE_TIME']
             UPDATE_TIME = bean['UPDATE_TIME']
-
-            if len(Acq_Tsk_StTm) == 0 :
-                print('字符串TEST1为空串')
-            else:
-                print
-                '字符串TEST1不是空串,TEST1：'
+            print('')
 
 
-
-
-
-
-
+    '''
+    获取任务
+    '''
+    def monitor_task_detail_id(self, task_id):
+        task_detail = MonitorTaskDao.monitor_task_detail_id(task_id)
+        if task_detail == None:
+            logger.error(f"没有监控任务信息")
+            return
+        return task_detail
 
 
 

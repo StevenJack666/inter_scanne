@@ -3,6 +3,7 @@
 from setting import *
 from tools.config_parser import CrawlConfigParser
 from tools.log import *
+import traceback
 
 
 class CrawlTask(object):
@@ -35,4 +36,5 @@ class CrawlTask(object):
             else:
                 logger.error(f"can not find the run_type {run_type}")
         except Exception as e:
-            logger.error(f"{run_type} run error, error msg is {e}")
+            msg = traceback.format_exc()
+            logger.error(f"{run_type} run error, error msg is {e} , msg{msg}")

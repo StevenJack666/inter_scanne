@@ -20,3 +20,13 @@ class MonitorTaskDao:
         )
         return list(crawl_infos.dicts())
 
+
+    '''
+    通过任务id获取任务详情
+    '''
+    @staticmethod
+    @error_log()
+    def monitor_task_detail_id(task_id):
+        logger.info(f"task_id is {task_id} ")
+        return MonitorTask.get(MonitorTask.id == task_id)
+

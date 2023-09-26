@@ -7,7 +7,9 @@ import requests_html
 from tools.config import *
 from tools.log import *
 from urllib.parse import urljoin
-
+from kafka_util.kafka_producer import CrawlerProducer
+from tools.config_parser import CrawlConfigParser
+from tools.config import get_root_path
 from tools.crawl_service import CrawlService
 
 cur_dirname = os.path.dirname(os.path.abspath(__file__))
@@ -108,6 +110,17 @@ class BaseHandler(object):
         resp.encoding = "utf8"
         return resp
 
+    '''
+    发送kafka消息
+    '''
+    def send_kafka_producer(self, send_data_li):
+        kafka_conf_file = os.path.join(get_root_path(), "conf/application.conf")
+        job_conf = CrawlConfigParser()
+        job_conf.read(kafka_conf_file)
+        topic = job_conf["kafka"]["event.topic"]
+        crawler_producer = CrawlerProducer(job_conf, topic)
+        crawler_producer.async_producer(send_data_li)
+
     def send_error_email(self, error_info, resp):
         msg = error_info
         if resp:
@@ -115,3 +128,5 @@ class BaseHandler(object):
         logger.error(msg)
         CrawlService.send_alert(crawl_pd=None, keyword=self.keywords, zh_type=self.zh_type, to_addrs=self.error_addrs,
                                 error_msg=msg)
+
+
