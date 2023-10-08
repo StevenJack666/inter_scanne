@@ -31,17 +31,30 @@ class TelegramBase(object):
             self.protocal = self.proxy.get("protocal", "socks5")
             self.proxy_ip = self.proxy.get("ip", "127.0.0.1")
             self.proxy_port = self.proxy.get("port", 7890)
-            self.clash_proxy = (self.protocal, self.proxy_ip, self.proxy_port)
+            self.username = self.proxy.get("username", 'test')
+            self.password = self.proxy.get("password", 'TeSt1024')
+
+            # self.clash_proxy = (self.protocal, self.proxy_ip, self.proxy_port)
+
+            self.clash_proxy = {
+                'proxy_type': self.protocal,  # (mandatory) protocol to use (see above)
+                'addr': self.proxy_ip,  # (mandatory) proxy IP address
+                'port': self.proxy_port,  # (mandatory) proxy port number
+                'username': self.username,  # (optional) username if the proxy requires auth
+                'password': self.password,  # (optional) password if the proxy requires auth
+                'rdns': True  # (optional) whether to use remote or local resolve, default remote
+            }
         self.group = config_js.get("group", [])
         # kafka配置
         self.app_conf = app_conf
         kafka_conf_file = os.path.join(cur_dirname, app_conf)
-        job_conf = CrawlConfigParser()
-        job_conf.read(kafka_conf_file)
-        self.topic = job_conf["kafka"]["event.topic"]
+        self.job_conf = CrawlConfigParser()
+        self.job_conf.read(kafka_conf_file)
+        self.topic = self.job_conf["kafka"]["event.topic"]
+        self.image_path = config_js.get("image_path")
 
     def login_in(self):
-        self.ta = TelegramAPIs(self.session_name, self.app_id, self.app_hash, self.clash_proxy)
+        self.ta = TelegramAPIs(self.session_name, self.app_id, self.app_hash, self.clash_proxy, self.image_path)
         self.ta.init_client()
 
     def login_out(self):
@@ -54,7 +67,7 @@ class TelegramBase(object):
     '''
     def send_kafka_producer(self, data: list, tg_type):
 
-        crawler_producer = CrawlerProducer(self.app_conf, self.topic)
+        crawler_producer = CrawlerProducer(self.job_conf, self.topic)
         # 生成消息id和时间戳
         millis = int(round(time.time() * 1000))
         result_scan_mes_json = {"message_id": tg_type+"_"+str(millis), "type": tg_type, "timestamp": str(millis)}

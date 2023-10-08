@@ -43,7 +43,7 @@ class MonitorTaskService:
     def monitor_task_detail_id(self, task_id):
         task_detail = MonitorTaskDao.monitor_task_detail_id(task_id)
         if task_detail == None:
-            logger.error(f"没有监控任务信息")
+            logger.info(f"没有监控任务信息")
             return
         return task_detail
 

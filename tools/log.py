@@ -4,7 +4,7 @@
 import logging
 import os
 from termcolor import colored
-from .config import Config
+from tools.config import Config
 from logging import handlers
 
 cur_dirname = os.path.dirname(os.path.abspath(__file__))

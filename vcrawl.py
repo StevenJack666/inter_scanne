@@ -1,7 +1,7 @@
 """vcrawl
 
 Usage:
-  vcrawl.py crawl [--conf=<v>]
+  vcrawl.py crawl [--task_id=<v> --conf=<v>]
   vcrawl.py tg [--task_id=<v> --action=<v> ]
 
 

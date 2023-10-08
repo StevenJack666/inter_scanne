@@ -3,13 +3,13 @@
     "api_hash": "d2fabea38cdb06ebe6aa58c1970ced0c",
     "phone_number": "13849016535",
     "session_name": "conf/13849016535.session",
-    "offset_date": "2023-08-02 00:00:11",
-    "image_path": "/home/py/download/image_path",
+    "offset_date": 1696764417000,
+    "image_path": "/Users/zhangmingming/pyProjects/vcrawl/data/image",
 
     "proxy": {
         "protocal": "socks5",
-        "ip": "45.32.223.200",
-        "port": 65534,
+        "ip": "127.0.0.1",
+        "port": 7890,
         "password": "TeSt1024",
         "username": "test"
     },

@@ -2,6 +2,8 @@
 # coding=utf-8
 
 import os
+import time
+
 import requests_html
 
 from tools.config import *
@@ -10,7 +12,9 @@ from urllib.parse import urljoin
 from kafka_util.kafka_producer import CrawlerProducer
 from tools.config_parser import CrawlConfigParser
 from tools.config import get_root_path
+from service.task_model_service import *
 from tools.crawl_service import CrawlService
+from tools.type_enum import DarkType
 
 cur_dirname = os.path.dirname(os.path.abspath(__file__))
 
@@ -29,7 +33,7 @@ class BaseHandler(object):
         self.to_addrs = jobconf["alter"]["alter.mail.toaddrs"]
         self.error_addrs = jobconf["alter"]["alter.mail.error.addrs"]
         self.zh_type = ""
-
+        self.crux_key = ''
         if "run_interval" in jobconf["others"] and jobconf["others"]["run_interval"]:
             self.run_interval = int(jobconf["others"]["run_interval"])
         else:
@@ -113,20 +117,33 @@ class BaseHandler(object):
     '''
     发送kafka消息
     '''
-    def send_kafka_producer(self, send_data_li):
+
+    def send_kafka_producer(self, send_data_li, dark_type):
         kafka_conf_file = os.path.join(get_root_path(), "conf/application.conf")
         job_conf = CrawlConfigParser()
         job_conf.read(kafka_conf_file)
         topic = job_conf["kafka"]["event.topic"]
         crawler_producer = CrawlerProducer(job_conf, topic)
-        crawler_producer.async_producer(send_data_li)
+        millis = int(round(time.time() * 1000))
+
+        result_scan_mes_json = {"message_id": dark_type + "_" + str(millis), "type": dark_type,
+                                "timestamp": str(millis), "data": send_data_li}
+        crawler_producer.async_producer(result_scan_mes_json)
 
     def send_error_email(self, error_info, resp):
         msg = error_info
         if resp:
             msg = f"{error_info} \n {resp.html.html}"
         logger.error(msg)
-        CrawlService.send_alert(crawl_pd=None, keyword=self.keywords, zh_type=self.zh_type, to_addrs=self.error_addrs,
-                                error_msg=msg)
+        # CrawlService.send_alert(crawl_pd=None, keyword=self.keywords, zh_type=self.zh_type, to_addrs=self.error_addrs,
+        #                         error_msg=msg)
 
-
+    # 查询数据库获取关键字
+    def query_db_for_curl(self, task_id):
+        task_service = MonitorTaskService()
+        task_detail = task_service.monitor_task_detail_id(task_id)
+        if task_detail == None:
+            return ''
+        fileContent = task_detail.fileContent
+        keywords = fileContent.split(",")
+        self.crux_key = keywords

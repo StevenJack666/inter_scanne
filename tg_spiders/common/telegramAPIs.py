@@ -13,6 +13,8 @@ import datetime
 import logging
 import asyncio
 import re
+from ocr_handler.cnocr.ocr_base import *
+import socks
 import telethon.tl.types
 from telethon.tl.types import InputMessagesFilterPhotos
 
@@ -54,13 +56,14 @@ accept_file_format = ["image/jpeg", "image/gif", "image/png","image/webp"]
 
 
 class TelegramAPIs(object):
-    def __init__(self, session_name, app_id, app_hash, proxy=None):
+    def __init__(self, session_name, app_id, app_hash, proxy=None, image_path=None):
         self.client = None
         self.session_name = session_name
         self.app_id = app_id
         self.app_hash = app_hash
         self.proxy = proxy
         self.phone_number = '13849016535'
+        self.image_path = image_path
 
 
     def init_client(self):
@@ -345,9 +348,7 @@ class TelegramAPIs(object):
         ):
 
             if isinstance(message, Message):
-                file_name = self.download_image(message, '/Users/zhangmingming/image')
-
-
+                file_name = self.download_image(message)
                 content = ""
                 try:
                     content = message.message
@@ -357,21 +358,21 @@ class TelegramAPIs(object):
                     continue
                 m = dict()
                 m["message_id"] = message.id
-                m["user_id"] = 0
-                m["user_name"] = ""
+                m["publisher_id"] = 0
+                m["publisher"] = ""
                 m["nick_name"] = ""
                 m["reply_to_msg_id"] = 0
                 m["from_name"] = ""
                 m["image_path"] = ""
-                m["from_time"] = datetime.datetime.fromtimestamp(657224281)
+                # m["from_time"] = datetime.datetime.fromtimestamp(657224281)
                 if message.sender:
-                    m["user_id"] = message.sender.id
+                    m["publisher_id"] = message.sender.id
                     if isinstance(message.sender, ChannelForbidden):
                         username = ""
                     else:
                         username = message.sender.username
                         username = username if username else ""
-                    m["user_name"] = username
+                    m["publisher"] = username
                     if isinstance(message.sender, Channel) or isinstance(
                             message.sender, ChannelForbidden
                     ):
@@ -387,11 +388,11 @@ class TelegramAPIs(object):
                     m["reply_to_msg_id"] = message.reply_to_msg_id
                 if message.forward:
                     m["from_name"] = message.forward.from_name
-                    m["from_time"] = message.forward.date
+                    # m["from_time"] = message.forward.date
                 m["chat_id"] = chat.id
                 # m['postal_time'] = message.date.strftime('%Y-%m-%d %H:%M:%S')
-                m["postal_time"] = message.date
-                m["message"] = content
+                m["publish_time"] = datetime.datetime.strptime(str(message.date), "%Y-%m-%d %H:%M:%S+00:00").strftime("%Y-%m-%d %H:%M:%S")
+                m["content_title"] = content
                 if file_name is not None:
                     m["image_path"] = file_name
                 tick += 1
@@ -412,7 +413,7 @@ class TelegramAPIs(object):
 
 
     # 下载媒体的具体方法
-    def download_image(self, message, save_path):
+    def download_image(self, message):
         picture_storage_path = "/"
         # message_tmp = self.client.get_messages('https://t.me/xliluo', None, max_id=100000, min_id=0, filter=InputMessagesFilterPhotos)
         # total = len(photos)
@@ -448,7 +449,10 @@ class TelegramAPIs(object):
             else:
                 return
             # download_media()可以自动命名，下载成功后会返回文件的保存名
-        filename = self.client.download_media(message, save_path)
+        filename = self.client.download_media(message, self.image_path)
+
+        ocr_image = OcrImage()
+        ocr_image.scan_cn_image(filename)
         # print(f"媒体下载完成:{filename}")
         return filename
             # 下面注释的代码不知道什么原因无法在文件不存在的情况下新建文件
@@ -539,7 +543,7 @@ class TelegramAPIs(object):
             m["nick_name"] = ""
             m["reply_to_msg_id"] = 0
             m["from_name"] = ""
-            m["from_time"] = datetime.datetime.fromtimestamp(657224281)
+            #m["from_time"] = datetime.datetime.fromtimestamp(657224281)
             if message.sender:
                 m["user_id"] = message.sender.id
                 if isinstance(message.sender, ChannelForbidden):
@@ -575,16 +579,31 @@ class TelegramAPIs(object):
         result_scan_mes_json["data"] = list_message
         return result_scan_mes_json
 
+from selenium.webdriver.common.proxy import  ProxyType
 
 if __name__ == "__main__":
 
     protocal = "socks5"
+    aa = socks.SOCKS5
     proxy_ip = "45.32.223.200"
-    proxy_port = 7890
-    proxy = (protocal, proxy_ip, proxy_port)
+    proxy_port = 65534
+
+    my_proxy = {
+        'proxy_type': protocal,  # (mandatory) protocol to use (see above)
+        'addr': '45.32.223.200',  # (mandatory) proxy IP address
+        'port': 65534,  # (mandatory) proxy port number
+        'username': 'test',  # (optional) username if the proxy requires auth
+        'password': 'TeSt1024',  # (optional) password if the proxy requires auth
+        'rdns': True  # (optional) whether to use remote or local resolve, default remote
+    }
+
+    # proxy = (aa, proxy_ip, proxy_port, 'TeSt1024', 'test')
+
+    proxy = (socks.SOCKS5, proxy_ip, proxy_port, 'test', 'TeSt1024')
+
     cli = TelegramAPIs('test_session.session',
                        '24251370', 'd2fabea38cdb06ebe6aa58c1970ced0c',
-                       proxy=proxy)
+                       proxy=my_proxy)
 
 
     cli.init_client()

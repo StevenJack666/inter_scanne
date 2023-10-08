@@ -11,12 +11,12 @@ from urllib.parse import urljoin
 from urllib.parse import urlparse
 from requests import RequestException
 from retry import retry
-from tools.config import *
-from tools.log import logger
-from tools.crawl_service import CrawlService
 from tools.tor_tool import make_new_tor_id
 from handler.base_handler import BaseHandler
 import traceback
+from tools.type_enum import DarkType
+from service.task_model_service import *
+
 
 class DarkNetTradingNet(BaseHandler):
     is_login: bool = False
@@ -233,30 +233,41 @@ class DarkNetTradingNet(BaseHandler):
     并插入数据
     """
     def get_single_type(self, page_link: str = "", page:str = ""):
+        crux_key_tmp = ''
         logger.info(f"parse page={page},url={page_link}")
+        send_data_li = []
+        dark_type = DarkType.darknet.value
         for idx, datas in enumerate(self.parse_list(page_link)):
             href = datas.get("href")
             parse_tag = f"{page}_{idx}"
             try:
                 detail = self.parse_detail(href, parse_tag)
-                crawl_info = {
-                    "docid": detail.get("docid"),
+                self.query_db_for_curl(self.task_id)
+                for value in self.crux_key:
+                    if value in datas.get("title"):
+                        crux_key_tmp = value
+                    break
+                # todo 字段补齐
+                send_data_li.append({
+                    "id": time.time(),
+                    "tenant_id": "zhnormal",
+                    "doc_id": detail.get("docid"),
+                    "content_title": datas.get("title"),
                     "publish_time": detail.get("publish_time"),
-                    "href": urljoin(self.index_url, href),
-                    "title": datas.get("title"),
+                    "data_link": urljoin(self.index_url, href),
                     "publisher": datas.get("user"),
-                    "dtype": self.dtype,
-                    "doc_page_tag": f"{page}页{idx}行"
-                }
-
-                send_data_li = [crawl_info]
-                self.send_kafka_producer(send_data_li)
-#                CrawlService.insert_crawl_info(crawl_info)
+                    "publisher_id": "",
+                    "crux_key": crux_key_tmp,
+                    "doc_desc": "",
+                    "origin_data": "",
+                    "image_path": "",
+                    "crawl_dark_type": self.dtype,
+                    "href_name": f"{page}页{idx}行"
+                })
             except Exception as e:
                 trace_msg = traceback.format_exc()
                 logger.error(f"[parse error {href},{datas}, {e} ; trace {trace_msg}")
-
-
+        self.send_kafka_producer(send_data_li, dark_type)
 
     '''
     解析列表信息，并获取对应字段值    
@@ -313,7 +324,8 @@ class DarkNetTradingNet(BaseHandler):
                     return items[index].text
         return ""
 
-    def run(self):
+    def run(self, *args, **kwargs):
+        self.task_id = kwargs['id']
         self.print_arguments()
         make_new_tor_id(self.tor_port)
         domain_available = False

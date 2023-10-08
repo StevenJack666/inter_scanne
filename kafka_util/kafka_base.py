@@ -12,3 +12,5 @@ class KafkaBase(object):
 
     def __init__(self, kafka_conf):
         self.bootstrap_servers = kafka_conf["kafka"]["address"]
+        logger.info(f"crawl bootstrap_servers is {self.bootstrap_servers}")
+

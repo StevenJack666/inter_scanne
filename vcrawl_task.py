@@ -15,6 +15,7 @@ class CrawlTask(object):
             logger.error(f'submit cmd error ,can not find conf file!!{self.arguments}')
             raise Exception(f'submit cmd error ,can not find conf file!!')
         conf_file = self.arguments.get('--conf')
+        task_id = self.arguments.get('--task_id')
         jobconf = CrawlConfigParser()
         workdir = os.getcwd()
         jobconf.read(os.path.join(workdir, conf_file))
@@ -30,7 +31,7 @@ class CrawlTask(object):
 
         try:
             if 'once' == run_type:
-                handler_list[key](jobconf).run()
+                handler_list[key](jobconf).run(id=task_id)
             elif 'forever' == run_type:
                 handler_list[key](jobconf).run_forever()
             else:

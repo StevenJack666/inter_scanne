@@ -21,7 +21,7 @@ class TelegramGetMessage(TelegramBase):
 
     def __init__(self, jobconf, app_conf):
         super(TelegramGetMessage, self).__init__(jobconf, app_conf)
-        self.postal_time = None
+        self.publish_time = None
         self.task_id = None
         self.crux_key = None
 
@@ -47,49 +47,52 @@ class TelegramGetMessage(TelegramBase):
             # 遍历读取消息
             now = time.time()  # 返回float数据
             now_tmp = int(round(now * 1000))
-            self.postal_time = offset_date_tmp
-            while (now_tmp > self.convert_time(self.postal_time)):
+            self.publish_time = offset_date_tmp
+            while (now_tmp > self.publish_time):
                 param = {
                     "limit": 10,
                     "offset_date": offset_date_tmp,
                     "last_message_id": last_message_id,  # -1表示从第一条开始
                 }
-                print("zhangmm%d"+ str(last_message_id)+":::"+str(offset_date_tmp)+":::"+str(self.postal_time))
                 # TODO 循环遍历所有的消息，并记录最新的消息ID
                 # 爬取群组消息
                 message_res = self.ta.scan_message(chat_dialog, **param)
                 if message_res['result'] == 'success':
                     # 对爬取的群组消息输出
-                    last_message_id_tmp = self.print_res(message_res)
+                    last_message_id_tmp = self.print_res(message_res, item['username'])
                     last_message_id = last_message_id_tmp
                 else:
                     break
             item['last_message_id'] = -1
-            item['offset_date'] = self.postal_time
+            item['offset_date'] = self.publish_time
             self.insert_update_channel_group(item)
         #     TODO 存储爬到的消息id，下次从这里爬取消息
         self.ta.close_client()
 
-    def print_res(self, json_res):
+    def print_res(self, json_res, group_name):
         if json_res['result'] == 'success':
             data = json_res['data']
-            tg_type = TgType.group_message_type.name
+
             last_message_id = -1
             for item in data:
                 if data is None:
                     print("获取群数据失败")
                     continue
                 message_id = item.get("message_id", "")
-                message = item.get("message", "")
-                time_tmp = item.get("postal_time", "")
-                timeArray = datetime.datetime.strptime(str(time_tmp), "%Y-%m-%d %H:%M:%S+00:00").strftime("%Y-%m-%d %H:%M:%S")
-                self.postal_time = timeArray
+                message = item.get("content_title", "")
+                time_tmp = item.get("publish_time", "")
+                # timeArray = datetime.datetime.strptime(str(time_tmp), "%Y-%m-%d %H:%M:%S+00:00").strftime("%Y-%m-%d %H:%M:%S")
+                item["publish_time"] = self.convert_time(time_tmp)
+                item["group_name"] = group_name
+                item["tenant_id"] = "zhnormal"
+                item["id"] = int(round(time.time() * 1000))
                 # TODO  比对关键字，并给数据打标
                 for value in self.crux_key:
                     if value in message:
                         item['crux_key'] = value
                     break
                 last_message_id = message_id
+            tg_type = TgType.group_message_type.value
             self.send_kafka_producer(data, tg_type)
             return last_message_id
 

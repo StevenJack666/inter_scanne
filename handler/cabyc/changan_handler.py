@@ -23,7 +23,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from kafka_util.kafka_producer import CrawlerProducer
-
+from tools.type_enum import DarkType
+import traceback
 
 class ChangAn(BaseHandler):
     good_detail_suffix = '/#/detail?gid=%s'
@@ -370,6 +371,7 @@ class ChangAn(BaseHandler):
     """
 
     def parse_summary(self, resp_json, page: int = 0):
+        crux_key_tmp = ''
         result = []
         if 'data' in resp_json:
             goods = resp_json['data']['goods']
@@ -383,30 +385,43 @@ class ChangAn(BaseHandler):
                     time_local = time.gmtime(ctime)
                     publish_time = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
                     href = urljoin(self.index_url, self.good_detail_suffix % good_id)
+
+                    self.query_db_for_curl(self.task_id)
+                    for value in self.crux_key:
+                        if value in title:
+                            crux_key_tmp = value
+                        break
+
                     result.append({
-                        "docid": good_id,
-                        "title": title,
-                        "publisher": publisher,
+                        "id": time.time(),
+                        "tenant_id": "zhnormal",
+                        "doc_id": good_id,
+                        "content_title": title,
                         "publish_time": publish_time,
-                        "href": href,
-                        "dtype": self.dtype,
-                        "description": description,
-                        "doc_page_tag": f"{page}页{idx}行"
+                        "data_link": href,
+                        "publisher": publisher,
+                        "publisher_id": "",
+                        "crux_key": crux_key_tmp,
+                        "origin_data": "",
+                        "image_path": "",
+                        "doc_desc": description,
+                        "crawl_dark_type": self.dtype,
+                        "href_name": f"{page}页{idx}行"
                     })
-
-
                 except Exception as e:
+                    trace_msg = traceback.format_exc()
                     logger.exception(e)
-                    logger.error(f"error page={page},error idx={idx}")
+                    logger.error(f"error page={page},error idx={idx}, trace_msg={trace_msg}")
         if len(result) == 0:
             logger.error(f"parse error, page={page}")
-
-        self.send_kafka_producer(result)
+        dark_type = DarkType.chang_an.name
+        self.send_kafka_producer(result, dark_type)
         return result
 
 
 
-    def run(self):
+    def run(self, *args, **kwargs):
+        self.task_id = kwargs['id']
         self.print_arguments()
         if self.tor_enable:
             if not self.login_with_tor_headless():

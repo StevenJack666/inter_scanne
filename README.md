@@ -121,14 +121,15 @@ run_interval = 1800
 # 4、执行命令
 至今使用darnet.conf或者changan.conf或者复制新的配置文件，修改执行命令
 ```
-# 暗网交易市场
-nohup python vcrawl.py crawl --conf=darknet.conf    2>&1 &
-
+进入py用户
+# 暗网交易市场  trade
+sudo  nohup python3.7 /home/py/package/backend/vcrawl/vcrawl.py crawl --conf=darknet.conf > /home/py/package/backend/vcrawl/darknet.log 2>&1 &
 # 长安不夜城
-nohup python vcrawl.py crawl --conf=changan.conf >vcrawler.log 2>&1 &
-
+sudo  nohup python3.7 /home/py/package/backend/vcrawl/vcrawl.py crawl --conf=changan.conf > /home/py/package/backend/vcrawl/changan.log 2>&1 &
 #TG爬虫
-nohup python vcrawl.py tg --task_id=1 --action=get_message >vcrawler.log 2>&1 &
+sudo nohup python3.7 /home/py/package/backend/vcrawl/vcrawl.py  tg --task_id={} --action=get_message >tg.log  2>&1 &
+
+
 # 查看日志
 less logs/info.log
 ```

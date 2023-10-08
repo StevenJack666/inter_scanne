@@ -60,11 +60,11 @@ class Telegram:
 
 if __name__ == "__main__":
     protocal = "socks5"
-    proxy_ip = "127.0.0.1"
-    proxy_port = 7890
+    proxy_ip = "45.32.223.200"
+    proxy_port = 65534
     clash_proxy = (protocal, proxy_ip, proxy_port)
     telegram_test = Telegram()
-    telegram_test.send_message_to_channel("last_channel", CHANNEL_USERNAME)
+    telegram_test.send_message_to_channel("last_channel", 'caisheen88888')
     telegram_test.send_message_to_group("last_group", 'xliluo')
 
     # test()

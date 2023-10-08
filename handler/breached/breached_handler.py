@@ -11,6 +11,7 @@ from requests import RequestException
 from retry import retry
 from tools.log import logger
 from bs4 import BeautifulSoup
+from tools.type_enum import DarkType
 
 cur_dirname = os.path.dirname(os.path.abspath(__file__))
 
@@ -91,12 +92,12 @@ class BreachedTo(BaseHandler):
         for s_data in self.parse_summary(resp, page=page):
             logger.info(f"parse page = {page} data")
             CrawlService.insert_crawl_info(s_data)
-
         '''
         发送kafka消息
         '''
         send_data_li = self.parse_summary(resp, page=page)
-        self.send_kafka_producer(send_data_li)
+        dark_type = DarkType.breached.name
+        self.send_kafka_producer(send_data_li, dark_type)
 
 
     """
@@ -148,7 +149,8 @@ class BreachedTo(BaseHandler):
         return resp
 
 
-    def run(self):
+    def run(self, *args, **kwargs):
+        self.task_id = kwargs['id']
         self.print_arguments()
         self.new_session()
         while True:

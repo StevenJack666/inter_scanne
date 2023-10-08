@@ -42,7 +42,7 @@ def get_root_path():
    curPath = os.path.abspath(os.path.dirname(__file__))
    # 获取项目根路径，内容为当前项目的名字
    rootPath = curPath[:curPath.find("vcrawl/") + len("vcrawl/")]
-   print("crawler root path"+rootPath)
+   # logger.info("crawler root path: "+rootPath)
    return rootPath
 
 if __name__ == "__main__":
