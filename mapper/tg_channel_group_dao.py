@@ -50,8 +50,13 @@ class TgChannelGroupDao:
     @error_log()
     def channel_group_detail_id(self, user_name):
         logger.info(f"channel_id is {user_name} ")
-        detail = TgGroupModel.get(
-            TgGroupModel.username == user_name
-        )
-        return detail
+
+        try:
+            return TgGroupModel.get(TgGroupModel.username == user_name)
+        except Exception as e:
+            logger.info(f"query channel_group_detail error {e} ")
+            return None
+
+
+
 

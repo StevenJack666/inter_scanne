@@ -45,8 +45,7 @@ class TelegramGetMessage(TelegramBase):
                 # last_message_id = tg_group_detail.last_message_id
                 offset_date_tmp = tg_group_detail.offset_date
             # 遍历读取消息
-            now = time.time()  # 返回float数据
-            now_tmp = int(round(now * 1000))
+            now_tmp = int(round(time.time() * 1000))
             self.publish_time = offset_date_tmp
             while (now_tmp > self.publish_time):
                 param = {
@@ -85,7 +84,7 @@ class TelegramGetMessage(TelegramBase):
                 item["publish_time"] = self.convert_time(time_tmp)
                 item["group_name"] = group_name
                 item["tenant_id"] = "zhnormal"
-                item["id"] = int(round(time.time() * 1000))
+
                 # TODO  比对关键字，并给数据打标
                 for value in self.crux_key:
                     if value in message:

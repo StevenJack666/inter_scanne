@@ -123,11 +123,11 @@ run_interval = 1800
 ```
 进入py用户
 # 暗网交易市场  trade
-sudo  nohup python3.7 /home/py/package/backend/vcrawl/vcrawl.py crawl --conf=darknet.conf > /home/py/package/backend/vcrawl/darknet.log 2>&1 &
+sudo  nohup python3.7 /home/py/package/backend/vcrawl/vcrawl.py crawl --task_id={} --conf=darknet.conf > /home/py/logs/py_darknet.log 2>&1 &
 # 长安不夜城
-sudo  nohup python3.7 /home/py/package/backend/vcrawl/vcrawl.py crawl --conf=changan.conf > /home/py/package/backend/vcrawl/changan.log 2>&1 &
+sudo  nohup python3.7 /home/py/package/backend/vcrawl/vcrawl.py crawl --task_id={} --conf=changan.conf > /home/py/logs/py_changan.log 2>&1 &
 #TG爬虫
-sudo nohup python3.7 /home/py/package/backend/vcrawl/vcrawl.py  tg --task_id={} --action=get_message >tg.log  2>&1 &
+sudo nohup python3.7 /home/py/package/backend/vcrawl/vcrawl.py  tg --task_id={} --action=get_message >/home/py/logs/py_tg.log  2>&1 &
 
 
 # 查看日志
@@ -138,11 +138,24 @@ less logs/info.log
 ``` 
         {
             "message_id":"",
-            "type":"dark_event",
+            "type":"1",
             "datetime":"1234567890",
             "data": [
                         {
-                            "id":"id"
+                            "id":"id",
+                            "sample_datas":[{
+                                "original_event_id":"123",
+                                "tenanted_id":"",
+                                "phone_num":"",
+                                "bind_id":"",
+                                "user_name":"",
+                                "user_id":"",
+                                "identity_id":"",
+                                "home_addr":"",
+                                "bin_check":"",
+                                "luhn_check":""
+                                
+                            }]
                         }
             ]
         }

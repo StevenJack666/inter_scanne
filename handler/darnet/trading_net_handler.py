@@ -16,6 +16,7 @@ from handler.base_handler import BaseHandler
 import traceback
 from tools.type_enum import DarkType
 from service.task_model_service import *
+from datetime import datetime
 
 
 class DarkNetTradingNet(BaseHandler):
@@ -38,6 +39,7 @@ class DarkNetTradingNet(BaseHandler):
     '''
     设置session请求头
     '''
+
     def get_header(self):
         return {
             "User-Agent": "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0",
@@ -96,9 +98,11 @@ class DarkNetTradingNet(BaseHandler):
         for a_link in resp.html.find("a"):
             if a_link.text == '账户登录':
                 return a_link.attrs['href']
+
     '''
     获取登陆链接
     '''
+
     @retry((RequestException, RemoteDisconnected), tries=5, delay=20, logger=logger)
     def login_request(self, url, login_cookies):
         logger.info("step2: request login url")
@@ -110,6 +114,7 @@ class DarkNetTradingNet(BaseHandler):
     """
     获取账户登陆地址
     """
+
     @retry((RequestException, RemoteDisconnected), tries=5, delay=20, logger=logger)
     def account_login_url_request(self, url, login_cookies):
         logger.info("step3: request account_login_url")
@@ -128,6 +133,7 @@ class DarkNetTradingNet(BaseHandler):
     """
     发送post请求
     """
+
     @retry((RequestException, RemoteDisconnected), tries=5, delay=20, logger=logger)
     def passwd_post_request(self, url, login_cookies):
         logger.info("step5: request passwd_input_url")
@@ -167,6 +173,7 @@ class DarkNetTradingNet(BaseHandler):
     暗网中文网登陆
     获取爬取的第一页链接
     """
+
     @retry(exceptions=ValueError, tries=5, delay=20, logger=logger)
     def login(self):
         if self.is_login:
@@ -197,16 +204,17 @@ class DarkNetTradingNet(BaseHandler):
     """
     解析获取每页URL
     """
+
     def parse_page_url(self, resp):
         page_button_links = resp.html.find("table.table_goods_area a.href_button_page")
         for page_link in page_button_links:
             self.page_link_dict[page_link.text] = page_link.links.pop()
         logger.info(f"page link dict is {self.page_link_dict}")
 
-
     """
     初始化会话信息：使用Tor网站，解决网站IP封禁问题
     """
+
     def get_all_types(self):
         if not self.is_login:
             return
@@ -232,7 +240,7 @@ class DarkNetTradingNet(BaseHandler):
     获取列表页和详情页对应属性信息
     并插入数据
     """
-    def get_single_type(self, page_link: str = "", page:str = ""):
+    def get_single_type(self, page_link: str = "", page: str = ""):
         crux_key_tmp = ''
         logger.info(f"parse page={page},url={page_link}")
         send_data_li = []
@@ -247,22 +255,27 @@ class DarkNetTradingNet(BaseHandler):
                     if value in datas.get("title"):
                         crux_key_tmp = value
                     break
+                # 生成主键id
+                id_millis = str(int(round(time.time() * 1000)))
+                sample_datas = self.sample_datas_convert(id_millis)
+                pic_path = self.screenshot(href)
                 # todo 字段补齐
                 send_data_li.append({
-                    "id": time.time(),
+                    "id": id_millis,
                     "tenant_id": "zhnormal",
                     "doc_id": detail.get("docid"),
                     "content_title": datas.get("title"),
-                    "publish_time": detail.get("publish_time"),
+                    "publish_time": self.time_convert(detail.get("publish_time")),
                     "data_link": urljoin(self.index_url, href),
                     "publisher": datas.get("user"),
                     "publisher_id": "",
                     "crux_key": crux_key_tmp,
                     "doc_desc": "",
                     "origin_data": "",
-                    "image_path": "",
+                    "image_path": pic_path,
                     "crawl_dark_type": self.dtype,
-                    "href_name": f"{page}页{idx}行"
+                    "href_name": f"{page}页{idx}行",
+                    "sample_datas": sample_datas
                 })
             except Exception as e:
                 trace_msg = traceback.format_exc()
@@ -270,8 +283,20 @@ class DarkNetTradingNet(BaseHandler):
         self.send_kafka_producer(send_data_li, dark_type)
 
     '''
+    时间转化毫秒时间戳
+    '''
+
+    def time_convert(self, publish_time):
+        # 将字符串转换为 datetime 对象
+        time_obj = datetime.strptime(publish_time, "%Y-%m-%d")
+        # 将 datetime 对象转换为时间戳
+        publish_time_stamp = int(time_obj.timestamp() * 1000)
+        return publish_time_stamp
+
+    '''
     解析列表信息，并获取对应字段值    
     '''
+
     @retry((RequestException, RemoteDisconnected), tries=5, delay=20, logger=logger)
     def parse_list(self, list_url):
         query_cookies = self.query_cookies_str_format % (self.session_id, self.username)
@@ -291,15 +316,18 @@ class DarkNetTradingNet(BaseHandler):
                         "user": tr.pq("td:nth-child(2)").text(),
                         "title": tr.pq("td:nth-child(3)").text(),
                         "priceBTC": tr.pq("td:nth-child(5)").text(),
+                        "doc_desc": tr.pq("td:nth-child(5)").text(),
                     },
                 )
             return result
         except Exception as e:
             logger.error(f"parse list info error:{e}")
             return []
+
     """
     解析详情页信息
     """
+
     @retry((RequestException, RemoteDisconnected), tries=5, delay=20, logger=logger)
     def parse_detail(self, detail_url, parse_tag):
         logger.info(f"parse parse_tag={parse_tag}, url={detail_url}")
@@ -317,9 +345,9 @@ class DarkNetTradingNet(BaseHandler):
 
     @staticmethod
     def find_match_value(value, items):
-        for i,item in enumerate(items):
+        for i, item in enumerate(items):
             if value in item.text:
-                index = i+1
+                index = i + 1
                 if index < len(items):
                     return items[index].text
         return ""
@@ -368,6 +396,8 @@ class DarkNetTradingNet(BaseHandler):
 
 
 if __name__ == "__main__":
+    id_millis = int(round(time.time() * 1000))
+    print(id_millis)
     cur_dirname = os.path.dirname(os.path.abspath(__file__))
     conf_file = os.path.join(cur_dirname, "../../darknet.conf")
     from tools.config_parser import CrawlConfigParser

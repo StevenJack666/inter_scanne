@@ -13,8 +13,7 @@ from kafka_util.kafka_producer import CrawlerProducer
 from tools.config_parser import CrawlConfigParser
 from tools.config import get_root_path
 from service.task_model_service import *
-from tools.crawl_service import CrawlService
-from tools.type_enum import DarkType
+from tools.tor_tool import connect_tor_with_retry
 
 cur_dirname = os.path.dirname(os.path.abspath(__file__))
 
@@ -147,3 +146,53 @@ class BaseHandler(object):
         fileContent = task_detail.fileContent
         keywords = fileContent.split(",")
         self.crux_key = keywords
+
+    def sample_datas_convert(self, id_millis, ):
+        sample_datas = []
+        sample_datas.append({
+            "original_event_id": id_millis,
+            "tenanted_id": "zhnormal",
+            "phone_num": "",
+            "bind_id": "",
+            "user_name": "",
+            "user_id": "",
+            "identity_id": "",
+            "home_addr": "",
+            "type": "darknet",
+            "original_data": ''
+        })
+        return sample_datas
+
+
+   # TODO 打开tor浏览器驱动,使用驱动截取图片
+    def screenshot(self, href):
+        logger.info("使用TOR浏览器登录")
+        # 1、初始化driver
+        try:
+            self.driver = connect_tor_with_retry(self.firefox_binary, self.geckodriver_path, self.proxies,
+                                                 self.headless)
+            # 2、 请求主页
+            # self.driver.get(self.index_url)
+
+            # start
+            self.driver.get(href)
+            # 通过执行脚本，设置滚动条到最大宽度及最大高度
+            width = self.driver.execute_script("return document.documentElement.scrollWidth")
+            height = self.driver.execute_script("return document.documentElement.scrollHeight")
+            self.driver.set_window_size(width, height)
+            # 是否需要超时等待
+            time.sleep(1000)
+            # 保存的截图名字
+            current_milli_time = int(round(time.time() * 1000))
+            pic_name = str(current_milli_time) + '__screenshot.png'
+            self.driver.save_screenshot(pic_name)
+            return pic_name
+            # end
+        except Exception as e:
+            logger.warning("screenshot failed,close driver", e)
+            self.driver.quit()
+            return None
+
+        finally:
+            if self.driver:
+                self.driver.quit()

@@ -28,5 +28,10 @@ class MonitorTaskDao:
     @error_log()
     def monitor_task_detail_id(task_id):
         logger.info(f"task_id is {task_id} ")
-        return MonitorTask.get(MonitorTask.id == task_id)
+        try:
+            return MonitorTask.get(MonitorTask.id == task_id)
+        except Exception as e:
+            logger.info(f"query monitor_task_detail_id error {e} ")
+            return None
+
 

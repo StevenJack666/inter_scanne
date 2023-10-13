@@ -25,7 +25,7 @@ class TgGroupModel(BaseModel):
     title = CharField(max_length=64, verbose_name="频道标题", default="")
     username = CharField(max_length=20, verbose_name="频道名称", default="")
     hex_url = CharField(max_length=20, verbose_name="频道地址", default="")
-    offset_date = IntegerField(verbose_name="爬虫起始时间", default="")
+    offset_date = BigIntegerField(verbose_name="爬虫起始时间", default="")
 
     megagroup = CharField(max_length=20, verbose_name="", default="")
     member_count = IntegerField(verbose_name="群组成员数", default="")

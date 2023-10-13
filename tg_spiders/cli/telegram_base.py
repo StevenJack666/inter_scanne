@@ -81,3 +81,4 @@ class TelegramBase(object):
         # 获取项目根路径，内容为当前项目的名字
         rootPath = curPath[:curPath.find("vcrawl/") + len("vcrawl/")]
         return rootPath
+

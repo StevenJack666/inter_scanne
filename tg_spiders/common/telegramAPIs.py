@@ -348,7 +348,7 @@ class TelegramAPIs(object):
         ):
 
             if isinstance(message, Message):
-                file_name = self.download_image(message)
+
                 content = ""
                 try:
                     content = message.message
@@ -393,14 +393,21 @@ class TelegramAPIs(object):
                 # m['postal_time'] = message.date.strftime('%Y-%m-%d %H:%M:%S')
                 m["publish_time"] = datetime.datetime.strptime(str(message.date), "%Y-%m-%d %H:%M:%S+00:00").strftime("%Y-%m-%d %H:%M:%S")
                 m["content_title"] = content
+                file_name = self.download_image(message)
+                id_millis = str(int(round(time.time() * 1000)))
                 if file_name is not None:
+                    ocr_image = OcrImage()
+                    ocr_result = ocr_image.ocr_for_single_lines(file_name)
+                    m["sample_datas"] = self.sample_datas_convert(id_millis, ocr_result)
                     m["image_path"] = file_name
+                m["id"] = id_millis
                 tick += 1
                 if tick >= waterline:
                     tick = 0
                     waterline = randint(5, 10)
                     time.sleep(waterline)
                 count += 1
+
                 list_message.append(m.copy())
         print("total: %d" % count)
         if len(list_message) == 0:
@@ -451,15 +458,14 @@ class TelegramAPIs(object):
             # download_media()可以自动命名，下载成功后会返回文件的保存名
         filename = self.client.download_media(message, self.image_path)
 
-        ocr_image = OcrImage()
-        ocr_image.scan_cn_image(filename)
+
         # print(f"媒体下载完成:{filename}")
         return filename
             # 下面注释的代码不知道什么原因无法在文件不存在的情况下新建文件
             # async with async_open(save_path + "1.txt", "a") as f:
             #     await f.write(filename + "\n")
             # 原消息内容输出显示
-        print(message.sender.id, message.raw_text)
+        # print(message.sender.id, message.raw_text)
 
             # 通知mirai机器人干活（没有这个需求的可以把这句注释掉）
 
@@ -579,7 +585,23 @@ class TelegramAPIs(object):
         result_scan_mes_json["data"] = list_message
         return result_scan_mes_json
 
-from selenium.webdriver.common.proxy import  ProxyType
+
+    def sample_datas_convert(self, id_millis, ocr_result):
+        sample_datas = []
+        for res in ocr_result:
+            sample_datas.append({
+                "original_event_id": id_millis,
+                "tenanted_id": "zhnormal",
+                "phone_num": "",
+                "bind_id": "1",
+                "user_name": "",
+                "user_id": "",
+                "identity_id": "1",
+                "home_addr": "1",
+                "type": "tg",
+                "original_data": res
+            })
+        return sample_datas
 
 if __name__ == "__main__":
 
