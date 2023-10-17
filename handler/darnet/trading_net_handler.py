@@ -374,9 +374,9 @@ class DarkNetTradingNet(BaseHandler):
             image = {"img_path": img_path,
                      "img_name": image_all_path
                      }
-            image_list.append(image.copy())
             query_cookies = self.query_cookies_str_format % (self.session_id, self.username)
             self.get_download(img_path, query_cookies, is_abs_path=True, img_name=image_all_path)
+            image_list.append(image.copy())
         return image_list
 
 
