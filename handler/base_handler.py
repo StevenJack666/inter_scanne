@@ -6,8 +6,6 @@ import time
 
 import requests_html
 
-from tools.config import *
-from tools.log import *
 from urllib.parse import urljoin
 from kafka_util.kafka_producer import CrawlerProducer
 from tools.config_parser import CrawlConfigParser
@@ -90,6 +88,35 @@ class BaseHandler(object):
         resp.encoding = "utf8"
         return resp
 
+
+    def get_download(self, path: str, params: dict = None, cookies: str = "", auth_header: str = "", is_clear_cookies=False,
+            is_abs_path=False, **kwargs):
+        if cookies:
+            self.session.headers['Cookie'] = cookies
+        if is_clear_cookies:
+            self.session.headers.pop('Cookie', None)
+
+        if auth_header:
+            self.session.headers['Authorization'] = auth_header
+
+        if is_abs_path:
+            req_path = path
+        else:
+            req_path = urljoin(self.index_url, path)
+
+        logger.info(f"[GET METHOD] headers is : {self.session.headers}")
+        logger.info(f"[GET METHOD] request url = {req_path}")
+        logger.info(f"[GET METHOD] request proxy = {self.proxies}")
+        logger.info(f"[GET METHOD] request params = {params}")
+        resp = self.session.get(req_path, params=params, proxies=self.proxies, **kwargs)
+        path_name = f'./'+kwargs.get('img_name')
+        with open(path_name, 'wb') as f:
+            f.write(resp.content)
+            f.flush()
+            f.close()
+        #resp.encoding = "utf8"
+        #return resp
+
     def post(self, path, data: dict = None, json: dict = None, cookies: str = "", is_abs_path=False, **kwargs):
         if cookies:
             self.session.headers['Cookie'] = cookies
@@ -147,22 +174,23 @@ class BaseHandler(object):
         keywords = fileContent.split(",")
         self.crux_key = keywords
 
-    def sample_datas_convert(self, id_millis, original_data):
-        if original_data is None:
+    def sample_datas_convert(self, id_millis, ocr_result):
+        if ocr_result is None:
             return
         sample_datas = []
-        sample_datas.append({
-            "original_event_id": id_millis,
-            "tenanted_id": "zhnormal",
-            "phone_num": "",
-            "bind_id": "",
-            "user_name": "",
-            "user_id": "",
-            "identity_id": "",
-            "home_addr": "",
-            "type": "darknet",
-            "original_data": original_data
-        })
+        for res in ocr_result:
+            sample_datas.append({
+                "original_event_id": id_millis,
+                "tenanted_id": "zhnormal",
+                "phone_num": "",
+                "bind_id": "1",
+                "user_name": "",
+                "user_id": "",
+                "identity_id": "1",
+                "home_addr": "1",
+                "type": "tg",
+                "original_data": res
+            })
         return sample_datas
 
 
