@@ -147,7 +147,9 @@ class BaseHandler(object):
         keywords = fileContent.split(",")
         self.crux_key = keywords
 
-    def sample_datas_convert(self, id_millis, ):
+    def sample_datas_convert(self, id_millis, original_data):
+        if original_data is None:
+            return
         sample_datas = []
         sample_datas.append({
             "original_event_id": id_millis,
@@ -159,7 +161,7 @@ class BaseHandler(object):
             "identity_id": "",
             "home_addr": "",
             "type": "darknet",
-            "original_data": ''
+            "original_data": original_data
         })
         return sample_datas
 

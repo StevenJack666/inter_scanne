@@ -587,6 +587,8 @@ class TelegramAPIs(object):
 
 
     def sample_datas_convert(self, id_millis, ocr_result):
+        if ocr_result is None:
+            return
         sample_datas = []
         for res in ocr_result:
             sample_datas.append({

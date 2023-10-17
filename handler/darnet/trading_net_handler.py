@@ -257,7 +257,7 @@ class DarkNetTradingNet(BaseHandler):
                     break
                 # 生成主键id
                 id_millis = str(int(round(time.time() * 1000)))
-                sample_datas = self.sample_datas_convert(id_millis)
+                sample_datas = self.sample_datas_convert(id_millis, None)
                 pic_path = self.screenshot(href)
                 # todo 字段补齐
                 send_data_li.append({
@@ -335,6 +335,10 @@ class DarkNetTradingNet(BaseHandler):
         resp = self.get(detail_url, cookies=query_cookies)
         try:
             detail_tds = resp.html.find("table.table_view_goods td")
+
+
+            image_path = resp.html.find("div.div_view_goods_reply")
+            self.find_match_image(image_path)
             ans = dict()
             ans["docid"] = self.find_match_value("交易编号", detail_tds)
             ans["publish_time"] = self.find_match_value("上架日期", detail_tds)
@@ -351,6 +355,17 @@ class DarkNetTradingNet(BaseHandler):
                 if index < len(items):
                     return items[index].text
         return ""
+
+
+
+    @staticmethod
+    def find_match_image( items):
+        for i, item in enumerate(items):
+            path = item.find('img').get('src')
+            image_name = item.find('img').get('src')
+
+        return ""
+
 
     def run(self, *args, **kwargs):
         self.task_id = kwargs['id']
