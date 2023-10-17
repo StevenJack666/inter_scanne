@@ -109,7 +109,7 @@ class BaseHandler(object):
         logger.info(f"[GET METHOD] request proxy = {self.proxies}")
         logger.info(f"[GET METHOD] request params = {params}")
         resp = self.session.get(req_path, params=params, proxies=self.proxies, **kwargs)
-        path_name = f'./'+kwargs.get('img_name')
+        path_name = kwargs.get('img_name')
         with open(path_name, 'wb') as f:
             f.write(resp.content)
             f.flush()

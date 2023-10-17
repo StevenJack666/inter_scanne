@@ -5,8 +5,8 @@ import parse
 import re
 import time
 import ddddocr
-from ocr_handler.cnocr.ocr_base import *
 
+from ocr_handler.cnocr.ocr_base import *
 from http.client import RemoteDisconnected
 from urllib.parse import urljoin
 from urllib.parse import urlparse
@@ -18,7 +18,7 @@ import traceback
 from tools.type_enum import DarkType
 from service.task_model_service import *
 from datetime import datetime
-
+from tools.config import  *
 
 class DarkNetTradingNet(BaseHandler):
     is_login: bool = False
@@ -258,8 +258,7 @@ class DarkNetTradingNet(BaseHandler):
                     break
                 # 生成主键id
                 id_millis = str(int(round(time.time() * 1000)))
-                sample_datas = self.ocr_scan(detail.get("image").get("img_name"))
-                #pic_path = self.screenshot(href)
+                sample_datas = self.ocr_scan(detail['image_list'])
                 # todo 字段补齐
                 send_data_li.append({
                     "id": id_millis,
@@ -283,10 +282,13 @@ class DarkNetTradingNet(BaseHandler):
                 logger.error(f"[parse error {href},{datas}, {e} ; trace {trace_msg}")
         self.send_kafka_producer(send_data_li, dark_type)
 
-    def ocr_scan(self, image_path):
+    def ocr_scan(self, image_paths):
+        sample_datas = []
         ocr_image = OcrImage()
-        ocr_result = ocr_image.ocr_for_single_lines(image_path)
-        sample_datas = self.sample_datas_convert(id_millis, ocr_result)
+        for image in image_paths:
+            ocr_result = ocr_image.ocr_for_single_lines(image['img_name'])
+            sample_datas_tmp = self.sample_datas_convert(id_millis, ocr_result)
+            sample_datas.extend(sample_datas_tmp)
         return sample_datas
     '''
     时间转化毫秒时间戳
@@ -341,13 +343,11 @@ class DarkNetTradingNet(BaseHandler):
         resp = self.get(detail_url, cookies=query_cookies)
         try:
             detail_tds = resp.html.find("table.table_view_goods td")
-
-
             image_path = resp.html.find("div.div_view_goods_reply div img")
             ans = dict()
             ans["docid"] = self.find_match_value("交易编号", detail_tds)
             ans["publish_time"] = self.find_match_value("上架日期", detail_tds)
-            ans["image"] = self.find_match_image(image_path)
+            ans["image_list"] = self.find_match_image(image_path)
             return ans
         except Exception as e:
             logger.error(f"parse detail info error:{e}")
@@ -364,18 +364,20 @@ class DarkNetTradingNet(BaseHandler):
 
 
 
-
+    #下载图片
     def find_match_image(self, items):
-        image = {}
+        image_list = []
         for i, item in enumerate(items):
             img_path = item.attrs.get('src')
             img_name = item.attrs.get('alt')
+            image_all_path = f'{get_root_path()}data/image/darknet/{img_name}'
             image = {"img_path": img_path,
-                     "img_name": img_name
+                     "img_name": image_all_path
                      }
+            image_list.append(image.copy())
             query_cookies = self.query_cookies_str_format % (self.session_id, self.username)
-            self.get_download(img_path, query_cookies, is_abs_path=True, img_name=img_name)
-        return image
+            self.get_download(img_path, query_cookies, is_abs_path=True, img_name=image_all_path)
+        return image_list
 
 
     def run(self, *args, **kwargs):
