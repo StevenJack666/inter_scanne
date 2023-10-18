@@ -258,7 +258,7 @@ class DarkNetTradingNet(BaseHandler):
                     break
                 # 生成主键id
                 id_millis = str(int(round(time.time() * 1000)))
-                sample_datas = self.ocr_scan(detail['image_list'])
+                sample_datas, paths = self.ocr_scan(id_millis, detail['image_list'])
                 # todo 字段补齐
                 send_data_li.append({
                     "id": id_millis,
@@ -272,24 +272,28 @@ class DarkNetTradingNet(BaseHandler):
                     "crux_key": crux_key_tmp,
                     "doc_desc": "",
                     "origin_data": "",
-                    "image_path": detail.get("image").get("img_name"),
+                    "image_path": paths,
                     "crawl_dark_type": self.dtype,
                     "href_name": f"{page}页{idx}行",
                     "sample_datas": sample_datas
                 })
+                self.send_kafka_producer(send_data_li, dark_type)
             except Exception as e:
                 trace_msg = traceback.format_exc()
                 logger.error(f"[parse error {href},{datas}, {e} ; trace {trace_msg}")
-        self.send_kafka_producer(send_data_li, dark_type)
 
-    def ocr_scan(self, image_paths):
+
+    def ocr_scan(self, id_millis, image_paths):
         sample_datas = []
+        paths = ''
         ocr_image = OcrImage()
         for image in image_paths:
-            ocr_result = ocr_image.ocr_for_single_lines(image['img_name'])
+            path = image['img_name']
+            ocr_result = ocr_image.ocr_for_single_lines(path)
             sample_datas_tmp = self.sample_datas_convert(id_millis, ocr_result)
+            paths = f'{path},{paths}'
             sample_datas.extend(sample_datas_tmp)
-        return sample_datas
+        return sample_datas, paths
     '''
     时间转化毫秒时间戳
     '''

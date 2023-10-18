@@ -108,9 +108,9 @@ class BaseHandler(object):
         logger.info(f"[GET METHOD] request url = {req_path}")
         logger.info(f"[GET METHOD] request proxy = {self.proxies}")
         logger.info(f"[GET METHOD] request params = {params}")
-        resp = self.session.get(req_path, params=params, proxies=self.proxies, **kwargs)
-        path_name = kwargs.get('img_name')
-        with open(path_name, 'wb') as f:
+        resp = self.session.get(req_path, params=params, proxies=self.proxies)
+        img_path_name = kwargs['img_name']
+        with open(img_path_name, 'wb') as f:
             f.write(resp.content)
             f.flush()
             f.close()
@@ -183,12 +183,12 @@ class BaseHandler(object):
                 "original_event_id": id_millis,
                 "tenanted_id": "zhnormal",
                 "phone_num": "",
-                "bind_id": "1",
+                "bind_id": "",
                 "user_name": "",
                 "user_id": "",
-                "identity_id": "1",
-                "home_addr": "1",
-                "type": "tg",
+                "identity_id": "",
+                "home_addr": "",
+                "type": "dark",
                 "original_data": res
             })
         return sample_datas
