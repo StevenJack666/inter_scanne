@@ -25,13 +25,13 @@ fi
 echo "will start $FULE_NAME"
 
 if (( $type == 1 )); then
-  echo "py runn"
+  echo "tg run"
   nohup python3.7 ../vcrawl.py  tg --task_id=${task_id} --action=get_message >/home/py/logs/py_tg.log  2>&1 &
 elif (( $type==2 )); then
   echo "chagnan run"
   nohup python3.7 ../vcrawl.py crawl --task_id=${task_id} --conf=../changan.conf > /home/py/logs/py_changan.log 2>&1 &
 elif (( $type==3 )); then
-  echo "darnnet run"  
+  echo "darnnet run"
   nohup python3.7 ../vcrawl.py crawl --task_id=${task_id} --conf=../darknet.conf > /home/py/logs/py_darknet.log 2>&1 &
 else
   echo "error"

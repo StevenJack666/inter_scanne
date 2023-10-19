@@ -4284,3 +4284,436 @@ task_id=1
 2023-10-18 22:17:54,490 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://xxxxxxxxp56bqacrnumb4ouvxthknazytrz4hsxhth4mjnm3kihdtoyd.onion
 2023-10-18 22:17:54,490 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
 2023-10-18 22:17:54,491 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:18:00,807 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:96] - INFO: resp cookies is <RequestsCookieJar[<Cookie PHPSESSID=tqkj078nnqkdbmc5vh67d4p98e for xxxxxxxxp56bqacrnumb4ouvxthknazytrz4hsxhth4mjnm3kihdtoyd.onion/>]>
+2023-10-18 22:18:01,015 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:185] - INFO: login cookies is PHPSESSID=tqkj078nnqkdbmc5vh67d4p98e
+2023-10-18 22:18:01,016 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:109] - INFO: step2: request login url
+2023-10-18 22:18:01,016 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'xxxxxxxxp56bqacrnumb4ouvxthknazytrz4hsxhth4mjnm3kihdtoyd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tqkj078nnqkdbmc5vh67d4p98e'}
+2023-10-18 22:18:01,016 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://xxxxxxxxp56bqacrnumb4ouvxthknazytrz4hsxhth4mjnm3kihdtoyd.onion/entrance.php?parameter=b02e-k57QpZYXQ__1JW3Jhvf04IvRZX_5f2bssGsDpBLIpAS7SW__YgJPZOP9IWdQvEVDXOuHpxk_P2YKNkmbhhROv6s1YcoXQiq2-B5xud-Kcmg
+2023-10-18 22:18:01,016 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:18:01,017 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:18:08,500 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:121] - INFO: step3: request account_login_url
+2023-10-18 22:18:08,501 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'xxxxxxxxp56bqacrnumb4ouvxthknazytrz4hsxhth4mjnm3kihdtoyd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tqkj078nnqkdbmc5vh67d4p98e'}
+2023-10-18 22:18:08,501 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://xxxxxxxxp56bqacrnumb4ouvxthknazytrz4hsxhth4mjnm3kihdtoyd.onion/entranceLogin.php?parameter=fde2KJh26eqtlLH39XvwMDaZVmCfqDkNvMMwh5veOfTQg1mxqi17OaI2APF7FPdpsWh6qamUxWU42Wo50iH6H86YEQhrPivuYiwLOVVI84CsmCYMy_muBW5fUv11uqDLJs6GCXLp0EAM3k4
+2023-10-18 22:18:08,501 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:18:08,501 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:18:12,400 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:127] - INFO: step4: request account_input_url
+2023-10-18 22:18:12,400 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:129] - INFO: [POST METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'xxxxxxxxp56bqacrnumb4ouvxthknazytrz4hsxhth4mjnm3kihdtoyd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tqkj078nnqkdbmc5vh67d4p98e'}
+2023-10-18 22:18:12,401 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:130] - INFO: [POST METHOD] request url = http://xxxxxxxxp56bqacrnumb4ouvxthknazytrz4hsxhth4mjnm3kihdtoyd.onion/entranceLogin.php?parameter=5aa5GQ2l85T6f2eFFyiwmypCxD0ppotxMgeugZm8OcGySBI-siJkOmU2Z1dFMFaBRv8TuF5Cr07-q3t54X6kz2rEr8hHNCyqcejClpO2Hit9PWhbhrBE1YyLJa4TNpfmj6oLLLF1oqP32c0
+2023-10-18 22:18:12,401 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:131] - INFO: [POST METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:18:12,401 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:132] - INFO: [POST METHOD] data is :{'submit_login_id': '759847', 'login_id_submit': '下一步'}
+2023-10-18 22:18:19,672 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:140] - INFO: step5: request passwd_input_url
+2023-10-18 22:18:19,672 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:129] - INFO: [POST METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'xxxxxxxxp56bqacrnumb4ouvxthknazytrz4hsxhth4mjnm3kihdtoyd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tqkj078nnqkdbmc5vh67d4p98e'}
+2023-10-18 22:18:19,672 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:130] - INFO: [POST METHOD] request url = http://xxxxxxxxp56bqacrnumb4ouvxthknazytrz4hsxhth4mjnm3kihdtoyd.onion/entranceLogin.php?parameter=6bdd22E4QB1Uyi8zHKVMKcipLjHFTCffgD1Tvg1jsyeYB8AEpn4cdTESe3E75fatCH4gh9NRo2jbRZbngH_aZgDqIo-veNNANxeTiI74qw1HPIp9z8XAwsxJmAXxVg8CaXnXRKayIYFA5nUeve-AaLUPwBdBtHQORSO6RRmVCpr4_zYc5POjDj7y3Cmye0NpyR2UQvmUXsaPT3oxjxZkZB6B3cOYWZuxIOzYuA
+2023-10-18 22:18:19,673 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:131] - INFO: [POST METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:18:19,673 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:132] - INFO: [POST METHOD] data is :{'login_password': 'tianqi6997091', 'login_password_submit': '下一步'}
+2023-10-18 22:18:23,438 - /Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')), retrying in 20 seconds...
+2023-10-18 22:18:43,445 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:140] - INFO: step5: request passwd_input_url
+2023-10-18 22:18:43,447 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:129] - INFO: [POST METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'xxxxxxxxp56bqacrnumb4ouvxthknazytrz4hsxhth4mjnm3kihdtoyd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tqkj078nnqkdbmc5vh67d4p98e'}
+2023-10-18 22:18:43,447 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:130] - INFO: [POST METHOD] request url = http://xxxxxxxxp56bqacrnumb4ouvxthknazytrz4hsxhth4mjnm3kihdtoyd.onion/entranceLogin.php?parameter=6bdd22E4QB1Uyi8zHKVMKcipLjHFTCffgD1Tvg1jsyeYB8AEpn4cdTESe3E75fatCH4gh9NRo2jbRZbngH_aZgDqIo-veNNANxeTiI74qw1HPIp9z8XAwsxJmAXxVg8CaXnXRKayIYFA5nUeve-AaLUPwBdBtHQORSO6RRmVCpr4_zYc5POjDj7y3Cmye0NpyR2UQvmUXsaPT3oxjxZkZB6B3cOYWZuxIOzYuA
+2023-10-18 22:18:43,448 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:131] - INFO: [POST METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:18:43,449 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:132] - INFO: [POST METHOD] data is :{'login_password': 'tianqi6997091', 'login_password_submit': '下一步'}
+2023-10-18 22:18:47,922 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:149] - INFO: step6: update domain info
+2023-10-18 22:18:47,922 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:154] - INFO: new index is http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion
+2023-10-18 22:18:47,922 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:155] - INFO: new headers is {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tqkj078nnqkdbmc5vh67d4p98e'}
+2023-10-18 22:18:47,926 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache'}
+2023-10-18 22:18:47,927 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/entrance/loginCheck.php?parameter=8089KKYpFgnM37NYaKonIIUjpi-UNQxvwo_WGo7K77ktyRXXCcqGARfao3h2TmyjzIPD0ilbdyGXE40giZ935CTNYA-EZcw_cz7UomdxP9rFqml7RmMCF9ympAwLq0A-ZayWfMYit75blg
+2023-10-18 22:18:47,927 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:18:47,927 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:18:52,948 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:193] - INFO: query cookies is PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847
+2023-10-18 22:18:52,948 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:166] - INFO: step8: request double_passwd_input_url
+2023-10-18 22:18:52,948 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:129] - INFO: [POST METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847'}
+2023-10-18 22:18:52,949 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:130] - INFO: [POST METHOD] request url = http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/entrance/loginCheck.php?parameter=9e67EFU8sq3c9audtwPKPpzpJn9j_SRNSChc9tYbl_9bj0X9kfaBxFwkvbXERFiJWW7mM1DiIfF_ARrS_5rDi1YHRb_68wP6De29V-A2LKmIFsTgdQCePIER8NVH5jgvaouCrCv0fVgX2lTsIzodr2wz08ereDGI67PONvzJEg1yzWgOdtjWbQ
+2023-10-18 22:18:52,949 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:131] - INFO: [POST METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:18:52,949 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:132] - INFO: [POST METHOD] data is :{'login_password': 'tianqi6997091', 'login_password_submit': '下一步'}
+2023-10-18 22:18:55,907 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:201] - INFO: page link dict 1 page num is {'1': 'http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/goods_area.php?parameter=aa2duxzyfPE2HOedWk1vmU2M0HlGO_HCOohNvOgoQ30u9my9mCuh5YFucr2BiveYtogBbjDhax12Z8KeNxhC8uFguq9bBAfQp3fPjl6PBYOXAP7Rm0k8kOfrfs-YLxXrvmsOqjIdO9xALc1wy2I6IUXxUEbwdn0JIdtk6Mtypz-MoBTb5XwR1Zib5auW6as4fA'}
+2023-10-18 22:18:55,907 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:203] - INFO: 登录成功
+2023-10-18 22:18:55,909 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:246] - INFO: parse page=1,url=http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/goods_area.php?parameter=aa2duxzyfPE2HOedWk1vmU2M0HlGO_HCOohNvOgoQ30u9my9mCuh5YFucr2BiveYtogBbjDhax12Z8KeNxhC8uFguq9bBAfQp3fPjl6PBYOXAP7Rm0k8kOfrfs-YLxXrvmsOqjIdO9xALc1wy2I6IUXxUEbwdn0JIdtk6Mtypz-MoBTb5XwR1Zib5auW6as4fA
+2023-10-18 22:18:55,909 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847'}
+2023-10-18 22:18:55,909 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/goods_area.php?parameter=aa2duxzyfPE2HOedWk1vmU2M0HlGO_HCOohNvOgoQ30u9my9mCuh5YFucr2BiveYtogBbjDhax12Z8KeNxhC8uFguq9bBAfQp3fPjl6PBYOXAP7Rm0k8kOfrfs-YLxXrvmsOqjIdO9xALc1wy2I6IUXxUEbwdn0JIdtk6Mtypz-MoBTb5XwR1Zib5auW6as4fA
+2023-10-18 22:18:55,909 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:18:55,910 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:18:58,438 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847'}
+2023-10-18 22:18:58,439 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/goods_area.php?parameter=6dd7KUKtJ0eeZswi62RvrqVI0bKyt2sp87_5YnA3G8jAwIes2wcynDNQt13crCrJWF7M6ebEMjKNphqsvc6E02YGSJSsW2lA-oxU_Xoblvrs2meggkD9zp1B8PZzCNySnwUieqR1fGeTez4pWWe9eYLwQC928QHNQH6S0sQ9cMuOFEl50avamwlYe0ZYqZgrhhS-GRLHe7ZZJPQvZShJKjmEN0U8sQ
+2023-10-18 22:18:58,439 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:18:58,439 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:19:01,063 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:213] - INFO: page link dict is {'1': 'http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/goods_area.php?parameter=aa2duxzyfPE2HOedWk1vmU2M0HlGO_HCOohNvOgoQ30u9my9mCuh5YFucr2BiveYtogBbjDhax12Z8KeNxhC8uFguq9bBAfQp3fPjl6PBYOXAP7Rm0k8kOfrfs-YLxXrvmsOqjIdO9xALc1wy2I6IUXxUEbwdn0JIdtk6Mtypz-MoBTb5XwR1Zib5auW6as4fA', '2': 'http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/goods_area.php?parameter=d6201yIGpgRqHVrbO3Px4CaQ-B6_WUl5ttBw6mKGGRNBp6mutHG8etFFcB-QKu-OjZ4k3spuPVz0JxPRF6gPg08PsLGHvcYGKr_yCdy4QAUrVZPOtW00Id29o7z_LzTE_UCNRsoE_vTjRji2oGWJj4ifGN7fkh22vIB7X5u-zjUDx6h1JI9PYzGZerstwjzPa0lY6e9_p28_pAuIlOZb06_mlOLbCGnX5rI2Kf1k4QpG#page_a', '3': 'http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/goods_area.php?parameter=7b3fcsiKk6LWpIabJFSknXVACagBExMthjnMayOT4x4NuNrAyNMNX-iQZBZN3sObKFRxiIjF_PVJSzsPJKdRLW1wDyzEvhGtMnZDOsSoZEmbDoN1CO2OSDgA4Pn1GiUS5uhQlbTZzcyKCQUBmodCjSbnZykzqvCdsJmte4FFqLYkQA6hrGjZ8jxNPD3Us7_atp7MxT098JfVfSYVvv3X2VPLFN1cDy1AYMEG7WmTVNF4#page_a', '4': 'http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/goods_area.php?parameter=c9e8aomLdn6DR10_LYaF9Z_GpWm7C6X_y5b4hNld2h2mqsw_Nyup0q95EfyG-RjAyvW-n5ugN1Pd6mMbVgqrP6-0PEkdBwGG-T8ZTLQBqhqYZ9HmSLPu0Nu07xs5epFE282NfSnUFsVTeoSdUtr18KHDbjF3taVo27J-Q2Zf85MiwzGxbjzkmDJ5jCc-j4dSnGLq5FUnkurt8_6y2NpJLY0QNlkdAuGAC84ly9C7tIfa#page_a', '5': 'http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/goods_area.php?parameter=430708bI8xNuc2mPgABuwjrSPBxbdWaX8NbXzTfSvrX9Pn-gMdfUzwRrnR1NaACdRn792DJ7j_74ITu3S2KgcOy8067ANRkL2ff56PLr2DwJNvbtkhEP0K6_ouHA99hA1XEUHSVX6UWT3eUcCAybYHhkP-p5Do4bFnPUV-ZFPb4pfpIKefVbcmZOFiV03fBz912edMA-NloBIPiCivLMOJpiPLijewL2jwV8FSrFlWsE#page_a', '10': 'http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/goods_area.php?parameter=3df6fnk3J6iF_8Mo1Ir9eiSfyiSGN1tp4Zx0FBTUFUC5Cjfo4_mwzSKJyx-U5H8ri4FVXTHpzpnRoSr7g_9pvKcWuoFnfyO75bRNUolevpG40Ay61msGkzXbwAtUxvKjlgCxKSgTkF0SiemENLhQNb0hGaepUFy8yt8bgZtisr0uctE8h-kRQdPKMdnPFqtC2TdIWWozeX7TdU_CZN7PXDEYKP4xpR_aANZhbMRaMPYOUA#page_a'}
+2023-10-18 22:19:01,170 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:345] - INFO: parse parse_tag=1_0, url=http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/goods_view.php?parameter=469aqsF56pugat5Y_XIE8gR-cUgHvUT3No0xZlvsDWykWXgK-M6FKa-239tCh3epDHqEdzaR0IxW_hG1TT_8e9NKKRQwoRssn5Anp8_G6xhL8h2tOzUg-zvECpDHdW_G0Y0kxa4vh0rwpEX955QnTH6eUZIkxk7mC3m7sCSQuNVHhloMOaTjXegivY8zMCA4I47LWA
+2023-10-18 22:19:01,171 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847'}
+2023-10-18 22:19:01,171 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/goods_view.php?parameter=469aqsF56pugat5Y_XIE8gR-cUgHvUT3No0xZlvsDWykWXgK-M6FKa-239tCh3epDHqEdzaR0IxW_hG1TT_8e9NKKRQwoRssn5Anp8_G6xhL8h2tOzUg-zvECpDHdW_G0Y0kxa4vh0rwpEX955QnTH6eUZIkxk7mC3m7sCSQuNVHhloMOaTjXegivY8zMCA4I47LWA
+2023-10-18 22:19:01,171 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:19:01,171 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:19:02,971 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847'}
+2023-10-18 22:19:02,971 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/files/2310/1896202_1b7ce3c80b722fd63ba2556398d881f1
+2023-10-18 22:19:02,971 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:19:02,971 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847
+2023-10-18 22:19:05,264 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847'}
+2023-10-18 22:19:05,264 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/files/2310/1896202_fe28578b7acb9028cbb6fefc797da83f
+2023-10-18 22:19:05,265 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:19:05,265 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847
+2023-10-18 22:19:08,292 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847'}
+2023-10-18 22:19:08,293 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/files/2310/1896202_623a05910153585d8ab16b0c98d20b79
+2023-10-18 22:19:08,294 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:19:08,294 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847
+2023-10-18 22:19:10,957 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847'}
+2023-10-18 22:19:10,958 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/files/2310/1896202_88a8d39ee78d036f50546bd2982714db
+2023-10-18 22:19:10,959 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:19:10,959 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847
+2023-10-18 22:19:14,196 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847'}
+2023-10-18 22:19:14,197 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://mxxxxxxxs4uqwd6cylditj7rh7zaz2clh7ofgik2z5jpeq5ixn4ziayd.onion/files/2310/1896202_cc17c70e08af841f5ee68181505ba323
+2023-10-18 22:19:14,197 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:19:14,198 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = PHPSESSID=tkvsq16o0f889bie88usnuhtm2; userid=759847
+2023-10-18 22:19:17,815 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-10-18 22:29:28,048 - /Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_base.py[line:15] - INFO: crawl bootstrap_servers is 127.0.0.1:9092
+2023-10-18 22:30:41,598 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_changan,run_type is once
+2023-10-18 22:30:41,599 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:56] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f9082600510>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+crux_key=
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+task_id=1
+2023-10-18 22:30:41,599 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:51] - INFO: 使用TOR浏览器登录
+2023-10-18 22:30:41,600 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-10-18 22:30:59,683 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-10-18 22:30:59,821 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-10-18 22:31:05,047 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - INFO: success connect tor
+2023-10-18 22:31:48,242 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:99] - INFO: step 1: login check
+2023-10-18 22:31:48,271 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:296] - INFO: is_for_login=False
+2023-10-18 22:31:48,272 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:307] - INFO: captcha image has decode success
+2023-10-18 22:31:49,146 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:41] - ERROR: once run error, error msg is HTTPConnectionPool(host='127.0.0.1', port=7890): Max retries exceeded with url: http://api.jfbym.com/api/YmServer/customApi (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9030025910>: Failed to establish a new connection: [Errno 61] Connection refused'))) , msgTraceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connectionpool.py", line 721, in urlopen
+    chunked=chunked,
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f9030025910>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=7890): Max retries exceeded with url: http://api.jfbym.com/api/YmServer/customApi (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9030025910>: Failed to establish a new connection: [Errno 61] Connection refused')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py", line 34, in run
+    handler_list[key](jobconf).run(id=task_id)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 427, in run
+    if not self.login_with_tor_headless():
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 60, in login_with_tor_headless
+    return self.check_and_login()
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 100, in check_and_login
+    self.check()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py", line 74, in retry_decorator
+    logger)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py", line 33, in __retry_internal
+    return f()
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 209, in check
+    captcha_code = request_captcha_code(image_data)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tools/captcha_code_tool.py", line 28, in request_captcha_code
+    cap_code = cap_verify.common_verify(image_data)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tools/captcha_code_tool.py", line 66, in common_verify
+    resp = requests.post(self._custom_url, headers=self._headers, data=json.dumps(payload))
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/requests/api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/requests/adapters.py", line 510, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='127.0.0.1', port=7890): Max retries exceeded with url: http://api.jfbym.com/api/YmServer/customApi (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9030025910>: Failed to establish a new connection: [Errno 61] Connection refused')))
+
+2023-10-18 22:33:02,986 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_changan,run_type is once
+2023-10-18 22:33:02,987 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:56] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fa4e4d7f750>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+crux_key=
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+task_id=1
+2023-10-18 22:33:02,987 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:51] - INFO: 使用TOR浏览器登录
+2023-10-18 22:33:02,987 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
+2023-10-18 22:33:05,828 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:92] - INFO: close alert
+2023-10-18 22:33:05,887 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: check page load complete
+2023-10-18 22:33:14,719 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - INFO: success connect tor
+2023-10-18 22:33:38,495 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:99] - INFO: step 1: login check
+2023-10-18 22:33:38,513 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
+2023-10-18 22:34:08,527 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:296] - INFO: is_for_login=False
+2023-10-18 22:34:08,528 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:307] - INFO: captcha image has decode success
+2023-10-18 22:35:32,061 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:41] - ERROR: once run error, error msg is HTTPConnectionPool(host='127.0.0.1', port=7890): Max retries exceeded with url: http://api.jfbym.com/api/YmServer/customApi (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa4c0927e50>: Failed to establish a new connection: [Errno 61] Connection refused'))) , msgTraceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connectionpool.py", line 721, in urlopen
+    chunked=chunked,
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fa4c0927e50>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=7890): Max retries exceeded with url: http://api.jfbym.com/api/YmServer/customApi (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa4c0927e50>: Failed to establish a new connection: [Errno 61] Connection refused')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py", line 34, in run
+    handler_list[key](jobconf).run(id=task_id)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 427, in run
+    if not self.login_with_tor_headless():
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 60, in login_with_tor_headless
+    return self.check_and_login()
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 100, in check_and_login
+    self.check()
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py", line 74, in retry_decorator
+    logger)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py", line 33, in __retry_internal
+    return f()
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 209, in check
+    captcha_code = request_captcha_code(image_data)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tools/captcha_code_tool.py", line 28, in request_captcha_code
+    cap_code = cap_verify.common_verify(image_data)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tools/captcha_code_tool.py", line 66, in common_verify
+    resp = requests.post(self._custom_url, headers=self._headers, data=json.dumps(payload))
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/requests/api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/requests/adapters.py", line 510, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='127.0.0.1', port=7890): Max retries exceeded with url: http://api.jfbym.com/api/YmServer/customApi (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa4c0927e50>: Failed to establish a new connection: [Errno 61] Connection refused')))
+
+2023-10-18 22:37:13,004 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_trading_net,run_type is once
+2023-10-18 22:37:13,005 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:56] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fae023af850>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=trading_net
+dtype=darknet_trading_net
+alter_type=email
+to_addrs=@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=暗网中文网
+crux_key=
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=False
+tor_port=9151
+username=759847
+passwd=tianqi6997091
+login_cookies_str_format=PHPSESSID=%s
+query_cookies_str_format=PHPSESSID=%s; userid=%s
+max_pagenum=20
+domains=['xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion', 'xxxxxxxx3a3kuuhhw5w7stk25fzhttrlpiomij5bogkg7yyqsng5tqyd.onion', 'xxxxxxxxneal7wz6nk2tuquh54pruer5nfgwtsdw4c4xk6jc2swaidad.onion', 'xxxxxxxxp56bqacrnumb4ouvxthknazytrz4hsxhth4mjnm3kihdtoyd.onion', 'xxxxxxxzxxbmwmggbeyt26t6nlgktj5le7crh4yat6ztfwqxn4uxvmad.onion', 'xxxxxxxxqeuwvkrsesijvfcem4dtkpm77srgru2vrvk7dvm4hur3ymid.onion', 'deepmixaasic2p6vm6f4d4g52e4ve6t37ejtti4holhhkdsmq3jsf3id.onion', 'deepmixbf6xqt3m7kagmurdt4v43f2h3doc23h7hrkjlroovyjsvseqd.onion', 'deepmixjso4ero6h3psxskkb756offo3uznx4a44vuc5464mjkqwndyd.onion', 'deepmixl6jyyextuekqvufhaw3k4fv2zygcllo5lciupwdru6cb7xeqd.onion']
+task_id=1
+2023-10-18 22:37:13,005 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:24] - INFO: reload tor
+2023-10-18 22:37:13,007 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:34] - ERROR: change ip error [Errno 61] Connection refused
+2023-10-18 22:37:15,013 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:397] - INFO: parse domain is xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion, index_url is http://xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion
+2023-10-18 22:37:15,016 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:91] - INFO: step1: request enter url
+2023-10-18 22:37:15,016 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache'}
+2023-10-18 22:37:15,016 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion
+2023-10-18 22:37:15,016 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:37:15,017 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:37:23,463 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:96] - INFO: resp cookies is <RequestsCookieJar[<Cookie PHPSESSID=c4oj770khki4bhg1t38ms54r3u for xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion/>]>
+2023-10-18 22:37:23,593 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:185] - INFO: login cookies is PHPSESSID=c4oj770khki4bhg1t38ms54r3u
+2023-10-18 22:37:23,594 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:109] - INFO: step2: request login url
+2023-10-18 22:37:23,594 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=c4oj770khki4bhg1t38ms54r3u'}
+2023-10-18 22:37:23,594 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion/entrance.php?parameter=73ab6-oAsgqR3iHxquGGVuVwX0Rgoa59gfR15QH2r-ArmW6-bnFhfDwc6QqPEY3qM3mJdESzWCQIsI4EO9o6piPveiuajEb6oggW5eceywwhLIJq
+2023-10-18 22:37:23,594 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:37:23,594 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:37:28,709 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:121] - INFO: step3: request account_login_url
+2023-10-18 22:37:28,710 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=c4oj770khki4bhg1t38ms54r3u'}
+2023-10-18 22:37:28,710 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion/entranceLogin.php?parameter=f3e3ivFjpPG9nYXBX-_ppgudOsa6MzyisKFhdHJSFv3rXE5XWR4iTFWyYbbJU_86n6WtdjalUJeZB3mWzMwMaebw5sIq8-0LYIHkJT55_kqMhRQGWb-C7ENyz6i82G17vtPXMweDsNH4agw
+2023-10-18 22:37:28,710 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:37:28,710 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:37:32,188 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:127] - INFO: step4: request account_input_url
+2023-10-18 22:37:32,189 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:129] - INFO: [POST METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=c4oj770khki4bhg1t38ms54r3u'}
+2023-10-18 22:37:32,189 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:130] - INFO: [POST METHOD] request url = http://xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion/entranceLogin.php?parameter=11daz9eJrh0JeXKwbASm900w7qYTB2lDX1hoKegaSFhJiF82azWTPZ9tbv3QaQG0NM_8Ira2kA-cjJYS8dQSMaTy8E3Xl5PJVz4nxvMdCn3CBlpnugns2Kh2tdyihOuUPSVAMphnvRxwG50
+2023-10-18 22:37:32,189 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:131] - INFO: [POST METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:37:32,189 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:132] - INFO: [POST METHOD] data is :{'submit_login_id': '759847', 'login_id_submit': '下一步'}
+2023-10-18 22:37:47,343 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:140] - INFO: step5: request passwd_input_url
+2023-10-18 22:37:47,343 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:129] - INFO: [POST METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=c4oj770khki4bhg1t38ms54r3u'}
+2023-10-18 22:37:47,344 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:130] - INFO: [POST METHOD] request url = http://xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion/entranceLogin.php?parameter=4dc0B_roDJKZI4WAiQO4szQd2zlb4BWtslnjGLt0_07dbJUc4lwa2Nt0UYpx4itHykXNxIE7wFjb2o3SMDZ2iIHwQnMmLQd-4O4wcKpyLX8AMSguj0BEjq1hH4BSbJVp4HWJ_aStdCIxxXj7CMNZlulVgAGhR1dmqRklANk5NQTiGmy15QzTymNRoe0j-NFiLjVaGDdbkURbPB-Abkptx7eewMVb8n7SS2X9Ow
+2023-10-18 22:37:47,344 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:131] - INFO: [POST METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:37:47,344 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:132] - INFO: [POST METHOD] data is :{'login_password': 'tianqi6997091', 'login_password_submit': '下一步'}
+2023-10-18 22:37:47,597 - /Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer')), retrying in 20 seconds...
+2023-10-18 22:38:07,603 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:140] - INFO: step5: request passwd_input_url
+2023-10-18 22:38:07,605 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:129] - INFO: [POST METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=c4oj770khki4bhg1t38ms54r3u'}
+2023-10-18 22:38:07,605 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:130] - INFO: [POST METHOD] request url = http://xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion/entranceLogin.php?parameter=4dc0B_roDJKZI4WAiQO4szQd2zlb4BWtslnjGLt0_07dbJUc4lwa2Nt0UYpx4itHykXNxIE7wFjb2o3SMDZ2iIHwQnMmLQd-4O4wcKpyLX8AMSguj0BEjq1hH4BSbJVp4HWJ_aStdCIxxXj7CMNZlulVgAGhR1dmqRklANk5NQTiGmy15QzTymNRoe0j-NFiLjVaGDdbkURbPB-Abkptx7eewMVb8n7SS2X9Ow
+2023-10-18 22:38:07,606 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:131] - INFO: [POST METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:38:07,606 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:132] - INFO: [POST METHOD] data is :{'login_password': 'tianqi6997091', 'login_password_submit': '下一步'}
+2023-10-18 22:38:15,688 - /Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')), retrying in 20 seconds...
+2023-10-18 22:38:35,694 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:140] - INFO: step5: request passwd_input_url
+2023-10-18 22:38:35,696 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:129] - INFO: [POST METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=c4oj770khki4bhg1t38ms54r3u'}
+2023-10-18 22:38:35,696 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:130] - INFO: [POST METHOD] request url = http://xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion/entranceLogin.php?parameter=4dc0B_roDJKZI4WAiQO4szQd2zlb4BWtslnjGLt0_07dbJUc4lwa2Nt0UYpx4itHykXNxIE7wFjb2o3SMDZ2iIHwQnMmLQd-4O4wcKpyLX8AMSguj0BEjq1hH4BSbJVp4HWJ_aStdCIxxXj7CMNZlulVgAGhR1dmqRklANk5NQTiGmy15QzTymNRoe0j-NFiLjVaGDdbkURbPB-Abkptx7eewMVb8n7SS2X9Ow
+2023-10-18 22:38:35,696 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:131] - INFO: [POST METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:38:35,697 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:132] - INFO: [POST METHOD] data is :{'login_password': 'tianqi6997091', 'login_password_submit': '下一步'}
+2023-10-18 22:38:40,135 - /Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')), retrying in 20 seconds...
+2023-10-18 22:39:00,138 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:140] - INFO: step5: request passwd_input_url
+2023-10-18 22:39:00,140 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:129] - INFO: [POST METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=c4oj770khki4bhg1t38ms54r3u'}
+2023-10-18 22:39:00,141 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:130] - INFO: [POST METHOD] request url = http://xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion/entranceLogin.php?parameter=4dc0B_roDJKZI4WAiQO4szQd2zlb4BWtslnjGLt0_07dbJUc4lwa2Nt0UYpx4itHykXNxIE7wFjb2o3SMDZ2iIHwQnMmLQd-4O4wcKpyLX8AMSguj0BEjq1hH4BSbJVp4HWJ_aStdCIxxXj7CMNZlulVgAGhR1dmqRklANk5NQTiGmy15QzTymNRoe0j-NFiLjVaGDdbkURbPB-Abkptx7eewMVb8n7SS2X9Ow
+2023-10-18 22:39:00,141 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:131] - INFO: [POST METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:39:00,141 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:132] - INFO: [POST METHOD] data is :{'login_password': 'tianqi6997091', 'login_password_submit': '下一步'}
+2023-10-18 22:39:12,732 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:149] - INFO: step6: update domain info
+2023-10-18 22:39:12,732 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:154] - INFO: new index is http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion
+2023-10-18 22:39:12,733 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:155] - INFO: new headers is {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=c4oj770khki4bhg1t38ms54r3u'}
+2023-10-18 22:39:12,739 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache'}
+2023-10-18 22:39:12,739 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/entrance/loginCheck.php?parameter=f9cfdjNFqtS3ulISYPqUJQQSqzj9Uhz618SrpeyzOsDKSdIM89lHXG0J75_hZslAL_SmKDL8YYMVkKIXMxEUMNihQFdZaqApclLTXAeonO46aVFPhR26qemb9_Lnh7pj-7BQa3MHhdQ9Xg
+2023-10-18 22:39:12,739 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:39:12,740 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:39:19,703 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:193] - INFO: query cookies is PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847
+2023-10-18 22:39:19,704 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:166] - INFO: step8: request double_passwd_input_url
+2023-10-18 22:39:19,704 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:129] - INFO: [POST METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847'}
+2023-10-18 22:39:19,704 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:130] - INFO: [POST METHOD] request url = http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/entrance/loginCheck.php?parameter=84b9Z3LIzSbbDTsaEog3c8wjs730wpKu2jsH_tMEJ9pHmv_sCFsXpzpxO3G4xsWz7SqnRTjSsYw6nWeSEaJH8HMIShlIabqk2iYtdC9lkrJH56cwyF2h2WVpH3OokNrKhsjY1DZuPbxtD5A3PftyAFl9AKFnjwtWJh7pAZfGnvi7GLCGWA9wpg
+2023-10-18 22:39:19,705 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:131] - INFO: [POST METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:39:19,705 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:132] - INFO: [POST METHOD] data is :{'login_password': 'tianqi6997091', 'login_password_submit': '下一步'}
+2023-10-18 22:39:24,264 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:201] - INFO: page link dict 1 page num is {'1': 'http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/goods_area.php?parameter=c738mhBh6yd_9HZrh14PnWpbVTPPUJ-lnVYjQ8hgWapDxpp12qyj6ajADlWD9ec-kr1iF1jfnEEmXDliiqytG6NN9rl4eDI9uQHNUZlq3Qt-dyCcC2wSm0NsPDB3jU52S5VC6IiTnhajeIH0z2Oz0LW1AGR2kK11CnpXP-vHzJMcbsembvz-8kFIAc9c0JJ3gg'}
+2023-10-18 22:39:24,264 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:203] - INFO: 登录成功
+2023-10-18 22:39:24,266 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:246] - INFO: parse page=1,url=http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/goods_area.php?parameter=c738mhBh6yd_9HZrh14PnWpbVTPPUJ-lnVYjQ8hgWapDxpp12qyj6ajADlWD9ec-kr1iF1jfnEEmXDliiqytG6NN9rl4eDI9uQHNUZlq3Qt-dyCcC2wSm0NsPDB3jU52S5VC6IiTnhajeIH0z2Oz0LW1AGR2kK11CnpXP-vHzJMcbsembvz-8kFIAc9c0JJ3gg
+2023-10-18 22:39:24,266 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847'}
+2023-10-18 22:39:24,266 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/goods_area.php?parameter=c738mhBh6yd_9HZrh14PnWpbVTPPUJ-lnVYjQ8hgWapDxpp12qyj6ajADlWD9ec-kr1iF1jfnEEmXDliiqytG6NN9rl4eDI9uQHNUZlq3Qt-dyCcC2wSm0NsPDB3jU52S5VC6IiTnhajeIH0z2Oz0LW1AGR2kK11CnpXP-vHzJMcbsembvz-8kFIAc9c0JJ3gg
+2023-10-18 22:39:24,267 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:39:24,267 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:39:27,119 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847'}
+2023-10-18 22:39:27,119 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/goods_area.php?parameter=31d6rsAtznb9AMD0PNfVof6BwcX2sWQgzoHLD_KNdf2voel7Zh8HbI_mrMFiow35s6vKbhLU3MFGGTbJEA-Thi93JLk2nnML3SS_v2YUAJm0yZ_k0s7zlvWjNg4Rci47Y4Jd8pIh1d1JbtV4PQX4nq7E8RRQKvEZmRN7tUCN7CJJEHg_BbMy9uAxmLxCL4Z__Zc70LBgsAXzv-zgBxISnK6OfLt2xg
+2023-10-18 22:39:27,120 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:39:27,120 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:39:29,217 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:213] - INFO: page link dict is {'1': 'http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/goods_area.php?parameter=c738mhBh6yd_9HZrh14PnWpbVTPPUJ-lnVYjQ8hgWapDxpp12qyj6ajADlWD9ec-kr1iF1jfnEEmXDliiqytG6NN9rl4eDI9uQHNUZlq3Qt-dyCcC2wSm0NsPDB3jU52S5VC6IiTnhajeIH0z2Oz0LW1AGR2kK11CnpXP-vHzJMcbsembvz-8kFIAc9c0JJ3gg', '2': 'http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/goods_area.php?parameter=08ebcFRbR4fW8EVEGqBqWDuyVP8ls3Trvz-EV6nEPj86Gy7QE75m_R0RnMrA1VgNfD0Zqe-z0ZBvXsDQTV_E3M4Aivbnj5N4S13FOkRxbrXI0jFxvcvpqqSonykshEqQGi_cdcBGlAVJEE__cvbk8Ret3GTdkJ-V24N3XUFxSdtVJHZLOjTNwVGcal-PpFRp5_VJHUBPBpti_To5HXkCBxS5gN6DgPKddgne7iDhxHV9#page_a', '3': 'http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/goods_area.php?parameter=ee161RWDk_w4IQA3-EYkbRAMENRhsyTmfK4blmhhxBfGv5HLfP1CH6D6IgS6tgH9tLbz1Y8tCGymbaQKeZaa6Bq9xgo-fkIsjIm13Cw3PQelZmaj0sOkVL0VXmlzIxN4e-pR6LiQhecAS7n-r2cYknR8W5GeWcKeGykHFnbBiH-jIZ4YCuRCgbJTOtYBPSdXGpFsSpmeM1SrIxT6n0z592ELnvlLYDAebfrZOLXZ-sLc#page_a', '4': 'http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/goods_area.php?parameter=8e75KzqUJRcA0lWCybwRXs94CJPV5FegA_NPUYzmLi31Vn898Wq9XAubXNMyjNXGNwbOw9ahQp1rO6kgSlLGfQrkyuuGnbyf2zAOrhId-DR2ndE1z0CdKxQsdA9Qh-SHJkhgPglsPo5dZ-_qs8UTx-tdiUIo9RX0hjkqUJceO38Sr2bYOcqsL784HZIDVeCFRBqjVpg4GCO3kGRx_34uqfioORLzagRYzr5N2sgRqLsW#page_a', '5': 'http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/goods_area.php?parameter=f354bvL26Coz3oUWlLfyS7MbQYFfYtc_IX7Zlf6KuGpQmDI6nkLGIEiF57PEdpYxejL8SV8vgo26Go4efAJWTSDZtse68RdzDrmc8bZGtdoXIOafn1pOY49YZM9YL-5lcWBz0bH8gh6t_l_Jcdsl3rc4HnKAaX_gEqQL0dy9Kerv5EHPoHFun2A0CbQRnHnuMqATeaGTfH7VBU6FYGE095PXi9TSNfBXxSOVPhPFACXc#page_a', '10': 'http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/goods_area.php?parameter=c6552P4hiLUdj6Yel_sDnkHlbxkOnzSlWhu1UfuIkh3X5oD0mYWVt3mlxsyAczY7nkTzZYyLU8Jf_5gWomgK_l91AiiA57I3aPZePsXRStXBaxQ9VPDnBHpfb7b2JbUzix4XJ37_-HtPh6hsAalPmgy-spkRVr3-z8nKS29Om5JyIP3EzgeuBSx69KrYz88CLTvYwdnamoBmPBjFOtZNlWosVwakNs4noi0XpYp9Fo5fgg#page_a'}
+2023-10-18 22:39:29,324 - /Users/zhangmingming/pyProjects/vcrawl/handler/darnet/trading_net_handler.py[line:345] - INFO: parse parse_tag=1_0, url=http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/goods_view.php?parameter=d837IEgk8yNsm0OGr22uZZnookJjWRBLwEFXmQFVsmxoRxRKe5W6yui1gzdoEB1lwE4XpzHcPC6iabx2hxhzH6Lx8uapOR3gKTKTUNlg1Xx1Nv_FN9TP76SYqiLzYz2pEjOgGyPngb9-xG-zrr5LUyoEWaDiv5UoRMwFyo7Q6wr0wNmd0P3MprRrDgNUsmPm-FGYKw
+2023-10-18 22:39:29,324 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847'}
+2023-10-18 22:39:29,324 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/goods_view.php?parameter=d837IEgk8yNsm0OGr22uZZnookJjWRBLwEFXmQFVsmxoRxRKe5W6yui1gzdoEB1lwE4XpzHcPC6iabx2hxhzH6Lx8uapOR3gKTKTUNlg1Xx1Nv_FN9TP76SYqiLzYz2pEjOgGyPngb9-xG-zrr5LUyoEWaDiv5UoRMwFyo7Q6wr0wNmd0P3MprRrDgNUsmPm-FGYKw
+2023-10-18 22:39:29,324 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:39:29,324 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-10-18 22:39:30,881 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847'}
+2023-10-18 22:39:30,882 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/files/2310/1896202_1b7ce3c80b722fd63ba2556398d881f1
+2023-10-18 22:39:30,882 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:39:30,882 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847
+2023-10-18 22:39:33,291 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847'}
+2023-10-18 22:39:33,292 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/files/2310/1896202_fe28578b7acb9028cbb6fefc797da83f
+2023-10-18 22:39:33,292 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:39:33,293 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847
+2023-10-18 22:39:37,506 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847'}
+2023-10-18 22:39:37,507 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/files/2310/1896202_623a05910153585d8ab16b0c98d20b79
+2023-10-18 22:39:37,508 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:39:37,508 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847
+2023-10-18 22:39:40,987 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847'}
+2023-10-18 22:39:40,988 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/files/2310/1896202_88a8d39ee78d036f50546bd2982714db
+2023-10-18 22:39:40,989 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:39:40,989 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847
+2023-10-18 22:39:43,958 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': 'mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Cookie': 'PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847'}
+2023-10-18 22:39:43,959 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://mxxxxxxxsjznlccmh5p64nambxuoklg44kmjscl2nkvgoolnzeiqbmqd.onion/files/2310/1896202_cc17c70e08af841f5ee68181505ba323
+2023-10-18 22:39:43,960 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-10-18 22:39:43,960 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = PHPSESSID=afp5o7156nlvo75sn6ip0sh6m2; userid=759847
+2023-10-18 22:39:47,201 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
