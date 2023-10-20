@@ -31,7 +31,7 @@ elif (( $type==2 )); then
   echo "chagnan run"
   nohup python3.7 ../vcrawl.py crawl --task_id=${task_id} --conf=../changan.conf > /home/py/logs/py_changan.log 2>&1 &
 elif (( $type==3 )); then
-  echo "darnnet run"
+  echo "darknet run"
   nohup python3.7 ../vcrawl.py crawl --task_id=${task_id} --conf=../darknet.conf > /home/py/logs/py_darknet.log 2>&1 &
 else
   echo "error"
