@@ -13,11 +13,11 @@ from selenium.webdriver.firefox.options import Options
 from seleniumwire import webdriver
 from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
-from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from retry import retry
+import traceback
 
 
 def make_new_tor_id(port: int = 9151, proxies="", ip_link="http://icanhazip.com/") -> None or str:
@@ -78,13 +78,17 @@ def open_browser_with_headless(firefox_binary, geckodriver_path, proxies, headle
     options = {
         'proxy': proxies
     }
-
-    driver = webdriver.Firefox(options=firefox_options,
-                               firefox_profile=profile,
-                               firefox_binary=binary,
-                               seleniumwire_options=options,
-                               executable_path=geckodriver_path,
-                               service_log_path=os.path.join(Config.log_dir, "geckodriver.log"))
+    try:
+        driver = webdriver.Firefox(options=firefox_options,
+                                   firefox_profile=profile,
+                                   firefox_binary=binary,
+                                   seleniumwire_options=options,
+                                   executable_path=geckodriver_path,
+                                   service_log_path=os.path.join(Config.log_dir, "geckodriver.log"))
+    except Exception as e:
+        msg = traceback.format_exc()
+        logger.error(f"init firefox webdriver error{e}, traceback{msg}")
+        return None
 
     driver.get("https://check.torproject.org/")
 
@@ -95,7 +99,8 @@ def open_browser_with_headless(firefox_binary, geckodriver_path, proxies, headle
         alert = driver.switch_to.alert
         alert.dismiss()
     except Exception as e:
-        logger.warning(f"auto close alter error{e}")
+        msg = traceback.format_exc()
+        logger.warning(f"auto close alter error{e}, traceback{msg}")
 
     try:
         logger.info(f"check page load complete")
@@ -112,7 +117,8 @@ def open_browser_with_headless(firefox_binary, geckodriver_path, proxies, headle
             driver.quit()
             return None
     except Exception as e:
-        logger.warning("get connect page info timeout,close driver",e)
+        msg = traceback.format_exc()
+        logger.warning(f"get connect page info timeout,close driver {e}, trace msg{msg}")
         driver.quit()
         return None
 

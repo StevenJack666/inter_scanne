@@ -22,7 +22,6 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from kafka_util.kafka_producer import CrawlerProducer
 from tools.type_enum import DarkType
 import traceback
 
@@ -62,38 +61,7 @@ class ChangAn(BaseHandler):
             if self.driver:
                 self.driver.quit()
 
-    # # TODO 打开tor浏览器驱动,使用驱动截取图片
-    # def screenshot(self, href):
-    #     logger.info("使用TOR浏览器登录")
-    #     # 1、初始化driver
-    #     try:
-    #         self.driver = connect_tor_with_retry(self.firefox_binary, self.geckodriver_path, self.proxies,
-    #                                              self.headless)
-    #         # 2、 请求主页
-    #         # self.driver.get(self.index_url)
-    #
-    #         # start
-    #         self.driver.get(href)
-    #         # 通过执行脚本，设置滚动条到最大宽度及最大高度
-    #         width = self.driver.execute_script("return document.documentElement.scrollWidth")
-    #         height = self.driver.execute_script("return document.documentElement.scrollHeight")
-    #         self.driver.set_window_size(width, height)
-    #         # 是否需要超时等待
-    #         time.sleep(1000)
-    #         # 保存的截图名字
-    #         current_milli_time = int(round(time.time() * 1000))
-    #         pic_name = str(current_milli_time) + '__screenshot.png'
-    #         self.driver.save_screenshot(pic_name)
-    #         return pic_name
-    #         # end
-    #     except Exception as e:
-    #         logger.warning("screenshot failed,close driver", e)
-    #         self.driver.quit()
-    #         return None
-    #
-    #     finally:
-    #         if self.driver:
-    #             self.driver.quit()
+
 
     def check_and_login(self):
         logger.info(f"step 1: login check")
