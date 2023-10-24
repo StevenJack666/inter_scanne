@@ -395,3 +395,5 @@ JavaScript error: resource://gre/modules/TorControlPort.sys.mjs, line 316: TorEr
 2023-10-24 21:19:38.341 plugin-container[75893:130050] Failed to get font faces: (
     "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
 ).
+1698154535592	Marionette	INFO	Stopped listening on port 51395
+JavaScript error: resource://gre/modules/TorControlPort.sys.mjs, line 316: TorError: authenticate  -> 515 Authentication failed: Password did not match HashedControlPassword *or* authentication cookie.

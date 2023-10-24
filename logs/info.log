@@ -212,3 +212,37 @@ query_cookies_str_format=Bearer %s
 2023-10-24 21:19:39,347 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
 2023-10-24 21:20:14,904 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
 2023-10-24 21:20:44,921 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:21:14,931 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:21:44,950 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:22:14,956 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:151] - WARNING: image load failed, retry=5
+2023-10-24 21:22:19,231 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:22:49,250 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:23:19,271 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:23:49,290 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:24:19,310 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:24:49,316 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:151] - WARNING: image load failed, retry=4
+2023-10-24 21:24:53,956 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:25:23,979 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:25:54,003 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:26:24,019 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:26:54,040 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:27:24,044 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:151] - WARNING: image load failed, retry=3
+2023-10-24 21:27:51,364 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:28:21,380 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:28:51,391 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:29:21,409 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:29:51,426 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:30:21,431 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:151] - WARNING: image load failed, retry=2
+2023-10-24 21:30:28,922 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:30:58,946 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:31:28,959 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:31:58,976 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:32:28,994 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:32:58,999 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:151] - WARNING: image load failed, retry=1
+2023-10-24 21:33:05,464 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:33:35,481 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:34:05,499 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:34:35,512 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:35:05,529 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:35:35,535 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:158] - ERROR: check error , can not get captcha image
+2023-10-24 21:35:35,743 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is check error , can not get captcha image
