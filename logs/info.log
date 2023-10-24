@@ -1,5 +1,5 @@
-2023-10-23 15:38:08,743 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_changan,run_type is once
-2023-10-23 15:38:08,744 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:56] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f7b845ded90>
+2023-10-24 20:35:31,813 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-10-24 20:35:31,814 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fed681cbed0>
 protocol=http
 keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
 base_type=darknet
@@ -9,7 +9,35 @@ alter_type=email
 to_addrs=zhangchaoss122@163.com
 error_addrs=zhangchaoss122@163.com
 zh_type=长安不夜城
-crux_key=
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangchao/devops/browser-driver/geckodiver/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-10-24 20:35:31,814 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/handler/cabyc/changan_handler.py[line:43] - INFO: 使用TOR浏览器登录
+2023-10-24 20:35:31,815 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-10-24 20:35:31,816 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/tools/tor_tool.py[line:71] - INFO: start init webdriver
+2023-10-24 20:35:31,866 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver'
+2023-10-24 20:36:21,794 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-10-24 20:36:21,795 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7feb8030f750>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
 run_interval=1800
 proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
 tor_enable=True
@@ -24,70 +52,17 @@ index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
 username=mzzlimuzi
 passwd=T@ianqi6997091
 query_cookies_str_format=Bearer %s
-task_id=1
-2023-10-23 15:38:08,744 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:51] - INFO: 使用TOR浏览器登录
-2023-10-23 15:38:08,745 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
-2023-10-23 15:38:11,863 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:96] - INFO: close alert
-2023-10-23 15:38:11,879 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:106] - INFO: check page load complete
-2023-10-23 15:38:16,534 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:113] - INFO: success connect tor
-2023-10-23 15:38:41,835 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:99] - INFO: step 1: login check
-2023-10-23 15:38:41,852 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:39:11,868 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:39:41,878 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:40:11,901 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:40:41,916 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:41:11,923 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:196] - WARNING: image load failed, retry=5
-2023-10-23 15:41:19,425 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:41:49,441 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:42:19,465 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:42:49,488 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:43:19,519 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:43:49,526 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:196] - WARNING: image load failed, retry=4
-2023-10-23 15:43:54,602 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:44:24,627 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:44:54,646 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:45:24,670 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:45:54,691 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:46:24,698 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:196] - WARNING: image load failed, retry=3
-2023-10-23 15:46:29,717 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:46:59,733 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:47:29,754 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:47:59,775 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:48:29,797 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:48:59,800 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:196] - WARNING: image load failed, retry=2
-2023-10-23 15:49:04,556 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:49:34,574 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:50:04,596 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:50:34,617 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:51:04,633 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:51:34,635 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:196] - WARNING: image load failed, retry=1
-2023-10-23 15:51:39,443 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:52:09,462 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:52:39,485 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:53:09,503 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:53:39,524 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-23 15:54:09,529 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:203] - ERROR: check error , can not get captcha image
-2023-10-23 15:54:09,729 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:41] - ERROR: once run error, error msg is check error , can not get captcha image , msgTraceback (most recent call last):
-  File "/Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py", line 34, in run
-    handler_list[key](jobconf).run(id=task_id)
-  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 427, in run
-    if not self.login_with_tor_headless():
-  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 60, in login_with_tor_headless
-    return self.check_and_login()
-  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 100, in check_and_login
-    self.check()
-  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/decorator.py", line 232, in fun
-    return caller(func, *(extras + args), **kw)
-  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py", line 74, in retry_decorator
-    logger)
-  File "/Users/zhangmingming/pyProjects/vcrawl/venv/lib/python3.7/site-packages/retry/api.py", line 33, in __retry_internal
-    return f()
-  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 206, in check
-    raise Exception("check error , can not get captcha image")
-Exception: check error , can not get captcha image
-
-2023-10-24 10:19:12,292 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_changan,run_type is once
-2023-10-24 10:19:12,292 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:56] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fbc3d380810>
+2023-10-24 20:36:21,796 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/handler/cabyc/changan_handler.py[line:43] - INFO: 使用TOR浏览器登录
+2023-10-24 20:36:21,796 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-10-24 20:36:21,797 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/tools/tor_tool.py[line:71] - INFO: start init webdriver
+2023-10-24 20:36:25,905 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/tools/tor_tool.py[line:86] - INFO: close alert
+2023-10-24 20:36:26,016 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/tools/tor_tool.py[line:95] - INFO: check page load complete
+2023-10-24 20:36:31,736 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/tools/tor_tool.py[line:101] - INFO: success connect tor
+2023-10-24 20:36:38,018 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/handler/cabyc/changan_handler.py[line:57] - INFO: step 1: login check
+2023-10-24 20:36:38,036 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 20:37:08,059 - /Users/zhangmingming/pyProjects/爬虫项目/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 20:37:52,249 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-10-24 20:37:55,875 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fbce054afd0>
 protocol=http
 keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
 base_type=darknet
@@ -97,7 +72,6 @@ alter_type=email
 to_addrs=zhangchaoss122@163.com
 error_addrs=zhangchaoss122@163.com
 zh_type=长安不夜城
-crux_key=
 run_interval=1800
 proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
 tor_enable=True
@@ -112,46 +86,129 @@ index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
 username=mzzlimuzi
 passwd=T@ianqi6997091
 query_cookies_str_format=Bearer %s
-task_id=1
-2023-10-24 10:19:12,293 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:51] - INFO: 使用TOR浏览器登录
-2023-10-24 10:19:12,293 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:61] - INFO: init browser option
-2023-10-24 10:21:03,840 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:96] - INFO: close alert
-2023-10-24 10:21:09,622 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:106] - INFO: check page load complete
-2023-10-24 10:21:13,135 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:113] - INFO: success connect tor
-2023-10-24 10:21:36,117 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:99] - INFO: step 1: login check
-2023-10-24 10:21:36,133 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:22:06,151 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:22:36,179 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:23:06,089 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:23:36,111 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:24:06,117 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:196] - WARNING: image load failed, retry=5
-2023-10-24 10:24:10,574 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:24:40,594 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:25:10,616 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:25:40,642 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:26:10,662 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:26:40,668 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:196] - WARNING: image load failed, retry=4
-2023-10-24 10:26:45,397 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:27:15,419 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:27:45,439 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:28:15,471 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:28:45,487 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:29:15,494 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:196] - WARNING: image load failed, retry=3
-2023-10-24 10:29:21,767 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:29:51,785 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:30:21,804 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:30:51,822 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:31:21,837 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:31:51,839 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:196] - WARNING: image load failed, retry=2
-2023-10-24 10:31:56,514 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:32:26,534 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:32:56,546 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:33:26,566 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:33:56,585 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:34:26,592 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:196] - WARNING: image load failed, retry=1
-2023-10-24 10:34:31,006 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:35:01,020 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:35:31,039 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:36:01,056 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:36:31,072 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:272] - INFO: captcha image not exists , retry
-2023-10-24 10:37:01,078 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:203] - ERROR: check error , can not get captcha image
+2023-10-24 20:37:55,875 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:43] - INFO: 使用TOR浏览器登录
+2023-10-24 20:37:55,877 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-10-24 20:37:56,888 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:71] - INFO: start init webdriver
+2023-10-24 20:37:59,805 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:86] - INFO: close alert
+2023-10-24 20:37:59,865 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:95] - INFO: check page load complete
+2023-10-24 20:40:00,349 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:108] - WARNING: get connect page info timeout,close driver
+2023-10-24 20:40:00,894 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:43] - ERROR: failed connect tor, retry connect
+2023-10-24 20:40:00,894 - /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-10-24 20:40:10,899 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:50] - INFO: init browser option
+2023-10-24 20:41:08,932 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:71] - INFO: start init webdriver
+2023-10-24 20:41:12,230 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:86] - INFO: close alert
+2023-10-24 20:41:12,260 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:95] - INFO: check page load complete
+2023-10-24 20:41:19,130 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:101] - INFO: success connect tor
+2023-10-24 20:41:24,150 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:57] - INFO: step 1: login check
+2023-10-24 20:41:24,167 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 20:41:54,182 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 20:42:24,202 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 20:42:54,219 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 20:43:24,229 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 20:43:54,236 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:151] - WARNING: image load failed, retry=5
+2023-10-24 20:44:40,466 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-10-24 20:45:05,463 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fc7c84d2ed0>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-10-24 20:45:05,463 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:43] - INFO: 使用TOR浏览器登录
+2023-10-24 20:45:05,466 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-10-24 20:45:07,025 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-10-24 20:45:09,858 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:87] - INFO: close alert
+2023-10-24 20:45:09,883 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:96] - INFO: check page load complete
+2023-10-24 20:46:33,788 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:102] - INFO: success connect tor
+2023-10-24 20:47:49,710 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:57] - INFO: step 1: login check
+2023-10-24 20:48:22,933 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 20:49:13,707 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 20:50:03,281 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 20:51:04,422 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:17:28,103 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-10-24 21:17:31,905 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f7b004b1990>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-10-24 21:17:31,907 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:43] - INFO: 使用TOR浏览器登录
+2023-10-24 21:17:31,909 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-10-24 21:17:35,260 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-10-24 21:17:38,248 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:87] - INFO: close alert
+2023-10-24 21:17:41,682 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:96] - INFO: check page load complete
+2023-10-24 21:17:45,363 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:102] - INFO: success connect tor
+2023-10-24 21:17:57,554 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:57] - INFO: step 1: login check
+2023-10-24 21:18:03,694 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:18:39,992 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:19:20,003 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:19:25,492 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-10-24 21:19:25,493 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7ff791bdb150>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-10-24 21:19:25,493 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:43] - INFO: 使用TOR浏览器登录
+2023-10-24 21:19:25,493 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-10-24 21:19:25,495 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-10-24 21:19:28,548 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:87] - INFO: close alert
+2023-10-24 21:19:28,609 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:96] - INFO: check page load complete
+2023-10-24 21:19:32,274 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:102] - INFO: success connect tor
+2023-10-24 21:19:37,180 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:57] - INFO: step 1: login check
+2023-10-24 21:19:39,347 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:20:14,904 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 21:20:44,921 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry

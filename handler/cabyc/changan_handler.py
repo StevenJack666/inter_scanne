@@ -22,8 +22,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from tools.type_enum import DarkType
-import traceback
+
 
 class ChangAn(BaseHandler):
     good_detail_suffix = '/#/detail?gid=%s'
@@ -40,17 +39,10 @@ class ChangAn(BaseHandler):
         self.passwd = jobconf["login"]["login.passwd"]
         self.query_cookies_str_format = jobconf["login"]["query.cookies.format"]
 
-    """
-    打开tor浏览器驱动
-    使用驱动请求首页
-    
-    """
-
     def login_with_tor_headless(self):
         logger.info("使用TOR浏览器登录")
         # 1、初始化driver
         try:
-            # self.screenshot("https://blog.csdn.net/JNingWei/article/details/78618273")
             self.driver = connect_tor_with_retry(self.firefox_binary, self.geckodriver_path, self.proxies,
                                                  self.headless)
             # 2、 请求主页
@@ -60,39 +52,6 @@ class ChangAn(BaseHandler):
         finally:
             if self.driver:
                 self.driver.quit()
-
-    # # TODO 打开tor浏览器驱动,使用驱动截取图片
-    # def screenshot(self, href):
-    #     logger.info("使用TOR浏览器登录")
-    #     # 1、初始化driver
-    #     try:
-    #         self.driver = connect_tor_with_retry(self.firefox_binary, self.geckodriver_path, self.proxies,
-    #                                              self.headless)
-    #         # 2、 请求主页
-    #         # self.driver.get(self.index_url)
-    #
-    #         # start
-    #         self.driver.get(href)
-    #         # 通过执行脚本，设置滚动条到最大宽度及最大高度
-    #         width = self.driver.execute_script("return document.documentElement.scrollWidth")
-    #         height = self.driver.execute_script("return document.documentElement.scrollHeight")
-    #         self.driver.set_window_size(width, height)
-    #         # 是否需要超时等待
-    #         time.sleep(1000)
-    #         # 保存的截图名字
-    #         current_milli_time = int(round(time.time() * 1000))
-    #         pic_name = str(current_milli_time) + '__screenshot.png'
-    #         self.driver.save_screenshot(pic_name)
-    #         return pic_name
-    #         # end
-    #     except Exception as e:
-    #         logger.warning("screenshot failed,close driver", e)
-    #         self.driver.quit()
-    #         return None
-    #
-    #     finally:
-    #         if self.driver:
-    #             self.driver.quit()
 
     def check_and_login(self):
         logger.info(f"step 1: login check")
@@ -178,9 +137,6 @@ class ChangAn(BaseHandler):
             raise CrawlRuntimeException("can not get login result, retry")
         return login_res_json
 
-    """
-    提取验证码，登陆验证
-    """
     @retry(CrawlRuntimeException, tries=5, delay=20, logger=logger)
     def check(self):
         """
@@ -273,10 +229,6 @@ class ChangAn(BaseHandler):
                 retry_num = retry_num - 1
         return image_data
 
-    """
-    解析验证码内容
-    """
-
     def parse_captcha_image(self, is_for_login=False):
         """
         过滤获取验证码的请求，解析请求体获得图片信息
@@ -307,10 +259,6 @@ class ChangAn(BaseHandler):
 
         return image_data
 
-    '''
-    设置session请求头
-    '''
-
     def get_header(self):
         return {
             "User-Agent": "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0",
@@ -334,12 +282,6 @@ class ChangAn(BaseHandler):
         self.get_single_type(query_path=self.query_path, page=1)
         for page_num in range(2, self.max_pagenum):
             self.get_single_type(query_path=self.query_path, page=page_num)
-
-    """
-    1.爬取数据
-    2.爬取失败，匹配是否由命中关键字的数据，命中发送邮件
-    3.爬取成功：数据标准化，插入数据库
-    """
 
     @retry((RequestException, RemoteDisconnected), tries=5, delay=20, logger=logger)
     def get_single_type(self, query_path: str = "", page: int = 1):
@@ -365,12 +307,7 @@ class ChangAn(BaseHandler):
         for s_data in self.parse_summary(resp_json, page=page):
             CrawlService.insert_crawl_info(s_data)
 
-    """
-    爬取数据标准化，准备入库
-    """
-
     def parse_summary(self, resp_json, page: int = 0):
-        crux_key_tmp = ''
         result = []
         if 'data' in resp_json:
             goods = resp_json['data']['goods']
@@ -384,47 +321,28 @@ class ChangAn(BaseHandler):
                     time_local = time.gmtime(ctime)
                     publish_time = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
                     href = urljoin(self.index_url, self.good_detail_suffix % good_id)
-
-                    self.query_db_for_curl(self.task_id)
-                    for value in self.crux_key:
-                        if value in title:
-                            crux_key_tmp = value
-                        break
-
                     result.append({
-                        "id": time.time(),
-                        "tenant_id": "zhnormal",
-                        "doc_id": good_id,
-                        "content_title": title,
-                        "publish_time": publish_time,
-                        "data_link": href,
+                        "docid": good_id,
+                        "title": title,
                         "publisher": publisher,
-                        "publisher_id": "",
-                        "crux_key": crux_key_tmp,
-                        "origin_data": "",
-                        "image_path": "",
-                        "doc_desc": description,
-                        "crawl_dark_type": self.dtype,
-                        "href_name": f"{page}页{idx}行"
+                        "publish_time": publish_time,
+                        "href": href,
+                        "dtype": self.dtype,
+                        "description": description,
+                        "doc_page_tag": f"{page}页{idx}行"
                     })
                 except Exception as e:
-                    trace_msg = traceback.format_exc()
                     logger.exception(e)
-                    logger.error(f"error page={page},error idx={idx}, trace_msg={trace_msg}")
+                    logger.error(f"error page={page},error idx={idx}")
         if len(result) == 0:
             logger.error(f"parse error, page={page}")
-        dark_type = DarkType.chang_an.name
-        self.send_kafka_producer(result, dark_type)
         return result
 
-
-
-    def run(self, *args, **kwargs):
-        self.task_id = kwargs['id']
+    def run(self):
         self.print_arguments()
         if self.tor_enable:
             if not self.login_with_tor_headless():
-                self.send_error_email(f"长安不夜城登录失败,异常信息:", None)
+                self.send_error_email(f"长安不夜城登录失败,异常信息:{e}", None)
         self.new_session()
         try:
             self.get_all_types()

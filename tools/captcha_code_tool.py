@@ -12,9 +12,6 @@ import time
 from io import BytesIO
 from PIL import Image
 
-"""
-提取图片中的验证码
-"""
 
 def request_captcha_code(image_data):
     begin_time = int(time.time() * 1000)

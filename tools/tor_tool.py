@@ -13,6 +13,7 @@ from selenium.webdriver.firefox.options import Options
 from seleniumwire import webdriver
 from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -36,14 +37,7 @@ def make_new_tor_id(port: int = 9151, proxies="", ip_link="http://icanhazip.com/
         time.sleep(2)
 
 
-'''
-
-打开无头浏览器
-链接驱动
-使用装饰器做失败重试
-
-'''
-@retry(CrawlRuntimeException, tries=5, delay=10, logger=logger)
+@retry(CrawlRuntimeException, tries=10, delay=10, logger=logger)
 def connect_tor_with_retry(firefox_binary, geckodriver_path, proxies, headless=True):
     driver = open_browser_with_headless(firefox_binary, geckodriver_path, proxies, headless)
     if not driver:
@@ -53,10 +47,6 @@ def connect_tor_with_retry(firefox_binary, geckodriver_path, proxies, headless=T
     return driver
 
 
-'''
-初始化浏览器参数
-
-'''
 def open_browser_with_headless(firefox_binary, geckodriver_path, proxies, headless=True):
     logger.info("init browser option")
     firefox_options = Options()
@@ -79,6 +69,7 @@ def open_browser_with_headless(firefox_binary, geckodriver_path, proxies, headle
         'proxy': proxies
     }
     try:
+        logger.info("start init webdriver")
         driver = webdriver.Firefox(options=firefox_options,
                                    firefox_profile=profile,
                                    firefox_binary=binary,
@@ -99,15 +90,13 @@ def open_browser_with_headless(firefox_binary, geckodriver_path, proxies, headle
         alert = driver.switch_to.alert
         alert.dismiss()
     except Exception as e:
-        msg = traceback.format_exc()
-        logger.warning(f"auto close alter error{e}, traceback{msg}")
+        logger.warning(f"auto close alter error{e}")
 
     try:
         logger.info(f"check page load complete")
-        success_text = WebDriverWait(driver, 1200).until(
+        success_text = WebDriverWait(driver, 120).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, '.on'))
         )
-
         # 检测是否成功连接，如果没连接，则关闭driver返回空
         if "Congratulations" in success_text.text:
             logger.info("success connect tor")
@@ -117,8 +106,7 @@ def open_browser_with_headless(firefox_binary, geckodriver_path, proxies, headle
             driver.quit()
             return None
     except Exception as e:
-        msg = traceback.format_exc()
-        logger.warning(f"get connect page info timeout,close driver {e}, trace msg{msg}")
+        logger.warning("get connect page info timeout,close driver")
         driver.quit()
         return None
 
