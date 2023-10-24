@@ -246,3 +246,37 @@ query_cookies_str_format=Bearer %s
 2023-10-24 21:35:05,529 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
 2023-10-24 21:35:35,535 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:158] - ERROR: check error , can not get captcha image
 2023-10-24 21:35:35,743 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:38] - ERROR: once run error, error msg is check error , can not get captcha image
+2023-10-24 22:03:09,355 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:24] - INFO: crawl type is darknet_changan,run_type is once
+2023-10-24 22:03:09,356 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:53] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7fd038a0e910>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+2023-10-24 22:03:09,356 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:43] - INFO: 使用TOR浏览器登录
+2023-10-24 22:03:09,357 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-10-24 22:03:09,358 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-10-24 22:03:12,981 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:87] - INFO: close alert
+2023-10-24 22:03:13,014 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:96] - INFO: check page load complete
+2023-10-24 22:03:16,668 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:102] - INFO: success connect tor
+2023-10-24 22:03:22,119 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:57] - INFO: step 1: login check
+2023-10-24 22:03:22,135 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
+2023-10-24 22:03:52,253 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:227] - INFO: captcha image not exists , retry
