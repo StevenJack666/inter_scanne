@@ -23,7 +23,7 @@ class Config:
     mysql_host = "127.0.0.1"
     mysql_port = 3306
     mysql_usr = "root"
-    mysql_pass = "Zhc6997097"
+    mysql_pass = "Qzhang450000"
     mysql_db = "vcrawl"
 
     # email配置
@@ -37,7 +37,16 @@ class Config:
     img_dir = os.path.join(data_dir, "image")
 
 
+def get_root_path():
+        # 获取文件目录
+   curPath = os.path.abspath(os.path.dirname(__file__))
+   # 获取项目根路径，内容为当前项目的名字
+   rootPath = curPath[:curPath.find("vcrawl/") + len("vcrawl/")]
+   # logger.info("crawler root path: "+rootPath)
+   return rootPath
+
 if __name__ == "__main__":
     from pprint import pprint
 
+    get_root_path()
     pprint(Config.__dict__)

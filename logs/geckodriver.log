@@ -463,3 +463,196 @@ Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+1698198691801	geckodriver	INFO	Listening on 127.0.0.1:59169
+1698198692312	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/mb/6dqbtq096tnchll7h6d9qggr0000gn/T/rust_mozprofilew4pdFM"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.info: SecurityLevel: Listening for messages from NoScript.
+console.info: SecurityLevel: Initializing security-prefs.js
+console.info: SecurityLevel: security-prefs.js initialization complete
+2023-10-25 09:51:32.595 firefox[90658:167550] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+1698198692609	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag -remote-allow-hosts\n"
+console.log: "TorConnect: init()"
+console.log: "TorConnect: Entering Initial state"
+console.log: "TorConnect: Try transitioning from Initial to Disabled"
+WebDriver BiDi listening on ws://localhost:59170
+console.log: "TorConnect: Exited Initial state"
+console.log: "TorConnect: Entering Disabled state"
+1698198692876	Marionette	INFO	Listening on port 59175
+Read port: 59175
+1698198693189	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1698198693192	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"[::ffff:7f00:1]:59168","sslProxy":"[::ffff:7f00:1]:59168"}
+JavaScript warning: resource://gre/modules/RemoteWebNavigation.sys.mjs, line 82: unreachable code after return statement
+2023-10-25 09:51:33.451 plugin-container[90982:168128] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt (t=1.149) [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/RFPHelper.sys.mjs, line 310: NS_NOINTERFACE: Component returned failure code: 0x80004002 (NS_NOINTERFACE) [nsIInterfaceRequestor.getInterface]
+DevTools listening on ws://localhost:59170/devtools/browser/76ead1d7-340f-4824-8f94-f5b8e172fa87
+2023-10-25 09:51:34.462 plugin-container[90983:168203] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+2023-10-25 09:51:34.523 plugin-container[90984:168209] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+2023-10-25 09:51:34.567 plugin-container[90985:168221] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+2023-10-25 09:51:41.929 plugin-container[90986:168314] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+console.error: TorProvider: 
+  Cannot connect to the control port
+  Message: Error: The control socket has been closed: Component returned failure code: 0x804b000d (NS_ERROR_CONNECTION_REFUSED) [nsIScriptableInputStream.available]
+  Stack:
+    #close@resource://gre/modules/TorControlPort.sys.mjs:607:19
+#startMessagePump@resource://gre/modules/TorControlPort.sys.mjs:533:20
+
+JavaScript error: resource://gre/modules/TorControlPort.sys.mjs, line 607: Error: The control socket has been closed: Component returned failure code: 0x804b000d (NS_ERROR_CONNECTION_REFUSED) [nsIScriptableInputStream.available]
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1698199644869	geckodriver	INFO	Listening on 127.0.0.1:59698
+1698199645395	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/mb/6dqbtq096tnchll7h6d9qggr0000gn/T/rust_mozprofileVz0KoE"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.info: SecurityLevel: Listening for messages from NoScript.
+console.info: SecurityLevel: Initializing security-prefs.js
+console.info: SecurityLevel: security-prefs.js initialization complete
+2023-10-25 10:07:25.867 firefox[22031:217847] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+1698199645897	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag -remote-allow-hosts\n"
+console.log: "TorConnect: init()"
+console.log: "TorConnect: Entering Initial state"
+console.log: "TorConnect: Try transitioning from Initial to Disabled"
+WebDriver BiDi listening on ws://localhost:59699
+console.log: "TorConnect: Exited Initial state"
+console.log: "TorConnect: Entering Disabled state"
+1698199646145	Marionette	INFO	Listening on port 59704
+Read port: 59704
+1698199646379	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1698199646383	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"[::ffff:7f00:1]:59697","sslProxy":"[::ffff:7f00:1]:59697"}
+JavaScript warning: resource://gre/modules/RemoteWebNavigation.sys.mjs, line 82: unreachable code after return statement
+2023-10-25 10:07:26.820 plugin-container[22033:217988] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt (t=1.489) [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/RFPHelper.sys.mjs, line 310: NS_NOINTERFACE: Component returned failure code: 0x80004002 (NS_NOINTERFACE) [nsIInterfaceRequestor.getInterface]
+DevTools listening on ws://localhost:59699/devtools/browser/7269d164-6d1b-4fb2-b12a-0af15ebc9dd4
+2023-10-25 10:07:27.833 plugin-container[22034:218064] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+2023-10-25 10:07:27.889 plugin-container[22035:218067] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+2023-10-25 10:07:27.939 plugin-container[22036:218082] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+console.error: TorProvider: 
+  Cannot connect to the control port
+  Message: TorError: authenticate  -> 515 Authentication failed: Password did not match HashedControlPassword *or* authentication cookie.
+  Stack:
+    TorError@resource://gre/modules/TorControlPort.sys.mjs:316:5
+#sendCommandSimple@resource://gre/modules/TorControlPort.sys.mjs:594:13
+
+JavaScript error: resource://gre/modules/TorControlPort.sys.mjs, line 316: TorError: authenticate  -> 515 Authentication failed: Password did not match HashedControlPassword *or* authentication cookie.
+console.error: OnionAlias: 
+  Could not update mappings for channel SecureDropTorOnion2021
+  Message: Error: Could not fetch timestamp for SecureDropTorOnion2021
+  Stack:
+    updateLatestTimestamp@resource:///modules/OnionAliasStore.jsm:105:13
+
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1698199730107	geckodriver	INFO	Listening on 127.0.0.1:59749
+1698199730621	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/mb/6dqbtq096tnchll7h6d9qggr0000gn/T/rust_mozprofile34rWwG"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.info: SecurityLevel: Listening for messages from NoScript.
+console.info: SecurityLevel: Initializing security-prefs.js
+console.info: SecurityLevel: security-prefs.js initialization complete
+2023-10-25 10:08:50.896 firefox[24648:222250] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+1698199730910	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag -remote-allow-hosts\n"
+console.log: "TorConnect: init()"
+console.log: "TorConnect: Entering Initial state"
+console.log: "TorConnect: Try transitioning from Initial to Disabled"
+WebDriver BiDi listening on ws://localhost:59750
+console.log: "TorConnect: Exited Initial state"
+console.log: "TorConnect: Entering Disabled state"
+1698199731157	Marionette	INFO	Listening on port 59755
+Read port: 59755
+1698199731466	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1698199731468	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"[::ffff:7f00:1]:59748","sslProxy":"[::ffff:7f00:1]:59748"}
+JavaScript warning: resource://gre/modules/RemoteWebNavigation.sys.mjs, line 82: unreachable code after return statement
+2023-10-25 10:08:51.707 plugin-container[24650:222384] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt (t=1.103) [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/RFPHelper.sys.mjs, line 310: NS_NOINTERFACE: Component returned failure code: 0x80004002 (NS_NOINTERFACE) [nsIInterfaceRequestor.getInterface]
+DevTools listening on ws://localhost:59750/devtools/browser/bba84d87-c745-4308-87e1-5b9e39da9fa6
+2023-10-25 10:08:52.721 plugin-container[24651:222454] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+2023-10-25 10:08:52.777 plugin-container[24652:222457] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+2023-10-25 10:08:52.823 plugin-container[24653:222472] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+2023-10-25 10:08:57.138 plugin-container[24976:222990] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+console.error: TorProvider: 
+  Cannot connect to the control port
+  Message: TorError: authenticate  -> 515 Authentication failed: Password did not match HashedControlPassword *or* authentication cookie.
+  Stack:
+    TorError@resource://gre/modules/TorControlPort.sys.mjs:316:5
+#sendCommandSimple@resource://gre/modules/TorControlPort.sys.mjs:594:13
+
+JavaScript error: resource://gre/modules/TorControlPort.sys.mjs, line 316: TorError: authenticate  -> 515 Authentication failed: Password did not match HashedControlPassword *or* authentication cookie.
+2023-10-25 10:09:27.251 plugin-container[25943:224545] Failed to get font faces: (
+    "file:///Applications/Tor%20Browser.app/Contents/Resources/fonts/000_README.txt"
+).
+1698200852673	Marionette	INFO	Stopped listening on port 59755
+JavaScript error: resource://gre/modules/TorControlPort.sys.mjs, line 316: TorError: authenticate  -> 515 Authentication failed: Password did not match HashedControlPassword *or* authentication cookie.

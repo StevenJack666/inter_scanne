@@ -3,7 +3,8 @@
 from setting import *
 from tools.config_parser import CrawlConfigParser
 from tools.log import *
-
+import traceback
+import sys
 
 class CrawlTask(object):
     def __init__(self, arguments):
@@ -14,6 +15,7 @@ class CrawlTask(object):
             logger.error(f'submit cmd error ,can not find conf file!!{self.arguments}')
             raise Exception(f'submit cmd error ,can not find conf file!!')
         conf_file = self.arguments.get('--conf')
+        task_id = self.arguments.get('--task_id')
         jobconf = CrawlConfigParser()
         workdir = os.getcwd()
         jobconf.read(os.path.join(workdir, conf_file))
@@ -29,10 +31,12 @@ class CrawlTask(object):
 
         try:
             if 'once' == run_type:
-                handler_list[key](jobconf).run()
+                handler_list[key](jobconf).run(id=task_id)
             elif 'forever' == run_type:
                 handler_list[key](jobconf).run_forever()
             else:
                 logger.error(f"can not find the run_type {run_type}")
         except Exception as e:
-            logger.error(f"{run_type} run error, error msg is {e}")
+            msg = traceback.format_exc()
+            logger.error(f"{run_type} run error, error msg is {e} , msg{msg}")
+            sys.exit()

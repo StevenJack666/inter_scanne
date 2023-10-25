@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+# coding=utf-8
+
+from tools.log import *
+
+cur_dirname = os.path.dirname(os.path.abspath(__file__))
+
+class KafkaBase(object):
+    session = None
+
+
+
+    def __init__(self, kafka_conf):
+        self.bootstrap_servers = kafka_conf["kafka"]["address"]
+        logger.info(f"crawl bootstrap_servers is {self.bootstrap_servers}")
+
