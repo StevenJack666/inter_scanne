@@ -7,7 +7,7 @@ cd ../../
 ls -al
 
 
-date_time=$(date +%Y%m%d%H%M%S)
+date_time=$(date +%m_%d_%H_%M)
 echo $date_time
 package_name=${date_time}_vcrawl
 

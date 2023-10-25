@@ -294,12 +294,12 @@ class DarkNetTradingNet(BaseHandler):
                     domain_available = False
         if domain_available:
             self.get_all_types()
-            CrawlService.match_crawl_info(self.keywords, self.dtype, self.to_addrs, self.zh_type, send_dict= {
-                "title": "标题",
-                "publish_time": "发布时间",
-                "publisher": "发布人",
-                "docid": "交易编号",
-            })
+            # CrawlService.match_crawl_info(self.keywords, self.dtype, self.to_addrs, self.zh_type, send_dict= {
+            #     "title": "标题",
+            #     "publish_time": "发布时间",
+            #     "publisher": "发布人",
+            #     "docid": "交易编号",
+            # })
         else:
             self.send_error_email(f"暗网中文网爬虫错误,异常信息:{error_domain_exceptions}", None)
 

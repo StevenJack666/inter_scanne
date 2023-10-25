@@ -319,7 +319,7 @@ class ChangAn(BaseHandler):
         resp_json = json.loads(resp.text)
         if resp_json['code'] != 2000:
             logger.error(f"{resp_json}")
-            CrawlService.match_crawl_info(self.keywords, self.dtype, self.to_addrs, self.zh_type)
+            # CrawlService.match_crawl_info(self.keywords, self.dtype, self.to_addrs, self.zh_type)
             err_msg = f"request code is {resp.status_code},please reset cookies,response={resp.html.html}"
             logger.error(err_msg)
             raise Exception(err_msg)
@@ -398,7 +398,7 @@ class ChangAn(BaseHandler):
         except Exception as e:
             self.send_error_email(f"长安不夜城爬虫错误,异常信息:{e}", None)
             return
-        CrawlService.match_crawl_info(self.keywords, self.dtype, self.to_addrs, self.zh_type)
+        # CrawlService.match_crawl_info(self.keywords, self.dtype, self.to_addrs, self.zh_type)
 
     def run_forever(self):
         pass
