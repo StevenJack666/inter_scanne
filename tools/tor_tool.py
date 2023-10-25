@@ -78,6 +78,7 @@ def open_browser_with_headless(firefox_binary, geckodriver_path, proxies, headle
                                    service_log_path=os.path.join(Config.log_dir, "geckodriver.log"))
     except Exception as e:
         msg = traceback.format_exc()
+        driver.quit()
         logger.error(f"init firefox webdriver error{e}, traceback{msg}")
         return None
 
