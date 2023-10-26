@@ -351,7 +351,8 @@ class ChangAn(BaseHandler):
                     time_local = time.gmtime(ctime)
                     publish_time = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
                     href = urljoin(self.index_url, self.good_detail_suffix % good_id)
-
+                    origin_data = good['title']
+                    pic_path = self.domain + good['pic']
                     self.query_db_for_curl(self.task_id)
                     for value in self.crux_key:
                         if value in title:
@@ -368,8 +369,8 @@ class ChangAn(BaseHandler):
                         "publisher": publisher,
                         "publisher_id": "",
                         "crux_key": crux_key_tmp,
-                        "origin_data": "",
-                        "image_path": "",
+                        "origin_data": origin_data,
+                        "image_path": pic_path,
                         "doc_desc": description,
                         "crawl_dark_type": self.dtype,
                         "href_name": f"{page}页{idx}行"
