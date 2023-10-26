@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding=utf-8
-
+import logging
 import os
 import math
 import gzip
@@ -13,6 +13,7 @@ from handler.base_handler import BaseHandler
 from tools.crawl_service import CrawlService
 from tools.config import CrawlRuntimeException
 from tools.config import Config
+from tools.config import get_root_path
 from requests import RequestException
 from retry import retry
 from tools.log import logger
@@ -24,6 +25,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from tools.type_enum import DarkType
 import traceback
+
 
 class ChangAn(BaseHandler):
     good_detail_suffix = '/#/detail?gid=%s'
@@ -39,7 +41,7 @@ class ChangAn(BaseHandler):
         self.username = jobconf["login"]["login.name"]
         self.passwd = jobconf["login"]["login.passwd"]
         self.query_cookies_str_format = jobconf["login"]["query.cookies.format"]
-
+        self.detail_query_path = jobconf["url"]["detail.query.path"]
     """
     打开tor浏览器驱动
     使用驱动请求首页
@@ -339,6 +341,7 @@ class ChangAn(BaseHandler):
     def parse_summary(self, resp_json, page: int = 0):
         crux_key_tmp = ''
         result = []
+        dark_type = DarkType.chang_an.name
         if 'data' in resp_json:
             goods = resp_json['data']['goods']
             for idx, good in enumerate(goods):
@@ -351,14 +354,25 @@ class ChangAn(BaseHandler):
                     time_local = time.gmtime(ctime)
                     publish_time = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
                     href = urljoin(self.index_url, self.good_detail_suffix % good_id)
-                    origin_data = good['title']
+                    #origin_data = good['title']
                     pic_path = self.domain + good['pic']
                     self.query_db_for_curl(self.task_id)
                     for value in self.crux_key:
                         if value in title:
                             crux_key_tmp = value
                         break
-
+                    detail_data = self.get(self.detail_query_path + good_id, auth_header=self.auth_header)
+                    resp_json_detail = json.loads(detail_data.content)
+                    pic_list = resp_json_detail['data']['pics']
+                    paths = ''
+                    for pic_res in pic_list:
+                        pic = pic_res.get('pic')
+                        if pic is not None and len(pic) != 0:
+                            last_slash_index = pic.rfind('/')
+                            filename = pic[last_slash_index+1:]
+                            image_path = f'{get_root_path()}data/image/changan/{filename}'
+                            self.get_download(pic, auth_header=self.auth_header, img_name=image_path)
+                            paths = f'{image_path},{paths}'
                     result.append({
                         "id": time.time(),
                         "tenant_id": "zhnormal",
@@ -369,20 +383,20 @@ class ChangAn(BaseHandler):
                         "publisher": publisher,
                         "publisher_id": "",
                         "crux_key": crux_key_tmp,
-                        "origin_data": origin_data,
-                        "image_path": pic_path,
+                        "origin_data": resp_json_detail,
+                        "image_path": paths,
                         "doc_desc": description,
                         "crawl_dark_type": self.dtype,
                         "href_name": f"{page}页{idx}行"
                     })
+                    self.send_kafka_producer(result, dark_type)
                 except Exception as e:
                     trace_msg = traceback.format_exc()
                     logger.exception(e)
                     logger.error(f"error page={page},error idx={idx}, trace_msg={trace_msg}")
         if len(result) == 0:
             logger.error(f"parse error, page={page}")
-        dark_type = DarkType.chang_an.name
-        self.send_kafka_producer(result, dark_type)
+
         return result
 
 
