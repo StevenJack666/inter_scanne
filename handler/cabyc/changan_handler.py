@@ -10,7 +10,6 @@ import base64
 from tools.captcha_code_tool import request_captcha_code
 from urllib.parse import urljoin
 from handler.base_handler import BaseHandler
-from tools.crawl_service import CrawlService
 from tools.config import CrawlRuntimeException
 from tools.config import Config
 from tools.config import get_root_path
