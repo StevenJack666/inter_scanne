@@ -1,6 +1,6 @@
 from cnocr import CnOcr
 from pprint import pformat
-import mxnet as mx
+#import mxnet as mx
 from cnocr.line_split import line_split
 
 
@@ -20,12 +20,19 @@ class OcrImage:
     OCR中文识别
     '''
 
-    def scan_cn_image(self, image_path):
+    def ocr_for_single_lines(self, image_path):
         ocr = CnOcr(det_model_name='naive_det')
         if image_path is None:
             return
         res = ocr.ocr(image_path)
-        print("Predicted Chars:", res)
+        print(res)
+        result = []
+        for jb in res:
+            print(jb['text'])
+            result.append(jb['text'])
+        print("Predicted Chars:", result)
+        return result
+
 
     '''
     OCR英文识别
@@ -73,18 +80,18 @@ class OcrImage:
 
 
 
-    def ocr_for_single_lines(self, img_fp):
+    def scan_cn_image(self, img_fp):
 
-        ocr = CnOcr()
-        img = mx.image.imread(img_fp, 1).asnumpy()
-        line_imgs = line_split(img, blank=True)
-        line_img_list = [line_img for line_img, _ in line_imgs]
-        res = ocr.ocr_for_single_lines(line_img_list)
-        result = []
-        for jb in res:
-            print(jb['text'])
-            result.append(jb['text'])
-        return result
+        # ocr = CnOcr()
+        # img = mx.image.imread(img_fp, 1).asnumpy()
+        # line_imgs = line_split(img, blank=True)
+        # line_img_list = [line_img for line_img, _ in line_imgs]
+        # res = ocr.ocr_for_single_lines(line_img_list)
+        # result = []
+        # for jb in res:
+        #     print(jb['text'])
+        #     result.append(jb['text'])
+        return ''
 
 '''
 OCR测试
