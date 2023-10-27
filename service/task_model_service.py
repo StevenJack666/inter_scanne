@@ -2,8 +2,7 @@
 # coding=utf-8
 
 
-import pandas as pd
-from tools.send_email import send_mail
+
 from tools.log import *
 from mapper.monitor_task_dao import MonitorTaskDao
 
