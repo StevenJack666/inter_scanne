@@ -84,7 +84,7 @@ class TelegramGetMessage(TelegramBase):
                 item["publish_time"] = self.convert_time(time_tmp)
                 item["group_name"] = group_name
                 item["tenant_id"] = "zhnormal"
-
+                item["type"] = "2"
                 # TODO  比对关键字，并给数据打标
                 for value in self.crux_key:
                     if value in message:

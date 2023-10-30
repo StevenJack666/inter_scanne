@@ -272,6 +272,7 @@ class DarkNetTradingNet(BaseHandler):
                     "crux_key": crux_key_tmp,
                     "doc_desc": "",
                     "origin_data": "",
+                    "type": "1",
                     "image_path": paths,
                     "crawl_dark_type": self.dtype,
                     "href_name": f"{page}页{idx}行",

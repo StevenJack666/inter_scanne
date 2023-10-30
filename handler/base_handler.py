@@ -181,14 +181,13 @@ class BaseHandler(object):
         for res in ocr_result:
             sample_datas.append({
                 "original_event_id": id_millis,
-                "tenanted_id": "zhnormal",
+                "tenant_id": "zhnormal",
                 "phone_num": "",
                 "bind_id": "",
                 "user_name": "",
                 "user_id": "",
                 "identity_id": "",
                 "home_addr": "",
-                "type": "1",
                 "original_data": res
             })
         return sample_datas

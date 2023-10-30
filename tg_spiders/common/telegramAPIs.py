@@ -593,14 +593,14 @@ class TelegramAPIs(object):
         for res in ocr_result:
             sample_datas.append({
                 "original_event_id": id_millis,
-                "tenanted_id": "zhnormal",
+                "tenant_id": "zhnormal",
                 "phone_num": "",
                 "bind_id": "1",
                 "user_name": "",
                 "user_id": "",
                 "identity_id": "1",
                 "home_addr": "1",
-                "type": "2",
+
                 "original_data": res
             })
         return sample_datas
