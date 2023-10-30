@@ -188,7 +188,7 @@ class BaseHandler(object):
                 "user_id": "",
                 "identity_id": "",
                 "home_addr": "",
-                "type": "dark",
+                "type": "1",
                 "original_data": res
             })
         return sample_datas
