@@ -384,6 +384,7 @@ class ChangAn(BaseHandler):
                         "publisher_id": "",
                         "crux_key": crux_key_tmp,
                         "origin_data": resp_json_detail,
+                        "type": "1",
                         "image_path": paths,
                         "doc_desc": description,
                         "crawl_dark_type": self.dtype,
