@@ -10,7 +10,7 @@ import base64
 from tools.captcha_code_tool import request_captcha_code
 from urllib.parse import urljoin
 from handler.base_handler import BaseHandler
-from tools.crawl_service import CrawlService
+from datetime import datetime
 from tools.config import CrawlRuntimeException
 from tools.config import Config
 from tools.config import get_root_path
@@ -352,10 +352,10 @@ class ChangAn(BaseHandler):
                     ctime = good['ctime']
                     description = good['intro']
                     time_local = time.gmtime(ctime)
-                    publish_time = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
+                    publish_time_tmp = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
+                    time_tuple = time.strptime(publish_time_tmp, '%Y-%m-%d %H:%M:%S')
+                    publish_time_timestamp = int(time.mktime(time_tuple)*1000)
                     href = urljoin(self.index_url, self.good_detail_suffix % good_id)
-                    #origin_data = good['title']
-                    pic_path = self.domain + good['pic']
                     self.query_db_for_curl(self.task_id)
                     for value in self.crux_key:
                         if value in title:
@@ -373,17 +373,19 @@ class ChangAn(BaseHandler):
                             image_path = f'{get_root_path()}data/image/changan/{filename}'
                             self.get_download(pic, auth_header=self.auth_header, img_name=image_path)
                             paths = f'{image_path},{paths}'
+                    tmp_ori = resp_json_detail['data']['intro']
+                    id_millis = str(int(round(time.time() * 1000)))
                     result.append({
-                        "id": time.time(),
+                        "id": id_millis,
                         "tenant_id": "zhnormal",
                         "doc_id": good_id,
                         "content_title": title,
-                        "publish_time": publish_time,
+                        "publish_time": publish_time_timestamp,
                         "data_link": href,
                         "publisher": publisher,
                         "publisher_id": "",
                         "crux_key": crux_key_tmp,
-                        "origin_data": str(resp_json_detail),
+                        "origin_data": tmp_ori,
                         "image_path": paths,
                         "doc_desc": description,
                         "crawl_dark_type": self.dtype,
@@ -399,7 +401,12 @@ class ChangAn(BaseHandler):
 
         return result
 
-
+    def time_convert(self, publish_time):
+        # 将字符串转换为 datetime 对象
+        time_obj = datetime.strptime(publish_time, "%Y-%m-%d")
+        # 将 datetime 对象转换为时间戳
+        publish_time_stamp = int(time_obj.timestamp() * 1000)
+        return publish_time_stamp
 
     def run(self, *args, **kwargs):
         self.task_id = kwargs['id']
