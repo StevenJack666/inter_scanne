@@ -341,7 +341,7 @@ class ChangAn(BaseHandler):
     def parse_summary(self, resp_json, page: int = 0):
         crux_key_tmp = ''
         result = []
-        dark_type = DarkType.chang_an.name
+        dark_type = DarkType.chang_an.value
         if 'data' in resp_json:
             goods = resp_json['data']['goods']
             for idx, good in enumerate(goods):
@@ -383,7 +383,7 @@ class ChangAn(BaseHandler):
                         "publisher": publisher,
                         "publisher_id": "",
                         "crux_key": crux_key_tmp,
-                        "origin_data": resp_json_detail,
+                        "origin_data": str(resp_json_detail),
                         "image_path": paths,
                         "doc_desc": description,
                         "crawl_dark_type": self.dtype,
