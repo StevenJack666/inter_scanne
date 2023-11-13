@@ -66,18 +66,41 @@ class TelegramBase(object):
     发送kafka消息
     '''
     def send_kafka_producer(self, data: list, tg_type):
-
-        crawler_producer = CrawlerProducer(self.job_conf, self.topic)
         # 生成消息id和时间戳
         millis = int(round(time.time() * 1000))
         result_scan_mes_json = {"message_id": tg_type+"_"+str(millis), "type": tg_type, "timestamp": str(millis)}
         result_scan_mes_json["data"] = data
         if tg_type != '2':
+            crawler_producer = CrawlerProducer(self.job_conf, self.topic)
             crawler_producer.async_producer(result_scan_mes_json)
         else:
             time.sleep(1)
-            resp = requests.post(scanner_url, headers=scanner_headers, data=json.dumps(result_scan_mes_json))
+            self.upload_files(data)
+            resp = requests.post(scanner_tg_mes_url, headers=scanner_headers, data=json.dumps(result_scan_mes_json))
             print(resp)
+
+    def upload_files(self, data):
+
+        for item in data:
+            if data is None:
+                continue
+            file_path = item.get("image_path", "")
+            # 指定上传的文件路径
+            if file_path is None or file_path == '':
+                return
+            # 构建HTTP请求
+            files = {'file': open(file_path, 'rb')}
+
+            # 发送POST请求
+            response = requests.post(scanner_tg_image_url, headers=scanner_image_headers, files=files)
+            decoded_string = response.content.decode('utf-8')
+            tmp = json.loads(decoded_string)
+            code = tmp['code']
+            data = tmp['data']
+            if code == 200:
+                filePath = data['filePath']
+                item["image_path"] = filePath
+
 
     # 获得根路径
     def get_root_path(self):
@@ -86,4 +109,9 @@ class TelegramBase(object):
         # 获取项目根路径，内容为当前项目的名字
         rootPath = curPath[:curPath.find("vcrawl/") + len("vcrawl/")]
         return rootPath
+
+
+if __name__ == "__main__":
+    base = TelegramBase('../../conf/tg_config.json', '../../conf/application.conf')
+    base.upload_files('/Users/zhangmingming/Desktop/test.png')
 

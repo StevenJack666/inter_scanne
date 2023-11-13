@@ -28,9 +28,7 @@ class OcrImage:
         print(res)
         result = []
         for jb in res:
-            print(jb['text'])
             result.append(jb['text'])
-        print("Predicted Chars:", result)
         return result
 
 
