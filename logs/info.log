@@ -1598,3 +1598,160 @@ ValueError: time data '' does not match format '%Y-%m-%d'
     publish_order_url = resp_origin.html.find("table.table_goods_area > tr")[0].find("a", first=True).links.pop()
 IndexError: list index out of range
 
+2023-11-08 17:35:56,062 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:22] - INFO: tg tg type is get_message,task_id is 1
+2023-11-08 17:35:57,912 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-11-08 17:35:59,597 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:52] - INFO: channel_id is caisheen88888 
+2023-11-08 17:35:59,616 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:57] - INFO: query channel_group_detail error <Model: TgGroupModel> instance matching query does not exist:
+SQL: SELECT `t1`.`id`, `t1`.`channel_id`, `t1`.`tenant_id`, `t1`.`title`, `t1`.`username`, `t1`.`hex_url`, `t1`.`offset_date`, `t1`.`megagroup`, `t1`.`member_count`, `t1`.`channel_description`, `t1`.`last_message_id`, `t1`.`is_public`, `t1`.`join_date`, `t1`.`create_time`, `t1`.`update_time` FROM `tg_channel_group` AS `t1` WHERE (`t1`.`username` = %s) LIMIT %s OFFSET %s
+Params: ['caisheen88888', 1, 0] 
+2023-11-08 17:35:59,616 - /Users/zhangmingming/pyProjects/vcrawl/service/tg_group_model_service.py[line:17] - INFO: 没有频道数据信息
+2023-11-08 17:36:52,741 - /Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_base.py[line:15] - INFO: crawl bootstrap_servers is 192.168.1.64:9092,192.168.1.7:9092,192.168.1.150:9092
+2023-11-08 17:37:34,262 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:31] - ERROR: get_message run error, error msg is KafkaTimeoutError: Failed to update metadata after 10.0 secs., msg_trackback is Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py", line 27, in run
+    tg_handler_list[action](self.session_file, self.app_conf).run(id=task_id)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 142, in run
+    self.telegram_get_message()
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 61, in telegram_get_message
+    last_message_id_tmp = self.print_res(message_res, item['username'])
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 95, in print_res
+    self.send_kafka_producer(data, tg_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_base.py", line 75, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-11-08 17:38:05,098 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:22] - INFO: tg tg type is get_message,task_id is 1
+2023-11-08 17:38:06,167 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-11-08 17:38:07,141 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:52] - INFO: channel_id is caisheen88888 
+2023-11-08 17:38:07,153 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:57] - INFO: query channel_group_detail error <Model: TgGroupModel> instance matching query does not exist:
+SQL: SELECT `t1`.`id`, `t1`.`channel_id`, `t1`.`tenant_id`, `t1`.`title`, `t1`.`username`, `t1`.`hex_url`, `t1`.`offset_date`, `t1`.`megagroup`, `t1`.`member_count`, `t1`.`channel_description`, `t1`.`last_message_id`, `t1`.`is_public`, `t1`.`join_date`, `t1`.`create_time`, `t1`.`update_time` FROM `tg_channel_group` AS `t1` WHERE (`t1`.`username` = %s) LIMIT %s OFFSET %s
+Params: ['caisheen88888', 1, 0] 
+2023-11-08 17:38:07,153 - /Users/zhangmingming/pyProjects/vcrawl/service/tg_group_model_service.py[line:17] - INFO: 没有频道数据信息
+2023-11-08 17:38:26,780 - /Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_base.py[line:15] - INFO: crawl bootstrap_servers is 192.168.1.64:9092,192.168.1.7:9092,192.168.1.150:9092
+2023-11-08 17:39:14,415 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:31] - ERROR: get_message run error, error msg is KafkaTimeoutError: Failed to update metadata after 10.0 secs., msg_trackback is Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py", line 27, in run
+    tg_handler_list[action](self.session_file, self.app_conf).run(id=task_id)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 142, in run
+    self.telegram_get_message()
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 61, in telegram_get_message
+    last_message_id_tmp = self.print_res(message_res, item['username'])
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 95, in print_res
+    self.send_kafka_producer(data, tg_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_base.py", line 75, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-11-08 17:44:01,111 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:22] - INFO: tg tg type is get_message,task_id is 1
+2023-11-08 17:44:02,430 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-11-08 17:44:04,056 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:52] - INFO: channel_id is caisheen88888 
+2023-11-08 17:44:04,075 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:57] - INFO: query channel_group_detail error <Model: TgGroupModel> instance matching query does not exist:
+SQL: SELECT `t1`.`id`, `t1`.`channel_id`, `t1`.`tenant_id`, `t1`.`title`, `t1`.`username`, `t1`.`hex_url`, `t1`.`offset_date`, `t1`.`megagroup`, `t1`.`member_count`, `t1`.`channel_description`, `t1`.`last_message_id`, `t1`.`is_public`, `t1`.`join_date`, `t1`.`create_time`, `t1`.`update_time` FROM `tg_channel_group` AS `t1` WHERE (`t1`.`username` = %s) LIMIT %s OFFSET %s
+Params: ['caisheen88888', 1, 0] 
+2023-11-08 17:44:04,076 - /Users/zhangmingming/pyProjects/vcrawl/service/tg_group_model_service.py[line:17] - INFO: 没有频道数据信息
+2023-11-08 17:44:19,591 - /Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_base.py[line:15] - INFO: crawl bootstrap_servers is 192.168.1.105:9004,192.168.1.105:9005,192.168.1.105:9006
+2023-11-08 17:45:26,070 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:31] - ERROR: get_message run error, error msg is KafkaTimeoutError: Failed to update metadata after 10.0 secs., msg_trackback is Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py", line 27, in run
+    tg_handler_list[action](self.session_file, self.app_conf).run(id=task_id)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 142, in run
+    self.telegram_get_message()
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 61, in telegram_get_message
+    last_message_id_tmp = self.print_res(message_res, item['username'])
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 95, in print_res
+    self.send_kafka_producer(data, tg_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_base.py", line 75, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-11-09 13:54:40,124 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:22] - INFO: tg tg type is get_message,task_id is 1
+2023-11-09 13:55:53,432 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:22] - INFO: tg tg type is get_message,task_id is 1
+2023-11-09 14:46:06,274 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:22] - INFO: tg tg type is get_message,task_id is 1
+2023-11-09 14:46:20,439 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:22] - INFO: tg tg type is get_message,task_id is 1
+2023-11-09 14:46:25,338 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-11-09 14:46:26,713 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:52] - INFO: channel_id is caisheen88888 
+2023-11-09 14:46:26,730 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:57] - INFO: query channel_group_detail error <Model: TgGroupModel> instance matching query does not exist:
+SQL: SELECT `t1`.`id`, `t1`.`channel_id`, `t1`.`tenant_id`, `t1`.`title`, `t1`.`username`, `t1`.`hex_url`, `t1`.`offset_date`, `t1`.`megagroup`, `t1`.`member_count`, `t1`.`channel_description`, `t1`.`last_message_id`, `t1`.`is_public`, `t1`.`join_date`, `t1`.`create_time`, `t1`.`update_time` FROM `tg_channel_group` AS `t1` WHERE (`t1`.`username` = %s) LIMIT %s OFFSET %s
+Params: ['caisheen88888', 1, 0] 
+2023-11-09 14:46:26,730 - /Users/zhangmingming/pyProjects/vcrawl/service/tg_group_model_service.py[line:17] - INFO: 没有频道数据信息
+2023-11-09 14:46:40,847 - /Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_base.py[line:15] - INFO: crawl bootstrap_servers is 116.63.10.153:9004,116.63.10.153:9005,116.63.10.153:9006
+2023-11-09 15:23:30,279 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:22] - INFO: tg tg type is get_message,task_id is 1
+2023-11-09 15:23:30,996 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-11-09 15:23:31,973 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:52] - INFO: channel_id is caisheen88888 
+2023-11-09 15:23:31,989 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:57] - INFO: query channel_group_detail error <Model: TgGroupModel> instance matching query does not exist:
+SQL: SELECT `t1`.`id`, `t1`.`channel_id`, `t1`.`tenant_id`, `t1`.`title`, `t1`.`username`, `t1`.`hex_url`, `t1`.`offset_date`, `t1`.`megagroup`, `t1`.`member_count`, `t1`.`channel_description`, `t1`.`last_message_id`, `t1`.`is_public`, `t1`.`join_date`, `t1`.`create_time`, `t1`.`update_time` FROM `tg_channel_group` AS `t1` WHERE (`t1`.`username` = %s) LIMIT %s OFFSET %s
+Params: ['caisheen88888', 1, 0] 
+2023-11-09 15:23:31,989 - /Users/zhangmingming/pyProjects/vcrawl/service/tg_group_model_service.py[line:17] - INFO: 没有频道数据信息
+2023-11-09 15:23:44,015 - /Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_base.py[line:15] - INFO: crawl bootstrap_servers is 116.63.10.153:9004,116.63.10.153:9005,116.63.10.153:9006
+2023-11-09 15:24:05,131 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:31] - ERROR: get_message run error, error msg is KafkaTimeoutError: Failed to update metadata after 10.0 secs., msg_trackback is Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py", line 27, in run
+    tg_handler_list[action](self.session_file, self.app_conf).run(id=task_id)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 142, in run
+    self.telegram_get_message()
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 61, in telegram_get_message
+    last_message_id_tmp = self.print_res(message_res, item['username'])
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 95, in print_res
+    self.send_kafka_producer(data, tg_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_base.py", line 75, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-11-09 18:45:28,350 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:22] - INFO: tg tg type is get_message,task_id is 1
+2023-11-09 18:45:29,109 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-11-09 18:45:30,023 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:52] - INFO: channel_id is xliluo 
+2023-11-09 18:45:56,287 - /Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_base.py[line:15] - INFO: crawl bootstrap_servers is 116.63.10.153:9004,116.63.10.153:9005,116.63.10.153:9006
+2023-11-09 18:46:43,551 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:31] - ERROR: get_message run error, error msg is KafkaTimeoutError: Failed to update metadata after 10.0 secs., msg_trackback is Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py", line 27, in run
+    tg_handler_list[action](self.session_file, self.app_conf).run(id=task_id)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 142, in run
+    self.telegram_get_message()
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 61, in telegram_get_message
+    last_message_id_tmp = self.print_res(message_res, item['username'])
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_get_message.py", line 95, in print_res
+    self.send_kafka_producer(data, tg_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tg_spiders/cli/telegram_base.py", line 75, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-11-10 17:08:07,185 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:22] - INFO: tg tg type is get_message,task_id is 1
+2023-11-10 17:08:07,954 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-11-10 17:08:09,014 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:52] - INFO: channel_id is xliluo 
+2023-11-10 17:08:30,918 - /Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_base.py[line:15] - INFO: crawl bootstrap_servers is 192.168.1.64:9092,192.168.1.7:9092,192.168.1.150:9092
+2023-11-10 17:08:58,023 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:22] - INFO: tg tg type is get_message,task_id is 1
+2023-11-10 17:08:58,733 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-11-10 17:08:59,592 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:52] - INFO: channel_id is xliluo 
+2023-11-10 17:09:21,552 - /Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_base.py[line:15] - INFO: crawl bootstrap_servers is 192.168.1.64:9092,192.168.1.7:9092,192.168.1.150:9092
+2023-11-10 17:11:29,700 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:22] - INFO: tg tg type is get_message,task_id is 1
+2023-11-10 17:11:30,444 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-11-10 17:11:31,367 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:52] - INFO: channel_id is xliluo 
+2023-11-10 17:11:42,623 - /Users/zhangmingming/pyProjects/vcrawl/task/tg_crawl_task.py[line:22] - INFO: tg tg type is get_message,task_id is 1
+2023-11-10 17:11:43,336 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-11-10 17:11:44,354 - /Users/zhangmingming/pyProjects/vcrawl/mapper/tg_channel_group_dao.py[line:52] - INFO: channel_id is xliluo 
+2023-11-10 17:12:26,372 - /Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_base.py[line:15] - INFO: crawl bootstrap_servers is 192.168.1.64:9092,192.168.1.7:9092,192.168.1.150:9092

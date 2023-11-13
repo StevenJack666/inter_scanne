@@ -399,7 +399,7 @@ class ChangAn(BaseHandler):
                         "publish_time": publish_time,
                         "data_link": href,
                         "publisher": publisher,
-                        "publisher_id": "",
+                        "publisher_id": publisher,
                         "crux_key": crux_key_tmp,
                         "origin_data": "",
                         "image_path": "",

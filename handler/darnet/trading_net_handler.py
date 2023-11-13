@@ -268,7 +268,7 @@ class DarkNetTradingNet(BaseHandler):
                     "publish_time": self.time_convert(detail.get("publish_time")),
                     "data_link": urljoin(self.index_url, href),
                     "publisher": datas.get("user"),
-                    "publisher_id": "",
+                    "publisher_id": datas.get("user"),
                     "crux_key": crux_key_tmp,
                     "doc_desc": "",
                     "origin_data": "",

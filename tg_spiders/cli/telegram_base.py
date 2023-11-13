@@ -3,8 +3,8 @@ import json
 from tg_spiders.common.telegramAPIs import *
 from kafka_util.kafka_producer import CrawlerProducer
 from tools.config_parser import CrawlConfigParser
-from tools.type_enum import *
-
+from tools.config import *
+import requests
 cur_dirname = os.path.dirname(os.path.abspath(__file__))
 
 class TelegramBase(object):
@@ -72,7 +72,12 @@ class TelegramBase(object):
         millis = int(round(time.time() * 1000))
         result_scan_mes_json = {"message_id": tg_type+"_"+str(millis), "type": tg_type, "timestamp": str(millis)}
         result_scan_mes_json["data"] = data
-        crawler_producer.async_producer(result_scan_mes_json)
+        if tg_type != '2':
+            crawler_producer.async_producer(result_scan_mes_json)
+        else:
+            time.sleep(1)
+            resp = requests.post(scanner_url, headers=scanner_headers, data=json.dumps(result_scan_mes_json))
+            print(resp)
 
     # 获得根路径
     def get_root_path(self):
