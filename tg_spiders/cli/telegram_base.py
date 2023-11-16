@@ -5,6 +5,7 @@ from kafka_util.kafka_producer import CrawlerProducer
 from tools.config_parser import CrawlConfigParser
 from tools.config import *
 import requests
+from tools.log import logger
 cur_dirname = os.path.dirname(os.path.abspath(__file__))
 
 class TelegramBase(object):
@@ -74,10 +75,11 @@ class TelegramBase(object):
             crawler_producer = CrawlerProducer(self.job_conf, self.topic)
             crawler_producer.async_producer(result_scan_mes_json)
         else:
-            time.sleep(1)
             self.upload_files(data)
-            resp = requests.post(scanner_tg_mes_url, headers=scanner_headers, data=json.dumps(result_scan_mes_json))
-            print(resp)
+            time.sleep(1)
+            #logger.info(f"tg消息 http开始推送data: {result_scan_mes_json}")
+            resp = requests.post(scanner_tg_mes_url, headers=scanner_headers, data=json.dumps(result_scan_mes_json, ensure_ascii=False).encode('utf-8'))
+            logger.info(f"tg消息 http推送成功{resp.content}")
 
     def upload_files(self, data):
 
@@ -87,12 +89,16 @@ class TelegramBase(object):
             file_path = item.get("image_path", "")
             # 指定上传的文件路径
             if file_path is None or file_path == '':
-                return
+                continue
             # 构建HTTP请求
             files = {'file': open(file_path, 'rb')}
 
             # 发送POST请求
             response = requests.post(scanner_tg_image_url, headers=scanner_image_headers, files=files)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+            time.sleep(1)
+            logger.info(f"图片上传结果：{response.content}")
             decoded_string = response.content.decode('utf-8')
             tmp = json.loads(decoded_string)
             code = tmp['code']

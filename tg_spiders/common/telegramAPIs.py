@@ -595,11 +595,11 @@ class TelegramAPIs(object):
                 "original_event_id": id_millis,
                 "tenant_id": "zhnormal",
                 "phone_num": "",
-                "bind_id": "1",
+                "bind_id": "",
                 "user_name": "",
                 "user_id": "",
-                "identity_id": "1",
-                "home_addr": "1",
+                "identity_id": "",
+                "home_addr": "",
 
                 "original_data": res
             })

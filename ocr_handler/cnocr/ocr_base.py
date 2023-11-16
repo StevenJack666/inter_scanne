@@ -25,7 +25,6 @@ class OcrImage:
         if image_path is None:
             return
         res = ocr.ocr(image_path)
-        print(res)
         result = []
         for jb in res:
             result.append(jb['text'])
