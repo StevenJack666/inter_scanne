@@ -77,8 +77,10 @@ class TelegramBase(object):
         else:
             self.upload_files(data)
             time.sleep(1)
+            json_str = json.dumps(result_scan_mes_json, ensure_ascii=False).encode('utf-8')
+            print(json_str)
             #logger.info(f"tg消息 http开始推送data: {result_scan_mes_json}")
-            resp = requests.post(scanner_tg_mes_url, headers=scanner_headers, data=json.dumps(result_scan_mes_json, ensure_ascii=False).encode('utf-8'))
+            resp = requests.post(scanner_tg_mes_url, headers=scanner_headers, data=json_str)
             logger.info(f"tg消息 http推送成功{resp.content}")
 
     def upload_files(self, data):

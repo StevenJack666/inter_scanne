@@ -166,3 +166,8 @@ less logs/info.log
 2. 长安不夜城登录较为复杂，目前需要人工在本地访问，获取request header内的**Authorization**，更新配置文件中的**url.auth.header**
 3. 如果需要配置调度，结合crontab配置，注意需要将**run_type**设置成**once**。
 4. 由于长安不夜城不能自动登录，如果调度间隔时间过长Authorization会过期(目前2小时内不会过期)，可以将**run_type**设置成**forever**,长期运行。
+
+# 7.构建docker镜像
+1.docker build -t crawl-app .
+2.启动镜像并通过环境变量传参：docker run -it -d --name myimage -e PARAMS="我是参数" my_image
+3.启动镜像并使用命令行传参数：docker run myimage command --option1=value --option2=value
