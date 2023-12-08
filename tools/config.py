@@ -58,9 +58,9 @@ scanner_image_headers = {
         'scantoken': 'MTY5NjA1NjI0MjUzODExMDk3N3wwMjA0ZTc3MjZlODY0ZWY5YjI5MzVjYjc1NTNkOGFhNXxlZDliZmFjMGQzNGVjNWY3MWM5NmIzYzFhZGY1MDY4YWQ5ZGFlMzc4ZmNhOWU5MzY3OGFhZDQ5Mzk5MjUyMzVl',
         'tenantid':'zhnormal'
 }
-scanner_tg_image_url = 'http://116.63.10.153:9001/prod-api/openapi/common/file/upload'
+scanner_tg_image_url = 'https://116.63.10.153:9001/prod-api/openapi/common/file/upload'
 
-scanner_tg_mes_url = 'http://116.63.10.153:9001/prod-api/openapi/leak/sendKafka/tg'
+scanner_tg_mes_url = 'https://116.63.10.153:9001/prod-api/openapi/leak/sendKafka/tg'
 
 
 if __name__ == "__main__":

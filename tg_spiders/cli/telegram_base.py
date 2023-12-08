@@ -80,7 +80,7 @@ class TelegramBase(object):
             json_str = json.dumps(result_scan_mes_json, ensure_ascii=False).encode('utf-8')
             print(json_str)
             #logger.info(f"tg消息 http开始推送data: {result_scan_mes_json}")
-            resp = requests.post(scanner_tg_mes_url, headers=scanner_headers, data=json_str)
+            resp = requests.post(scanner_tg_mes_url, headers=scanner_headers, data=json_str, verify=False)
             logger.info(f"tg消息 http推送成功{resp.content}")
 
     def upload_files(self, data):
@@ -96,7 +96,7 @@ class TelegramBase(object):
             files = {'file': open(file_path, 'rb')}
 
             # 发送POST请求
-            response = requests.post(scanner_tg_image_url, headers=scanner_image_headers, files=files)
+            response = requests.post(scanner_tg_image_url, headers=scanner_image_headers, files=files, verify=False)
             if os.path.isfile(file_path):
                 os.remove(file_path)
             time.sleep(1)
