@@ -89,7 +89,7 @@ class TelegramGetMessage(TelegramBase):
                 for value in self.crux_key:
                     if value in message:
                         item['crux_key'] = value
-                    break
+                        break
                 if item.get('crux_key') is None or item.get('crux_key') == '':
                     item['crux_key'] = ''
                 last_message_id = message_id
