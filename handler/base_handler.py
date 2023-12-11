@@ -179,6 +179,8 @@ class BaseHandler(object):
             return
         sample_datas = []
         for res in ocr_result:
+            if res is None:
+                break
             sample_datas.append({
                 "original_event_id": id_millis,
                 "tenant_id": "zhnormal",

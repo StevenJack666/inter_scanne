@@ -253,9 +253,10 @@ class DarkNetTradingNet(BaseHandler):
                 detail = self.parse_detail(href, parse_tag)
                 self.query_db_for_curl(self.task_id)
                 for value in self.crux_key:
+                    logger.info(f"crux_key属性：{self.crux_key}, value 值：{value}")
                     if value in datas.get("title"):
                         crux_key_tmp = value
-                    break
+                        break
                 # 生成主键id
                 id_millis = str(int(round(time.time() * 1000)))
                 sample_datas, paths = self.ocr_scan(id_millis, detail['image_list'])
