@@ -171,3 +171,12 @@ less logs/info.log
 1.docker build -t crawl-app .
 2.启动镜像并通过环境变量传参：docker run -it -d --name myimage -e PARAMS="我是参数" my_image
 3.启动镜像并使用命令行传参数：docker run myimage command --option1=value --option2=value
+4. docker run -itd -p 3306:3306 --name crawl_mysql \
+-v /data/dockerdata/mysql3306/conf/my.cnf:/etc/my.cnf \
+-v /data/dockerdata/mysql3306/log:/var/log --privileged=true \
+--restart=always -e MYSQL_ROOT_PASSWORD=Qzhang450000 -d mysql:8
+# 8.tg sql
+INSERT INTO tbl_monitor_task (id, task_name, tenant_id, Mon_Tp_Nm, T_FIELD, Acq_Tsk_StTm, Tsk_EdTm_Pnt, Exec_Frq, CRONTAB_EXP_INF, Upload_File_Rte, fileContent,
+                                     Ctg_Rule_DSC, DEL_ST, CREATE_TIME, UPDATE_TIME) VALUES (1, '1', 'zhnormal', '1', '1',
+                                                                                             '2023-09-01 09:28:40', '2023-09-20 09:28:45',
+                                                                                             1, '1', '1', '建行,建设银行,银行,信用卡,贷款,金融,ccb,股票', '1', '1', '2023-09-01 09:29:15', '2023-09-20 15:48:13');
