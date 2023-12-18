@@ -271,8 +271,8 @@ class DarkNetTradingNet(BaseHandler):
                     "publisher": datas.get("user"),
                     "publisher_id": datas.get("user"),
                     "crux_key": crux_key_tmp,
-                    "doc_desc": "",
-                    "origin_data": "",
+                    "doc_desc": self.strToBase64(detail.get("detail_desc")),
+                    "origin_data": self.strToBase64(detail.get("detail_desc")),
                     "image_path": paths,
                     "crawl_dark_type": self.dtype,
                     "href_name": f"{page}页{idx}行",
@@ -300,11 +300,15 @@ class DarkNetTradingNet(BaseHandler):
     '''
 
     def time_convert(self, publish_time):
-        # 将字符串转换为 datetime 对象
-        time_obj = datetime.strptime(publish_time, "%Y-%m-%d")
-        # 将 datetime 对象转换为时间戳
-        publish_time_stamp = int(time_obj.timestamp() * 1000)
-        return publish_time_stamp
+        try:
+            # 将字符串转换为 datetime 对象
+            time_obj = datetime.strptime(publish_time, "%Y-%m-%d")
+            # 将 datetime 对象转换为时间戳
+            publish_time_stamp = int(time_obj.timestamp() * 1000)
+            return publish_time_stamp
+        except Exception as e:
+            logger.warning(f"时间格式化异常P{publish_time}", e)
+            return None
 
     '''
     解析列表信息，并获取对应字段值    
@@ -353,6 +357,7 @@ class DarkNetTradingNet(BaseHandler):
             ans["docid"] = self.find_match_value("交易编号", detail_tds)
             ans["publish_time"] = self.find_match_value("上架日期", detail_tds)
             ans["image_list"] = self.find_match_image(image_path)
+            ans["detail_desc"] = resp.text
             return ans
         except Exception as e:
             logger.error(f"parse detail info error:{e}")

@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-import os
 import time
-
+import base64
 import requests_html
 
 from urllib.parse import urljoin
@@ -227,3 +226,12 @@ class BaseHandler(object):
         finally:
             if self.driver:
                 self.driver.quit()
+
+    def strToBase64(self, text):
+        '''
+        将字符串转换为base64字符串
+        :param s:
+        :return:
+        '''
+        strEncode = base64.b64encode(text.encode('utf8'))
+        return str(strEncode, encoding='utf8')
