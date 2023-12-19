@@ -34,7 +34,14 @@ class DarkNetTradingNet(BaseHandler):
         self.login_cookies_str_format = jobconf["login"]["login.cookies.format"]
         self.query_cookies_str_format = jobconf["login"]["query.cookies.format"]
         self.max_pagenum = int(jobconf["parse"]["parse.max.pagenum"])
-        self.domains = jobconf["url"]["url.domain"].split(",")
+        self.url_domain = self.dark_conf_query(2)
+        domain_tmp = None
+        for urls in self.url_domain:
+            if domain_tmp is not None:
+                domain_tmp = domain_tmp+"," + urls['Links_Adr']
+                continue
+            domain_tmp = urls['Links_Adr']
+        self.domains = domain_tmp
         self.zh_type = "暗网中文网"
 
     '''

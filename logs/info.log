@@ -196,3 +196,42 @@ SQL: SELECT `t1`.`id`, `t1`.`channel_id`, `t1`.`tenant_id`, `t1`.`title`, `t1`.`
 Params: ['caisheen88888', 1, 0] 
 2023-11-13 16:31:46,185 - /Users/zhangmingming/pyProjects/vcrawl/service/tg_group_model_service.py[line:17] - INFO: 没有频道数据信息
 2023-11-13 16:31:54,622 - /Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_base.py[line:15] - INFO: crawl bootstrap_servers is 192.168.1.64:9092,192.168.1.7:9092,192.168.1.150:9092
+2023-12-19 19:14:33,178 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_trading_net,run_type is once
+2023-12-19 19:14:33,179 - /Users/zhangmingming/pyProjects/vcrawl/mapper/darknet_conf_dao.py[line:17] - INFO: send_status is 2 
+2023-12-19 19:19:29,345 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_trading_net,run_type is once
+2023-12-19 19:19:29,346 - /Users/zhangmingming/pyProjects/vcrawl/mapper/darknet_conf_dao.py[line:17] - INFO: send_status is 2 
+2023-12-19 19:22:39,886 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_trading_net,run_type is once
+2023-12-19 19:22:39,887 - /Users/zhangmingming/pyProjects/vcrawl/mapper/darknet_conf_dao.py[line:17] - INFO: send_status is 2 
+2023-12-19 19:23:43,004 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_trading_net,run_type is once
+2023-12-19 19:23:43,005 - /Users/zhangmingming/pyProjects/vcrawl/mapper/darknet_conf_dao.py[line:17] - INFO: send_status is 2 
+2023-12-19 19:24:32,505 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_trading_net,run_type is once
+2023-12-19 19:24:32,506 - /Users/zhangmingming/pyProjects/vcrawl/mapper/darknet_conf_dao.py[line:17] - INFO: send_status is 2 
+2023-12-19 19:24:54,348 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_trading_net,run_type is once
+2023-12-19 19:24:54,349 - /Users/zhangmingming/pyProjects/vcrawl/mapper/darknet_conf_dao.py[line:17] - INFO: send_status is 2 
+2023-12-19 19:25:38,164 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_trading_net,run_type is once
+2023-12-19 19:25:38,165 - /Users/zhangmingming/pyProjects/vcrawl/mapper/darknet_conf_dao.py[line:17] - INFO: send_status is 2 
+2023-12-19 19:25:54,843 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:55] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f83322f0190>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=trading_net
+dtype=darknet_trading_net
+alter_type=email
+to_addrs=@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=暗网中文网
+crux_key=
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=False
+tor_port=9151
+username=759847
+passwd=tianqi6997091
+login_cookies_str_format=PHPSESSID=%s
+query_cookies_str_format=PHPSESSID=%s; userid=%s
+max_pagenum=20
+url_domain=[{'Prim_Tbl_PK': 2, 'TpCd': '2', 'Links_Adr': 'xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion', 'Nm': '中文交易网', 'str_name': None, 'tenant_id': 'zhnormal', 'TXN_TPCD': None, 'access_path': None, 'record_by': None, 'record_by_org_code': None, 'remark': None, 'memo1': None, 'memo2': None, 'memo3': None, 'is_deleted': None, 'insert_time': datetime.datetime(2023, 12, 19, 19, 13, 3), 'update_time': None}, {'Prim_Tbl_PK': 3, 'TpCd': '2', 'Links_Adr': 'xxxxxxxx3a3kuuhhw5w7stk25fzhttrlpiomij5bogkg7yyqsng5tqyd.onion', 'Nm': '中文交易网', 'str_name': None, 'tenant_id': 'zhnormal', 'TXN_TPCD': None, 'access_path': None, 'record_by': None, 'record_by_org_code': None, 'remark': None, 'memo1': None, 'memo2': None, 'memo3': None, 'is_deleted': None, 'insert_time': datetime.datetime(2023, 12, 19, 19, 13, 3), 'update_time': None}]
+domains=xxxxxxxxss2wdceudprpxnmvjs5kwnlnfvun57koml6hkp6u7qwyhsyd.onion,xxxxxxxx3a3kuuhhw5w7stk25fzhttrlpiomij5bogkg7yyqsng5tqyd.onion
+task_id=1
+2023-12-19 19:25:54,844 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:24] - INFO: reload tor
+2023-12-19 19:25:55,419 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:31] - INFO: 27.148.81.45
