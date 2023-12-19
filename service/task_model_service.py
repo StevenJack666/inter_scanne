@@ -2,7 +2,6 @@
 # coding=utf-8
 
 
-
 from tools.log import *
 from mapper.monitor_task_dao import MonitorTaskDao
 
