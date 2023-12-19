@@ -3547,3 +3547,143 @@ task_id=1
 2023-10-26 19:36:59,859 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:239] - INFO: captcha image not exists , retry
 2023-10-26 19:37:29,877 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:239] - INFO: captcha image not exists , retry
 2023-10-26 19:37:59,884 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:163] - WARNING: image load failed, retry=4
+2023-12-13 09:12:02,524 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_changan,run_type is once
+2023-12-13 09:12:02,525 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:56] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f95f090ffd0>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+crux_key=
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+detail_query_path=api/goods/detail?gid=
+task_id=1
+2023-12-13 09:12:02,525 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:52] - INFO: 使用TOR浏览器登录
+2023-12-13 09:12:02,525 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-12-13 09:12:02,526 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-12-13 09:12:07,781 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:88] - INFO: close alert
+2023-12-13 09:12:07,812 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:97] - INFO: check page load complete
+2023-12-13 09:14:08,112 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:110] - WARNING: get connect page info timeout,close driver
+2023-12-13 09:14:08,513 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:44] - ERROR: failed connect tor, retry connect
+2023-12-13 09:14:08,513 - /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-12-13 09:14:18,519 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-12-13 09:14:18,521 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-12-13 09:14:20,611 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:88] - INFO: close alert
+2023-12-13 09:14:20,628 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:97] - INFO: check page load complete
+2023-12-13 09:16:20,877 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:110] - WARNING: get connect page info timeout,close driver
+2023-12-13 09:16:21,285 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:44] - ERROR: failed connect tor, retry connect
+2023-12-13 09:16:21,285 - /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-12-13 09:16:31,287 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-12-13 09:16:31,292 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-12-13 09:16:33,891 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:88] - INFO: close alert
+2023-12-13 09:16:33,996 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:97] - INFO: check page load complete
+2023-12-13 09:18:34,003 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:110] - WARNING: get connect page info timeout,close driver
+2023-12-13 09:18:34,189 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:44] - ERROR: failed connect tor, retry connect
+2023-12-13 09:18:34,189 - /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-12-13 09:18:44,195 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-12-13 09:18:44,199 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-12-13 09:18:46,329 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:88] - INFO: close alert
+2023-12-13 09:18:46,358 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:97] - INFO: check page load complete
+2023-12-13 09:20:46,494 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:110] - WARNING: get connect page info timeout,close driver
+2023-12-13 09:20:46,893 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:44] - ERROR: failed connect tor, retry connect
+2023-12-13 09:20:46,893 - /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-12-13 09:20:56,899 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-12-13 09:20:56,905 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-12-13 09:20:59,614 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:88] - INFO: close alert
+2023-12-13 09:20:59,669 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:97] - INFO: check page load complete
+2023-12-13 09:23:19,300 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:110] - WARNING: get connect page info timeout,close driver
+2023-12-13 09:23:19,481 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:44] - ERROR: failed connect tor, retry connect
+2023-12-13 09:23:19,482 - /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-12-13 09:23:29,482 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-12-13 09:23:29,485 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-12-13 09:23:31,643 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:88] - INFO: close alert
+2023-12-13 09:23:31,696 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:97] - INFO: check page load complete
+2023-12-13 09:33:27,326 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:110] - WARNING: get connect page info timeout,close driver
+2023-12-13 09:33:27,714 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:44] - ERROR: failed connect tor, retry connect
+2023-12-13 09:33:27,714 - /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-12-13 09:33:37,719 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-12-13 09:33:37,726 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-12-13 09:33:39,867 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:88] - INFO: close alert
+2023-12-13 09:33:39,894 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:97] - INFO: check page load complete
+2023-12-13 09:35:40,179 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:110] - WARNING: get connect page info timeout,close driver
+2023-12-13 09:35:40,607 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:44] - ERROR: failed connect tor, retry connect
+2023-12-13 09:35:40,607 - /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-12-13 09:35:50,612 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-12-13 09:35:50,616 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-12-13 09:35:52,771 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:88] - INFO: close alert
+2023-12-13 09:35:52,802 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:97] - INFO: check page load complete
+2023-12-13 09:37:53,001 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:110] - WARNING: get connect page info timeout,close driver
+2023-12-13 09:37:53,409 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:44] - ERROR: failed connect tor, retry connect
+2023-12-13 09:37:53,409 - /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-12-13 09:38:03,414 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-12-13 09:38:03,419 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-12-13 09:38:05,687 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:88] - INFO: close alert
+2023-12-13 09:38:05,720 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:97] - INFO: check page load complete
+2023-12-13 09:40:05,838 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:110] - WARNING: get connect page info timeout,close driver
+2023-12-13 09:40:06,258 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:44] - ERROR: failed connect tor, retry connect
+2023-12-13 09:40:06,258 - /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: failed connect tor, retry connect, retrying in 10 seconds...
+2023-12-13 09:43:27,645 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-12-13 09:43:27,708 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-12-13 09:43:29,003 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:41] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver' , msgTraceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py", line 78, in open_browser_with_headless
+    service_log_path=os.path.join(Config.log_dir, "geckodriver.log"))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/seleniumwire/webdriver.py", line 179, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 180, in __init__
+    keep_alive=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: Process unexpectedly closed with status 0
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 56, in login_with_tor_headless
+    self.headless)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py", line 74, in retry_decorator
+    logger)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py", line 33, in __retry_internal
+    return f()
+  File "/Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py", line 42, in connect_tor_with_retry
+    driver = open_browser_with_headless(firefox_binary, geckodriver_path, proxies, headless)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py", line 81, in open_browser_with_headless
+    driver.quit()
+UnboundLocalError: local variable 'driver' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py", line 34, in run
+    handler_list[key](jobconf).run(id=task_id)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 419, in run
+    if not self.login_with_tor_headless():
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 62, in login_with_tor_headless
+    if self.driver:
+AttributeError: 'ChangAn' object has no attribute 'driver'
+

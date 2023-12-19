@@ -360,7 +360,7 @@ class ChangAn(BaseHandler):
                     for value in self.crux_key:
                         if value in title:
                             crux_key_tmp = value
-                        break
+                            break
                     detail_data = self.get(self.detail_query_path + good_id, auth_header=self.auth_header)
                     resp_json_detail = json.loads(detail_data.content)
                     pic_list = resp_json_detail['data']['pics']
@@ -374,6 +374,10 @@ class ChangAn(BaseHandler):
                             self.get_download(pic, auth_header=self.auth_header, img_name=image_path)
                             paths = f'{image_path},{paths}'
                     tmp_ori = resp_json_detail['data']['intro']
+                    for value in self.crux_key:
+                        if value in tmp_ori:
+                            crux_key_tmp = value
+                            break
                     id_millis = str(int(round(time.time() * 1000)))
                     result.append({
                         "id": id_millis,
