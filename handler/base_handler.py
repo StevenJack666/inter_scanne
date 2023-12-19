@@ -12,7 +12,7 @@ from tools.config_parser import CrawlConfigParser
 from tools.config import get_root_path
 from service.task_model_service import *
 from tools.tor_tool import connect_tor_with_retry
-
+from service.darkconf_model_service import DarkconfService
 cur_dirname = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -173,6 +173,15 @@ class BaseHandler(object):
         fileContent = task_detail.fileContent
         keywords = fileContent.split(",")
         self.crux_key = keywords
+
+    # 查询数据库获取爬虫链接
+    def dark_conf_query(self, type):
+        dark_conf_service = DarkconfService()
+        dark_conf_list = dark_conf_service.darkconf_list(type)
+        if dark_conf_list is None:
+            return ''
+        return dark_conf_list
+
 
     def sample_datas_convert(self, id_millis, ocr_result):
         if ocr_result is None:

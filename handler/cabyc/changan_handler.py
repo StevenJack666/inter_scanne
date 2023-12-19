@@ -35,7 +35,8 @@ class ChangAn(BaseHandler):
         self.auth_header = jobconf["url"]["url.auth.header"]
         self.max_pagenum = int(jobconf["parse"]["parse.max.pagenum"])
         self.query_path = jobconf["url"]["url.query.path"]
-        self.domain = jobconf["url"]["url.domain"]
+        self.url_domain = self.dark_conf_query(1)
+        self.domain = self.url_domain[0]['Links_Adr']
         self.index_url = f"{self.protocol}://{self.domain}"
         self.zh_type = "长安不夜城"
         self.username = jobconf["login"]["login.name"]
@@ -360,7 +361,7 @@ class ChangAn(BaseHandler):
                     for value in self.crux_key:
                         if value in title:
                             crux_key_tmp = value
-                        break
+                            break
                     detail_data = self.get(self.detail_query_path + good_id, auth_header=self.auth_header)
                     resp_json_detail = json.loads(detail_data.content)
                     pic_list = resp_json_detail['data']['pics']
@@ -374,6 +375,10 @@ class ChangAn(BaseHandler):
                             self.get_download(pic, auth_header=self.auth_header, img_name=image_path)
                             paths = f'{image_path},{paths}'
                     tmp_ori = resp_json_detail['data']['intro']
+                    for value in self.crux_key:
+                        if value in tmp_ori:
+                            crux_key_tmp = value
+                            break
                     id_millis = str(int(round(time.time() * 1000)))
                     result.append({
                         "id": id_millis,
