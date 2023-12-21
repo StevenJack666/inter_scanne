@@ -41,7 +41,7 @@ class DarkNetTradingNet(BaseHandler):
                 domain_tmp = domain_tmp+"," + urls['Links_Adr']
                 continue
             domain_tmp = urls['Links_Adr']
-        self.domains = domain_tmp
+        self.domains = domain_tmp.split(',')
         self.zh_type = "暗网中文网"
 
     '''
@@ -267,7 +267,7 @@ class DarkNetTradingNet(BaseHandler):
                 # 生成主键id
                 id_millis = str(int(round(time.time() * 1000)))
                 sample_datas, paths = self.ocr_scan(id_millis, detail['image_list'])
-                #
+
                 send_data_li.append({
                     "id": id_millis,
                     "tenant_id": "zhnormal",
