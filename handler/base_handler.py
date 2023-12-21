@@ -198,6 +198,7 @@ class BaseHandler(object):
                 "user_id": "",
                 "identity_id": "",
                 "home_addr": "",
+                "data_type": "2",
                 "original_data": res
             })
         return sample_datas
