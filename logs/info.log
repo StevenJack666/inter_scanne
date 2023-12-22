@@ -3687,3 +3687,1016 @@ Traceback (most recent call last):
     if self.driver:
 AttributeError: 'ChangAn' object has no attribute 'driver'
 
+2023-12-22 15:34:19,187 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_changan,run_type is once
+2023-12-22 15:34:19,188 - /Users/zhangmingming/pyProjects/vcrawl/mapper/darknet_conf_dao.py[line:17] - INFO: send_status is 1 
+2023-12-22 15:34:19,226 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:56] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7f9098528ed0>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+crux_key=
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+url_domain=[{'Prim_Tbl_PK': 1, 'TpCd': '1', 'Links_Adr': 'cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion', 'Nm': '长夜不夜城', 'str_name': None, 'tenant_id': 'zhnormal', 'TXN_TPCD': None, 'access_path': None, 'record_by': None, 'record_by_org_code': None, 'remark': None, 'memo1': None, 'memo2': None, 'memo3': None, 'is_deleted': None, 'insert_time': datetime.datetime(2023, 12, 19, 15, 51, 48), 'update_time': None}]
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+detail_query_path=api/goods/detail?gid=
+task_id=1
+2023-12-22 15:34:19,227 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:53] - INFO: 使用TOR浏览器登录
+2023-12-22 15:34:19,227 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-12-22 15:34:19,228 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-12-22 15:34:30,635 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:41] - ERROR: once run error, error msg is 'ChangAn' object has no attribute 'driver' , msgTraceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py", line 78, in open_browser_with_headless
+    service_log_path=os.path.join(Config.log_dir, "geckodriver.log"))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/seleniumwire/webdriver.py", line 179, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 180, in __init__
+    keep_alive=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: Process unexpectedly closed with status 0
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 57, in login_with_tor_headless
+    self.headless)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py", line 74, in retry_decorator
+    logger)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py", line 33, in __retry_internal
+    return f()
+  File "/Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py", line 42, in connect_tor_with_retry
+    driver = open_browser_with_headless(firefox_binary, geckodriver_path, proxies, headless)
+  File "/Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py", line 81, in open_browser_with_headless
+    driver.quit()
+UnboundLocalError: local variable 'driver' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py", line 34, in run
+    handler_list[key](jobconf).run(id=task_id)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 420, in run
+    if not self.login_with_tor_headless():
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 63, in login_with_tor_headless
+    if self.driver:
+AttributeError: 'ChangAn' object has no attribute 'driver'
+
+2023-12-22 15:34:53,774 - /Users/zhangmingming/pyProjects/vcrawl/vcrawl_task.py[line:26] - INFO: crawl type is darknet_changan,run_type is once
+2023-12-22 15:34:53,774 - /Users/zhangmingming/pyProjects/vcrawl/mapper/darknet_conf_dao.py[line:17] - INFO: send_status is 1 
+2023-12-22 15:34:53,781 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:56] - INFO: jobconf=<tools.config_parser.CrawlConfigParser object at 0x7ff0086afe10>
+protocol=http
+keywords=['建行', '建设银行', '银行', '信用卡', '贷款', '金融']
+base_type=darknet
+sub_type=changan
+dtype=darknet_changan
+alter_type=email
+to_addrs=zhangchaoss122@163.com
+error_addrs=zhangchaoss122@163.com
+zh_type=长安不夜城
+crux_key=
+run_interval=1800
+proxies={'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+tor_enable=True
+firefox_binary=/Applications/Tor Browser.app/Contents/MacOS/firefox
+geckodriver_path=/Users/zhangmingming/tool/geckodriver
+headless=True
+auth_header=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE2ODY3MTYyNTUsImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.PcL65QZArakxEYocBAw0DUixYL3ovWPSWYQGFdMgRkk
+max_pagenum=10
+query_path=api/category/goods
+url_domain=[{'Prim_Tbl_PK': 1, 'TpCd': '1', 'Links_Adr': 'cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion', 'Nm': '长夜不夜城', 'str_name': None, 'tenant_id': 'zhnormal', 'TXN_TPCD': None, 'access_path': None, 'record_by': None, 'record_by_org_code': None, 'remark': None, 'memo1': None, 'memo2': None, 'memo3': None, 'is_deleted': None, 'insert_time': datetime.datetime(2023, 12, 19, 15, 51, 48), 'update_time': None}]
+domain=cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+index_url=http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion
+username=mzzlimuzi
+passwd=T@ianqi6997091
+query_cookies_str_format=Bearer %s
+detail_query_path=api/goods/detail?gid=
+task_id=1
+2023-12-22 15:34:53,781 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:53] - INFO: 使用TOR浏览器登录
+2023-12-22 15:34:53,781 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:51] - INFO: init browser option
+2023-12-22 15:34:53,782 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:72] - INFO: start init webdriver
+2023-12-22 15:34:56,048 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:88] - INFO: close alert
+2023-12-22 15:34:56,158 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:97] - INFO: check page load complete
+2023-12-22 15:34:59,786 - /Users/zhangmingming/pyProjects/vcrawl/tools/tor_tool.py[line:103] - INFO: success connect tor
+2023-12-22 15:35:06,078 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:67] - INFO: step 1: login check
+2023-12-22 15:35:06,094 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:240] - INFO: captcha image not exists , retry
+2023-12-22 15:35:36,115 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:240] - INFO: captcha image not exists , retry
+2023-12-22 15:36:06,134 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:240] - INFO: captcha image not exists , retry
+2023-12-22 15:36:36,147 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:240] - INFO: captcha image not exists , retry
+2023-12-22 15:37:06,167 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:240] - INFO: captcha image not exists , retry
+2023-12-22 15:37:36,174 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:164] - WARNING: image load failed, retry=5
+2023-12-22 15:38:34,056 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:240] - INFO: captcha image not exists , retry
+2023-12-22 15:39:04,074 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:264] - INFO: is_for_login=False
+2023-12-22 15:39:04,076 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:275] - INFO: captcha image has decode success
+2023-12-22 15:39:12,092 - /Users/zhangmingming/pyProjects/vcrawl/tools/captcha_code_tool.py[line:64] - INFO: request captcha platform ans is: {"msg":"识别成功","code":10000,"data":{"code":0,"data":"vvkh","time":7.396342039108276,"externel":1,"unique_code":"864ddb56f074fbd377cdd2d21c9c4d9a"}}
+2023-12-22 15:39:12,093 - /Users/zhangmingming/pyProjects/vcrawl/tools/captcha_code_tool.py[line:27] - INFO: request 1703230744076.png captcha code is vvkh, cost time is8017
+2023-12-22 15:39:12,093 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:193] - INFO: captcha code is vvkh
+2023-12-22 15:39:22,422 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:69] - INFO: step 2: login
+2023-12-22 15:39:25,741 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:261] - INFO: is_for_login=True,request header url is Bearer noLogin_ce71b94548644a89b75b46e91272424e
+2023-12-22 15:39:25,741 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:275] - INFO: captcha image has decode success
+2023-12-22 15:39:32,539 - /Users/zhangmingming/pyProjects/vcrawl/tools/captcha_code_tool.py[line:64] - INFO: request captcha platform ans is: {"msg":"识别成功","code":10000,"data":{"code":0,"data":"kr4t","time":6.381955146789551,"externel":1,"unique_code":"fe6f55dc683495a89c81977ae4e4f912"}}
+2023-12-22 15:39:32,540 - /Users/zhangmingming/pyProjects/vcrawl/tools/captcha_code_tool.py[line:27] - INFO: request 1703230765742.png captcha code is kr4t, cost time is6797
+2023-12-22 15:39:37,952 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:71] - INFO: step 3: parse token
+2023-12-22 15:39:37,964 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:146] - WARNING: can not get login result, retry
+2023-12-22 15:39:37,964 - /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/retry/api.py[line:40] - WARNING: can not get login result, retry, retrying in 2 seconds...
+2023-12-22 15:39:39,977 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:75] - INFO: login request result is {'code': 2000, 'msg': '', 'data': {'account': {'ctime': 1678956655, 'ltime': 1703230779, 'level': 0, 'name': 'mzzlimuzi', 'hid': '148844512', 'gender': '', 'avatar': '', 'real_name': '', 'motto': '', 'contact': ''}, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}}
+2023-12-22 15:39:39,977 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:94] - INFO: login success, token is Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI
+2023-12-22 15:39:40,137 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:39:40,138 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/category/goods
+2023-12-22 15:39:40,138 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:39:40,138 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = {'page_num': 1, 'page_size': 10, 'order': 'ctime', 'order_by': 'ascending'}
+2023-12-22 15:39:45,294 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:300] - INFO: parse max page is 425
+2023-12-22 15:39:45,294 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:333] - INFO: parse page = 1 data
+2023-12-22 15:39:45,301 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:39:45,321 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:39:45,321 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=f628888907d34d7bafb8d2c719b8d3a0
+2023-12-22 15:39:45,322 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:39:45,322 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:39:46,888 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:39:46,889 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eVPb/1843523986-WPUFgyq2j.jpg
+2023-12-22 15:39:46,889 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:39:46,889 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:39:49,360 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:39:49,361 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eVPb/1843523986-fV1f2ormZ.jpg
+2023-12-22 15:39:49,361 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:39:49,362 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:39:51,810 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:39:51,811 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eVPb/1843523986-ilZ7i1wiO.jpg
+2023-12-22 15:39:51,811 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:39:51,811 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:39:53,653 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:39:53,653 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eVPb/1843523986-QeB1vSIqX.jpg
+2023-12-22 15:39:53,654 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:39:53,654 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:39:55,377 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:39:55,377 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eVPb/1843523986-bk2nUKhm9.jpg
+2023-12-22 15:39:55,378 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:39:55,378 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:39:57,158 - /Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_base.py[line:15] - INFO: crawl bootstrap_servers is 127.0.0.1:9092
+2023-12-22 15:40:07,173 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:40:07,174 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=1,error idx=0, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:40:07,174 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:40:07,179 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:07,179 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=ffa1d46d002a4c4fab2d66b9ca9d1bdb
+2023-12-22 15:40:07,179 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:07,179 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:08,328 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:08,329 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eMj5/1843523986-bIoApMosy.jpg
+2023-12-22 15:40:08,329 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:08,329 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:09,711 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:09,712 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eMj5/1843523986-tuTp2jy7L.jpg
+2023-12-22 15:40:09,712 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:09,712 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:21,161 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:40:21,163 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=1,error idx=1, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:40:21,164 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:40:21,171 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:21,171 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=e4a7020419814df3b27f30cc204d54e3
+2023-12-22 15:40:21,171 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:21,172 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:22,405 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:22,405 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eMj5/975123135-lTwe36Mfc.jpg
+2023-12-22 15:40:22,406 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:22,406 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:24,462 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:24,463 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eMj5/975123135-Np0AQcVVd.jpg
+2023-12-22 15:40:24,463 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:24,463 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:28,867 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:28,868 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eMj5/975123135-VeQCEdNuM.jpg
+2023-12-22 15:40:28,868 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:28,868 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:36,004 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:36,005 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eMj5/975123135-kwr8wYoSh.jpg
+2023-12-22 15:40:36,005 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:36,005 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:48,249 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:40:48,251 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=1,error idx=2, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:40:48,251 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:40:48,263 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:48,264 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=026a384bbafc4d6684d74f6ab71631d8
+2023-12-22 15:40:48,265 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:48,265 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:49,546 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:49,547 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/1843523986-iqBIPxR1L.jpg
+2023-12-22 15:40:49,548 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:49,548 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:51,116 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:51,116 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/1843523986-BLNNQ9ELn.jpg
+2023-12-22 15:40:51,116 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:51,117 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:52,948 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:52,949 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/1843523986-AeenZjMHO.jpg
+2023-12-22 15:40:52,949 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:52,949 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:55,534 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:55,534 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/1843523986-Pv3BayjUi.jpg
+2023-12-22 15:40:55,535 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:55,535 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:57,541 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:57,542 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/1843523986-OHoIMaF4s.jpg
+2023-12-22 15:40:57,544 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:57,545 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:40:59,689 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:40:59,689 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/1843523986-43RB6LtkL.jpg
+2023-12-22 15:40:59,690 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:40:59,690 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:11,449 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:41:11,450 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=1,error idx=3, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:41:11,451 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:41:11,463 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:11,465 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=aea4a891e8f94fdea61452ac506c3265
+2023-12-22 15:41:11,465 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:11,466 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:12,723 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:12,724 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/1843523986-kDnBhR0OA.jpg
+2023-12-22 15:41:12,725 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:12,725 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:14,554 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:14,554 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/1843523986-TGnV7OUXB.jpg
+2023-12-22 15:41:14,555 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:14,555 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:17,498 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:17,499 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/1843523986-8nahzzpga.jpg
+2023-12-22 15:41:17,500 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:17,500 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:19,505 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:19,506 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/1843523986-tcjeeo9Jh.jpg
+2023-12-22 15:41:19,506 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:19,507 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:21,157 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:21,158 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/1843523986-TFvaCZO43.jpg
+2023-12-22 15:41:21,158 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:21,158 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:22,958 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:22,958 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/1843523986-xnHRXR3K9.jpg
+2023-12-22 15:41:22,959 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:22,959 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:34,478 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:41:34,481 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=1,error idx=4, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:41:34,482 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:41:34,497 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:34,498 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=c67236dd09f64049bb0066b85d4805b8
+2023-12-22 15:41:34,498 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:34,499 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:35,974 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:35,975 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/975123135-zAeQmxMjQ.jpg
+2023-12-22 15:41:35,975 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:35,976 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:37,514 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:37,515 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/975123135-PhFXHhzqc.jpg
+2023-12-22 15:41:37,515 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:37,516 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:39,030 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:39,031 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/975123135-T4IxVFO5O.jpg
+2023-12-22 15:41:39,031 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:39,032 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:40,670 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:40,671 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/975123135-2ILatrlHK.jpg
+2023-12-22 15:41:40,671 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:40,672 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:42,273 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:42,274 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/975123135-oyoqlqD8n.jpg
+2023-12-22 15:41:42,274 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:42,275 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:43,882 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:43,883 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5A36/975123135-RwcJH0UfS.jpg
+2023-12-22 15:41:43,883 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:43,884 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:55,564 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:41:55,565 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=1,error idx=5, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:41:55,566 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:41:55,578 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:55,578 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=5e51fd5d59d240c39ccd4bc552fcd700
+2023-12-22 15:41:55,578 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:55,579 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:57,331 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:57,332 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/b9Qb/1843523986-UucX7FewF.jpg
+2023-12-22 15:41:57,332 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:57,333 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:41:58,840 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:41:58,841 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/b9Qb/1843523986-lXtRrUqOp.jpg
+2023-12-22 15:41:58,841 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:41:58,841 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:00,111 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:00,112 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/b9Qb/1843523986-91SsHlxGE.jpg
+2023-12-22 15:42:00,113 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:00,113 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:01,844 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:01,845 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/b9Qb/1843523986-evkkNMg2D.jpg
+2023-12-22 15:42:01,846 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:01,846 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:13,766 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:42:13,767 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=1,error idx=6, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:42:13,768 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:42:13,777 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:13,778 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=f424306145c74070b5f3770d6962cb01
+2023-12-22 15:42:13,778 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:13,779 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:15,220 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:15,221 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eZ8b/1843523986-gkZIIpQPH.jpg
+2023-12-22 15:42:15,221 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:15,221 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:16,402 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:16,403 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eZ8b/1843523986-off82gelR.jpg
+2023-12-22 15:42:16,404 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:16,404 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:19,359 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:19,360 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eZ8b/1843523986-DWy2TfeKO.jpg
+2023-12-22 15:42:19,360 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:19,361 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:30,900 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:42:30,904 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=1,error idx=7, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:42:30,906 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:42:30,916 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:30,916 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=f4e8af4a0cb540059dd94653d3d054c6
+2023-12-22 15:42:30,917 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:30,917 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:32,344 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:32,345 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eZ8b/1843523986-zpjEpQRCb.jpg
+2023-12-22 15:42:32,345 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:32,346 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:33,946 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:33,947 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eZ8b/1843523986-i82vEQ15O.jpg
+2023-12-22 15:42:33,947 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:33,948 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:35,399 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:35,400 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eZ8b/1843523986-nVR9MXCL9.jpg
+2023-12-22 15:42:35,400 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:35,400 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:47,200 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:42:47,202 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=1,error idx=8, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:42:47,203 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:42:47,216 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:47,217 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=17ef8ffa4b8c47ee839e1f165099fd94
+2023-12-22 15:42:47,217 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:47,218 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:49,562 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:49,564 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eZ8b/1843523986-W1ZuY6H6h.jpg
+2023-12-22 15:42:49,564 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:49,565 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:50,814 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:50,814 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eZ8b/1843523986-hHgs5vmzi.jpg
+2023-12-22 15:42:50,814 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:50,815 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:42:52,357 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:42:52,358 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/eZ8b/1843523986-K1DTmVNFN.jpg
+2023-12-22 15:42:52,359 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:42:52,359 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:03,916 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:43:03,919 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=1,error idx=9, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:43:03,921 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:03,922 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/category/goods
+2023-12-22 15:43:03,922 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:03,923 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = {'page_num': 2, 'page_size': 10, 'order': 'ctime', 'order_by': 'ascending'}
+2023-12-22 15:43:05,459 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:333] - INFO: parse page = 2 data
+2023-12-22 15:43:05,461 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:43:05,474 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:05,474 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=88a63c4ee64e4029aa0d6ff2bafad687
+2023-12-22 15:43:05,474 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:05,475 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:06,972 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:06,973 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/975123135-NEe39iZzr.jpg
+2023-12-22 15:43:06,973 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:06,974 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:08,926 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:08,927 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/975123135-nza355QlE.jpg
+2023-12-22 15:43:08,927 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:08,928 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:10,770 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:10,771 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/975123135-3Cl9PagFs.jpg
+2023-12-22 15:43:10,771 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:10,771 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:12,439 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:12,440 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/975123135-ECkArdsZS.jpg
+2023-12-22 15:43:12,440 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:12,441 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:14,159 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:14,160 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/975123135-ygclKmUnB.jpg
+2023-12-22 15:43:14,160 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:14,160 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:25,809 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:43:25,811 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=2,error idx=0, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:43:25,812 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:43:25,824 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:25,825 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=2c9347fa63d44b369284e6b42d9be935
+2023-12-22 15:43:25,825 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:25,825 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:27,565 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:27,566 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/975123135-TVrFJDVEn.jpg
+2023-12-22 15:43:27,567 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:27,567 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:29,349 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:29,350 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/975123135-vISEGEi2D.jpg
+2023-12-22 15:43:29,350 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:29,350 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:31,707 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:31,708 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/975123135-XCaX92zWo.jpg
+2023-12-22 15:43:31,708 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:31,708 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:33,630 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:33,631 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/975123135-dsfAq5zod.jpg
+2023-12-22 15:43:33,632 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:33,632 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:35,357 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:35,358 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/975123135-UcWXwFhIC.jpg
+2023-12-22 15:43:35,358 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:35,358 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:37,120 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:37,120 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/975123135-omcttP5Fg.jpg
+2023-12-22 15:43:37,120 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:37,120 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:48,817 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:43:48,819 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=2,error idx=1, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:43:48,821 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:43:48,831 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:48,832 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=89e6f2d6b7a54722a9431c8789beecdf
+2023-12-22 15:43:48,832 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:48,832 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:49,975 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:49,976 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/1843523986-kDRdnR0gT.jpg
+2023-12-22 15:43:49,977 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:49,977 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:52,353 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:52,354 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/1843523986-rfaoZAnVN.jpg
+2023-12-22 15:43:52,354 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:52,355 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:43:53,858 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:43:53,858 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/1843523986-zZzw2flt7.jpg
+2023-12-22 15:43:53,859 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:43:53,859 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:05,325 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:44:05,327 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=2,error idx=2, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:44:05,328 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:44:05,341 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:05,342 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=6e0b2d5ad4684f5b90f5a2e03632cad0
+2023-12-22 15:44:05,342 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:05,342 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:06,745 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:06,746 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/1843523986-lEH6kQg6M.jpg
+2023-12-22 15:44:06,746 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:06,746 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:08,061 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:08,061 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/1843523986-kjfPz4uQX.jpg
+2023-12-22 15:44:08,062 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:08,062 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:09,464 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:09,465 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/5JN5/1843523986-5iwRYfyIO.jpg
+2023-12-22 15:44:09,465 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:09,466 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:21,015 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:44:21,018 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=2,error idx=3, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:44:21,019 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:44:21,029 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:21,033 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=265ff542e368420cb9fb54fb067192f4
+2023-12-22 15:44:21,033 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:21,033 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:23,337 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:23,338 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/53Q6/1052452789-bNVNoCNmQ.jpg
+2023-12-22 15:44:23,338 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:23,339 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:24,855 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:24,856 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/53Q6/1052452789-dYASikQNi.jpg
+2023-12-22 15:44:24,857 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:24,857 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:26,581 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:26,582 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/53Q6/1052452789-FIcP0S2aj.jpg
+2023-12-22 15:44:26,583 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:26,583 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:30,066 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:30,068 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/53Q6/1052452789-e5pzl8a3Z.jpg
+2023-12-22 15:44:30,068 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:30,069 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:34,339 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:34,339 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/53Q6/1052452789-RgwXYOLBP.jpg
+2023-12-22 15:44:34,339 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:34,339 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:39,850 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:39,851 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/53Q6/1052452789-Sj0crXua9.jpg
+2023-12-22 15:44:39,852 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:39,852 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:52,883 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:44:52,884 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=2,error idx=4, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:44:52,885 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:44:52,897 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:52,898 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=7bf16974842548d1ad7066c12156a1be
+2023-12-22 15:44:52,898 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:52,898 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:54,560 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:54,561 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/53Q6/1052452789-72qnU0SWk.jpg
+2023-12-22 15:44:54,562 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:54,562 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:56,275 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:56,276 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/53Q6/1052452789-wjH4aa5Zs.jpg
+2023-12-22 15:44:56,277 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:56,277 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:57,947 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:57,948 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/53Q6/1052452789-KIvfOxZhM.jpg
+2023-12-22 15:44:57,948 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:57,948 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:44:59,670 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:44:59,670 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/53Q6/1052452789-uC2YGPZMy.jpg
+2023-12-22 15:44:59,671 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:44:59,671 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:45:11,319 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:45:11,321 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=2,error idx=5, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:45:11,322 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:45:11,336 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:45:11,336 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=3a94eb8f75894b32ab3cece3f079f733
+2023-12-22 15:45:11,337 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:45:11,337 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:45:12,915 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:45:12,915 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/b7me/1345444889-gGrfRhJXq.jpg
+2023-12-22 15:45:12,916 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:45:12,917 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:45:14,601 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:45:14,602 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/b7me/1345444889-kW9kB7uIr.jpg
+2023-12-22 15:45:14,603 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:45:14,603 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:45:26,105 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:45:26,107 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=2,error idx=6, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:45:26,108 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:45:26,122 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:45:26,123 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=b4e72ef939fd49299c71046142a8127c
+2023-12-22 15:45:26,123 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:45:26,123 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:45:28,489 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:45:28,490 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/b7me/1345444889-EpiKihFOS.jpg
+2023-12-22 15:45:28,490 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:45:28,490 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:45:32,058 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:45:32,059 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/b7me/1345444889-hA4v8W8Ps.jpg
+2023-12-22 15:45:32,059 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:45:32,060 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:45:48,215 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:402] - ERROR: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+2023-12-22 15:45:48,216 - /Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py[line:403] - ERROR: error page=2,error idx=7, trace_msg=Traceback (most recent call last):
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/cabyc/changan_handler.py", line 399, in parse_summary
+    self.send_kafka_producer(result, dark_type)
+  File "/Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py", line 157, in send_kafka_producer
+    crawler_producer.async_producer(result_scan_mes_json)
+  File "/Users/zhangmingming/pyProjects/vcrawl/kafka_util/kafka_producer.py", line 72, in async_producer
+    self.__producer.send(self.topic, value=str(data))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 10.0 secs.
+
+2023-12-22 15:45:48,217 - /Users/zhangmingming/pyProjects/vcrawl/mapper/monitor_task_dao.py[line:30] - INFO: task_id is 1 
+2023-12-22 15:45:48,220 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:83] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:45:48,221 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:84] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/api/goods/detail?gid=6ca699e5c91d4c399acdfb220b75f95b
+2023-12-22 15:45:48,221 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:85] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:45:48,221 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:86] - INFO: [GET METHOD] request params = None
+2023-12-22 15:45:50,084 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:45:50,084 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/b7me/1345444889-fHpKBwjKR.jpg
+2023-12-22 15:45:50,084 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:45:50,084 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
+2023-12-22 15:45:53,569 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:107] - INFO: [GET METHOD] headers is : {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOjE3MDMzMTcxNzksImhpZCI6IjE0ODg0NDUxMiIsImxldmVsIjowfQ.jdPTNDR1oPnynRcRRKT1xrYOOLTg5vER5j9aQmfupnI'}
+2023-12-22 15:45:53,569 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:108] - INFO: [GET METHOD] request url = http://cabyceogpsji73sske5nvo45mdrkbz4m3qd3iommf3zaaa6izg3j2cqd.onion/store/pic/3oor/b7me/1345444889-Qh3Byo6Ai.jpg
+2023-12-22 15:45:53,569 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:109] - INFO: [GET METHOD] request proxy = {'http': 'socks5h://admin:a7dm1n@45.32.223.200:65533', 'https': 'socks5h://admin:a7dm1n@45.32.223.200:65533'}
+2023-12-22 15:45:53,569 - /Users/zhangmingming/pyProjects/vcrawl/handler/base_handler.py[line:110] - INFO: [GET METHOD] request params = None
