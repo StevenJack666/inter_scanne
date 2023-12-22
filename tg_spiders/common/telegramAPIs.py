@@ -600,7 +600,7 @@ class TelegramAPIs(object):
                 "user_id": "",
                 "identity_id": "",
                 "home_addr": "",
-                "data_type": "2",
+                "data_type": "1",
                 "original_data": res
             })
         return sample_datas
