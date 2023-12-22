@@ -362,7 +362,7 @@ class ChangAn(BaseHandler):
                         if value in title:
                             crux_key_tmp = value
                             break
-                    detail_data = self.get(self.detail_query_path + good_id, auth_header=self.auth_header)
+                    detail_data = self.get(href, auth_header=self.auth_header)
                     resp_json_detail = json.loads(detail_data.content)
                     pic_list = resp_json_detail['data']['pics']
                     paths = ''
