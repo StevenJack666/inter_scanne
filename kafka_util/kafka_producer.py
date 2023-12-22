@@ -62,8 +62,8 @@ class CrawlerProducer(KafkaBase):
 
         # data_json = json.loads(data)
 
-        logger.debug('send success, value: {}'.format(data_json))
-        print(repr(data_json))
+        #logger.debug('send success, value')
+        #print(repr(data_json))
         """
         异步发送数据
         :param data_li:发送数据
@@ -71,6 +71,7 @@ class CrawlerProducer(KafkaBase):
         """
         self.__producer.send(self.topic, value=str(data))
         self.__producer.flush()  # 批量提交
+        logger.debug('send success, value')
 
     def async_producer_callback(self, data_li: list):
         """
