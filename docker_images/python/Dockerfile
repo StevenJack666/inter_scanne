@@ -53,3 +53,7 @@ RUN localedef -c -f UTF-8 -i zh_CN zh_CN.utf8
 # 更新pip版本
 RUN pip install --upgrade pip
 ENV LC_ALL zh_CN.UTF-8
+
+WORKDIR /root/python/deploy
+CMD ./start.sh ${takskid} ${type}
+
