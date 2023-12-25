@@ -6,6 +6,7 @@ from tools.config_parser import CrawlConfigParser
 from tools.config import *
 import requests
 from tools.log import logger
+from tools.config import get_root_path
 cur_dirname = os.path.dirname(os.path.abspath(__file__))
 
 class TelegramBase(object):
@@ -19,7 +20,7 @@ class TelegramBase(object):
             data = f.read()
         config_js = json.loads(data)
         # tg配置
-        self.root_path = self.get_root_path()
+        self.root_path = get_root_path()
         self.session_name = self.root_path + config_js.get("session_name")
         self.app_id = config_js.get("api_id")
         self.app_hash = config_js.get("api_hash")
@@ -36,7 +37,7 @@ class TelegramBase(object):
             self.password = self.proxy.get("password", 'TeSt1024')
 
             # self.clash_proxy = (self.protocal, self.proxy_ip, self.proxy_port)
-
+            # TODO 如果部署到国外，直接把clash_proxy设置为None
             self.clash_proxy = {
                 'proxy_type': self.protocal,  # (mandatory) protocol to use (see above)
                 'addr': self.proxy_ip,  # (mandatory) proxy IP address
@@ -110,13 +111,7 @@ class TelegramBase(object):
                 item["image_path"] = filePath
 
 
-    # 获得根路径
-    def get_root_path(self):
-        # 获取文件目录
-        curPath = os.path.abspath(os.path.dirname(__file__))
-        # 获取项目根路径，内容为当前项目的名字
-        rootPath = curPath[:curPath.find("vcrawl/") + len("vcrawl/")]
-        return rootPath
+
 
 
 if __name__ == "__main__":
