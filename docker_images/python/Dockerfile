@@ -5,7 +5,7 @@
 # 进入容器：docker exec -it python /bin/bash
 ##############################################
 FROM centos:7.6.1810
-MAINTAINER mioshu # 指定作者信息
+MAINTAINER thor # 指定作者信息
 RUN set -ex \
     # 预安装所需组件
     && yum install -y wget tar libffi-devel zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make initscripts \
