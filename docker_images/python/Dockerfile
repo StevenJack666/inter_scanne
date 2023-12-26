@@ -22,6 +22,8 @@ RUN set -ex \
     && yum install python-backports-lzma -y \
     && pip install backports.lzma \
     && yum install mesa-libGL -y \
+    && yum install telnet -y \
+    && yum install net-tools -y \
     && ./configure prefix=/usr/local/python3 \
     && make \
     && make install \
@@ -47,6 +49,22 @@ RUN set -ex \
     && yum install -y vim \
     # 安装定时任务组件
     && yum -y install cronie
+
+# 添加镜像配置
+RUN set -ex \
+    # 下载
+    && curl -O http://ftp.gnu.org/gnu/glibc/glibc-2.18.tar.gz \
+    && tar zxf glibc-2.18.tar.gz \
+    && cd glibc-2.18 \
+    && mkdir build \
+    && cd build \
+    && ../configure --prefix=/usr \
+    && make -j2 \
+    && make install \
+    && yum install gtk2 -y \
+    && yum install gtk3 -y \
+    && yum install alsa-lib-devel -y
+
 # 支持中文
 RUN yum install kde-l10n-Chinese -y
 RUN localedef -c -f UTF-8 -i zh_CN zh_CN.utf8
