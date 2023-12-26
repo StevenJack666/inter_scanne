@@ -1,7 +1,7 @@
 ##############################################
 # 基于centos7构建python3运行环境
 # 构建命令: 在Dockerfile文件目录下执行 docker build   -t python:37 --build-arg takskid=1 --build-arg type=1 .
-# 容器启动命令: docker run -itd --name python --restart always --privileged=true -v /root/dockers/python:/root/python -v /root/dockers/python/cron:/var/spool/cron python:37 /usr/sbin/init
+# 容器启动命令: docker run -itd --name darknet --restart always --privileged=true -v /root/dockers/python:/root/python -v /root/dockers/python/cron:/var/spool/cron python:37 /usr/sbin/init
 # 进入容器：docker exec -it python /bin/bash
 ##############################################
 FROM centos:7.6.1810
