@@ -73,5 +73,9 @@ RUN pip install --upgrade pip
 ENV LC_ALL zh_CN.UTF-8
 
 WORKDIR /root/python/deploy
+COPY requirements.txt .
+RUN set -ex \
+    && python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+
 CMD ./start.sh ${takskid} ${type}
 
