@@ -32,7 +32,7 @@ tar -zxvf vcrawl.tar.gz && cd vcrawl
 pip install -r requirements.txt
 后台下载
 nohup python3.7 -m pip install -r requirements.txt  >vcrawler.log 2>&1 &
-
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
 python包镜像：https://mirrors.aliyun.com/pypi/simple/
 pip3 install cnocr -i https://mirrors.aliyun.com/pypi/simple/
 ```
