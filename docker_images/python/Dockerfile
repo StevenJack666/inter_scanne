@@ -2,11 +2,11 @@
 # 基于centos7构建python3运行环境
 # 构建命令: 在Dockerfile文件目录下执行 docker build   -t python:37 --build-arg takskid=1 --build-arg type=1 .
 # 容器启动命令:
-# docker run -itd --name con_name --restart always --privileged=true -v /root/lib/site-packages:/usr/local/python3/lib/python3.7/site-packages  -v /root/test/install:/root/install/ -v /root/darknet/:/root/python/  image_name  /usr/sbin/init
+# docker run -itd --name con_name --restart always --privileged=true -v /root/lib/site-packages:/usr/local/python3/lib/python3.7/site-packages  -v /root/test/install:/root/install/ -v /root/darknet/vcrawl:/root/python/vcrawl  image_name  /usr/sbin/init
 # 进入容器：docker exec -it con_name /bin/bash
 ##############################################
 FROM centos:7.6.1810
-MAINTAINER mioshu # 指定作者信息
+MAINTAINER thor # 指定作者信息
 RUN set -ex \
     # 预安装所需组件
     && yum install -y wget tar libffi-devel zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make initscripts \
