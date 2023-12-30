@@ -107,7 +107,7 @@ def open_browser_with_headless(firefox_binary, geckodriver_path, proxies, headle
             driver.quit()
             return None
     except Exception as e:
-        logger.warning("get connect page info timeout,close driver")
+        logger.warning(f"get connect page info timeout,close driver {e}")
         driver.quit()
         return None
 
