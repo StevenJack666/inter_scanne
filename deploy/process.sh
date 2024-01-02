@@ -1,5 +1,8 @@
+# crontab -e
+# crontab -u username -l
+
 # 0 3 * * * /bin/bash /root/crawl_email/vcrawl/cron_dark.sh >> /root/crawl_email/vcrawl/logs/cron.log 2>&1 &
-#0 3 * * * /bin/bash /root/crawl_email/vcrawl/cron_changan.sh >> /root/crawl_email/vcrawl/logs/cron.log 2>&1 &
+# 0 3 * * * /bin/bash /root/crawl_email/vcrawl/cron_changan.sh >> /root/crawl_email/vcrawl/logs/cron.log 2>&1 &
 
 
 source ~/.bashrc
