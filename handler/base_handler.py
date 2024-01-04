@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-import os
 import time
-
+import base64
 import requests_html
 
 from urllib.parse import urljoin
@@ -188,16 +187,18 @@ class BaseHandler(object):
             return
         sample_datas = []
         for res in ocr_result:
+            if res is None:
+                break
             sample_datas.append({
                 "original_event_id": id_millis,
-                "tenanted_id": "zhnormal",
+                "tenant_id": "zhnormal",
                 "phone_num": "",
                 "bind_id": "",
                 "user_name": "",
                 "user_id": "",
                 "identity_id": "",
                 "home_addr": "",
-                "type": "dark",
+                "data_type": "2",
                 "original_data": res
             })
         return sample_datas
@@ -235,3 +236,12 @@ class BaseHandler(object):
         finally:
             if self.driver:
                 self.driver.quit()
+
+    def strToBase64(self, text):
+        '''
+        将字符串转换为base64字符串
+        :param s:
+        :return:
+        '''
+        strEncode = base64.b64encode(text.encode('utf8'))
+        return str(strEncode, encoding='utf8')

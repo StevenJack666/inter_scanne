@@ -390,7 +390,7 @@ class ChangAn(BaseHandler):
                         "publisher": publisher,
                         "publisher_id": "",
                         "crux_key": crux_key_tmp,
-                        "origin_data": tmp_ori,
+                        "origin_data":  self.strToBase64(tmp_ori),
                         "image_path": paths,
                         "doc_desc": description,
                         "crawl_dark_type": self.dtype,
