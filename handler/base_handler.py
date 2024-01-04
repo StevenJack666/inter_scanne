@@ -12,6 +12,8 @@ from tools.config import get_root_path
 from service.task_model_service import *
 from tools.tor_tool import connect_tor_with_retry
 from service.darkconf_model_service import DarkconfService
+from tools.crawl_service import CrawlService
+
 cur_dirname = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -160,8 +162,8 @@ class BaseHandler(object):
         if resp:
             msg = f"{error_info} \n {resp.html.html}"
         logger.error(msg)
-        # CrawlService.send_alert(crawl_pd=None, keyword=self.keywords, zh_type=self.zh_type, to_addrs=self.error_addrs,
-        #                         error_msg=msg)
+        CrawlService.send_alert(crawl_pd=None, keyword=self.keywords, zh_type=self.zh_type, to_addrs=self.error_addrs,
+                                error_msg=msg)
 
     # 查询数据库获取关键字
     def query_db_for_curl(self, task_id):
